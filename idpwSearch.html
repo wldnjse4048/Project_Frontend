@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>잡담드림</title>
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- JQUERY -->
+    <script src="js/jquery-3.6.0.js" ></script>
+
+    <style>
+        .logo{
+            width: 16em;
+        }
+        .user{
+            padding: 2em;
+        }
+        .idpwSearch-form{
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .form-group{
+            margin-bottom: 1em;
+        }
+    </style>
+
+</head>
+
+<body class="user">
+
+    <!-- Header -->
+    <header id="header_login">
+        <div style="text-align: center;">
+            <a href="index.html"><img  class="logo" src="image/logo.png"></a>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-9 col-sm-12 idpwSearch-form">
+
+                    <form action="#">
+                        <div>
+                            <input type="radio" id="r_pn2" class="input_rd" name="certification" value="email"
+                                onclick="selectType('email');clickcr(this,'idf.email','','',event);">
+                                <label for="r_pn2" class="label_rd">본인확인 이메일로 인증</label>
+                            <div class="form-group">
+                                <label for="name">이름</label>
+                                <input type="text" class="form-control" id="name" placeholder="이름">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">이메일</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="email" placeholder="등록된 이메일주소">
+                                    <div class="input-group-addon">
+                                        <button class="btn btn-secondary idpw-btn">인증번호 전송</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="Number">인증번호</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="Number" placeholder="인증번호">
+                                    <div class="input-group-addon">
+                                        <button class="btn btn-secondary idpw-btn">인증하기</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
