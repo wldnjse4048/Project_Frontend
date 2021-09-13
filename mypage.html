@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>잡담드림</title>
 
-    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/styles.css">
@@ -53,7 +54,7 @@
         }
 
         table.calender th {
-            text-align: center;
+            align: center;
         }
 
         table.calendar td {
@@ -98,58 +99,47 @@
             height: 15em;
         }
 
+        /* MyPage */
+
+        .mypagebox {
+            border-bottom: 2px solid #ededed;
+        }
+
+        #mypagebox {
+            border-bottom: 2px solid #ededed;
+        }
+
+        #mypage_unregister {
+            margin-left: 0px;
+        }
+
+        #mypage_btn {
+            background-color: rgb(20, 50, 120);
+            color: white;
+        }
+
+
     </style>
 </head>
 
 <body id="body-pd">
 
-    <div class="l-navbar" id="navbar">
+    <div class="l-navbar expander" id="navbar">
         <nav class="nav">
             <div>
                 <div class="nav__brand">
                     <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
-                    <a href="#" class="nav__logo">잡담드림</a>
+                    <a href="#" class="nav__logo">Bedimcode</a>
                 </div>
-                <div class="nav__login">
-                    <a href="#" class="nav__link">
-                        <ion-icon name="person-circle-outline" class="nav__icon"></ion-icon>
-                        <span class="nav_name">Join & Login</span>
-                    </a>
-                </div>
-                <div class="nav__user">
-                    <div style="border: 1px solid #fff; border-radius: 5px; height: 12em; margin-bottom: 1em; text-align: center; padding-top: 1em;">
-                        <div class="profile-userpic">
-                            <img src="image/profile.jpg" class="img-responsive"
-                                style="width: 5em; height: 5em; border-radius: 50%;">
-                        </div>
-                        <div class="profile-usertitle" style="padding-bottom: 0.5em;">
-                            <div class="profile-usertitle-name" style="font-size: 1em;">
-                                manager
-                            </div>
-                            <div class="profile-usertitle-level" style="font-size: 0.8em;">
-                                level 1
-                            </div>
-                        </div>
-                        <div>
-                            <button type="button" class="btn btn-success btn-sm"
-                                style="font-size: 0.8em;">MyPage</button>
-                            <button type="button" class="btn btn-danger btn-sm"
-                                style="font-size: 0.8em;">Logout</button>
-                        </div>
-                    </div>
-                </div>
-                
                 <div class="nav__list">
-                    <a href="board/board-list.html" class="nav__link active">
-                        <ion-icon name="chevron-up-circle-outline" class="nav__icon"></ion-icon>
-                        <span class="nav_name">등업</span>
+                    <a href="board-list.html" class="nav__link active">
+                        <ion-icon name="reader-outline" class="nav__icon"></ion-icon>
+                        <span class="nav_name">study_board</span>
                     </a>
-                    <a href="message.html" class="nav__link">
+                    <a href="#" class="nav__link">
                         <ion-icon name="chatbubbles-outline" class="nav__icon"></ion-icon>
                         <span class="nav_name">Messenger</span>
                     </a>
-
-                    <hr>
 
                     <div href="#" class="nav__link collapse">
                         <ion-icon name="folder-outline" class="nav__icon"></ion-icon>
@@ -201,14 +191,12 @@
         <header class="head">
             <div class="mainlogo">
                 <a href="index.html"><img class="logo" src="image/logo.png"></a>
-
             </div>
             <div class="mainimg">
                 <img src="image/main.png">
             </div>
             <br style="content: ''; display: block; clear: both;">
             <hr style="content: ''; display: block; clear: both;">
-
         </header>
 
         <!-- floating menu -->
@@ -248,14 +236,80 @@
 
         <br><br>
 
-        <!-- Calender -->
-        <div class="cal_top">
-            <a href="#" id="movePrevMonth"><span id="prevMonth" class="cal_tit">&lt;</span></a>
-            <span id="cal_top_year"></span>
-            <span id="cal_top_month"></span>
-            <a href="#" id="moveNextMonth"><span id="nextMonth" class="cal_tit">&gt;</span></a>
+        <div class="w3-content w3-container w3-margin-top">
+            <div class="w3-container w3-card-4">
+                <div class="w3-center w3-large w3-margin-top">
+                    <h2><strong>사용자님의 My Page</strong></h2>
+                    <br>
+                    <br>
+                </div>
+                <div class="mypagebox">
+                    <form id="myForm" action="../member/update_mypage.do" method="post">
+
+
+                        <br>
+                </div>
+                <br>
+                <div class="mypagebox">
+                    <form id="myForm" action="../member/update_mypage.do" method="post">
+                        <p>
+                            <label>ID</label>
+                            <input class="w3-input" type="text" id="id" name="id" readonly value="사용자님의 아이디">
+                        </p>
+                        <p>
+                            <label>Nickname</label>
+                            <input class="w3-input" type="text" id="name" name="name" value="사용자님의 닉네임" required>
+                        </p>
+                        <p>
+                            <label>Email</label>
+                            <input class="w3-input" type="text" id="email" name="email" value="사용자님의 이메일" required>
+                        </p>
+                        <p>
+                            <label>Phone Number</label>
+                            <input class="w3-input" type="text" id="phone" name="phone" value="사용자님의 전화번호" required>
+                        </p>
+                        <p class="w3-center">
+                            <button type="submit" id="mypage_btn"
+                                class="w3-button w3-block w3-ripple w3-margin-top w3-round">회원정보 변경</button>
+                        </p>
+                    </form>
+                    <br>
+                </div>
+                <br>
+                <br />
+
+                <div class="mypagebox">
+                    <form id="pwForm" action="../member/update_pw.do" method="post">
+                        <input type="hidden" name="id" value="${ member.id }">
+                        <p>
+                            <label>Password</label>
+                            <input class="w3-input" id="old_pw" name="old_pw" type="password" required>
+                        </p>
+                        <p>
+                            <label>New Password</label>
+                            <input class="w3-input" id="pw" name="pw" type="password" required>
+                        </p>
+                        <p>
+                            <label>Confirm</label>
+                            <input class="w3-input" type="password" id="pw2" type="password" required>
+                        </p>
+                        <p class="w3-center">
+                            <button type="submit" id="mypage_btn"
+                                class="w3-button w3-block w3 w3-ripple w3-margin-top w3-round">비밀번호 변경</button>
+                        </p>
+                    </form>
+                    <br>
+                </div>
+                <br>
+                <p class="w3-center">
+                    <button type="submit" id="mypage_btn" class="w3-button w3-block w3 w3-ripple w3-margin-top w3-round"
+                        onclick="location.href='unregister.html'">회원 탈퇴</button>
+                </p>
+            </div>
         </div>
-        <div id="cal_tab" class="cal" style="text-align: center; width: 60em;"></div>
+
+
+    </div>
     </div>
 
 
@@ -277,143 +331,7 @@
                 });
             });
         });
-        // ]]>
-    </script>
-
-    <!-- Calender js -->
-    <script type="text/javascript">
-        var today = null;
-        var year = null;
-        var month = null;
-        var firstDay = null;
-        var lastDay = null;
-        var $tdDay = null;
-        var $tdSche = null;
-
-        $(document).ready(function () {
-            drawCalendar();
-            initDate();
-            drawDays();
-            drawSche();
-            $("#movePrevMonth").on("click", function () { movePrevMonth(); });
-            $("#moveNextMonth").on("click", function () { moveNextMonth(); });
-        });
-
-        //calendar 그리기
-        function drawCalendar() {
-            var setTableHTML = "";
-            setTableHTML += '<table class="calendar">';
-            setTableHTML += '<tr><th>SUN</th><th>MON</th><th>TUE</th><th>WED</th><th>THU</th><th>FRI</th><th>SAT</th></tr>';
-            for (var i = 0; i < 6; i++) {
-                setTableHTML += '<tr height="70em">';
-                for (var j = 0; j < 7; j++) {
-                    setTableHTML += '<td style="text-overflow:ellipsis; overflow:hidden; white-space:nowrap">';
-                    setTableHTML += '    <div class="cal-day"></div>';
-                    setTableHTML += '    <div class="cal-schedule" style="font-size: 0.5em"></div>';
-                    setTableHTML += '</td>';
-                }
-                setTableHTML += '</tr>';
-            }
-            setTableHTML += '</table>';
-            $("#cal_tab").html(setTableHTML);
-        }
-
-        //날짜 초기화
-        function initDate() {
-            $tdDay = $("td div.cal-day")
-            $tdSche = $("td div.cal-schedule")
-            dayCount = 0;
-            today = new Date();
-            year = today.getFullYear();
-            month = today.getMonth() + 1; //getMonth()의 반환값이 0-11이므로 +1
-            if (month < 10) { month = "0" + month; }
-            firstDay = new Date(year, month - 1, 1);
-            lastDay = new Date(year, month, 0); //마지막 날짜를 반환
-        }
-
-        //calendar 날짜표시
-        function drawDays() {
-            $("#cal_top_year").text(year);
-            $("#cal_top_month").text(month);
-            for (var i = firstDay.getDay(); i < firstDay.getDay() + lastDay.getDate(); i++) {
-                $tdDay.eq(i).text(++dayCount);
-            }
-            for (var i = 0; i < 42; i += 7) {
-                $tdDay.eq(i).css("color", "red");
-            }
-            for (var i = 6; i < 42; i += 7) {
-                $tdDay.eq(i).css("color", "blue");
-            }
-        }
-
-        //calendar 월 이동
-        function movePrevMonth() {
-            month--;
-            if (month <= 0) {
-                month = 12;
-                year--;
-            }
-            if (month < 10) {
-                month = String("0" + month);
-            }
-            getNewInfo();
-        }
-
-        function moveNextMonth() {
-            month++;
-            if (month > 12) {
-                month = 1;
-                year++;
-            }
-            if (month < 10) {
-                month = String("0" + month);
-            }
-            getNewInfo();
-        }
-
-        function getNewInfo() {
-            for (var i = 0; i < 42; i++) {
-                $tdDay.eq(i).text("");
-                $tdSche.eq(i).text("");
-            }
-            dayCount = 0;
-            firstDay = new Date(year, month - 1, 1);
-            lastDay = new Date(year, month, 0);
-            drawDays();
-            drawSche();
-        }
-
-        //데이터 등록
-        function setData() {
-            jsonData =
-            {
-                "2021": {
-                    "09": {
-                        "20": "추석연휴"
-                        , "21": "추석"
-                        , "22": "추석연휴"
-                    }
-                }
-            }
-        }
-
-        //스케줄 그리기
-        function drawSche() {
-            setData();
-            var dateMatch = null;
-            for (var i = firstDay.getDay(); i < firstDay.getDay() + lastDay.getDate(); i++) {
-                var txt = "";
-                txt = jsonData[year];
-                if (txt) {
-                    txt = jsonData[year][month];
-                    if (txt) {
-                        txt = jsonData[year][month][i];
-                        dateMatch = firstDay.getDay() + i - 1;
-                        $tdSche.eq(dateMatch).text(txt);
-                    }
-                }
-            }
-        }
+		// ]]>
     </script>
 
     <!-- IONICONS -->
@@ -440,7 +358,18 @@
             }
         }
         showMenu('nav-toggle', 'navbar', 'body-pd')
+
     </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./js/bootstrap.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/browser.min.js"></script>
+    <script src="js/breakpoints.min.js"></script>
+    <script src="js/util.js"></script>
+
+
 </body>
 
 </html>
