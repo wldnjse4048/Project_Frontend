@@ -67,7 +67,13 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    overflow: hidden;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+}
+
+.nav::-webkit-scrollbar { 
+    display: none;
+    width: 0 !important;
 }
 
 .nav__brand {
@@ -75,7 +81,7 @@ a {
     grid-template-columns: max-content max-content;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .nav__toggle {
@@ -97,13 +103,9 @@ a {
     padding: .75rem;
     color: var(--white-color);
     border-radius: .5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     transition: .3s;
     cursor: pointer;
-}
-
-.nav__link:hover {
-    background-color: var(--first-color);
 }
 
 .nav__icon {
@@ -124,11 +126,6 @@ a {
     padding: 2rem 0 0 15rem;
 } */
 
-/* Active links menu */
-.active {
-    background-color: var(--first-color);
-}
-
 /* COLLAPSE */
 .collapse {
     grid-template-columns: 20px max-content 1fr;
@@ -145,13 +142,13 @@ a {
 }
 
 .collapse__sublink {
-    color: var(--sub-color);
+    color: var(--white-color);
     font-size: var(--small-font-size);
 }
 
-.collapse__sublink:hover {
+/* .collapse__sublink:hover {
     color: var(--white-color);
-}
+} */
 
 /* Show collapse */
 .showCollapse {
