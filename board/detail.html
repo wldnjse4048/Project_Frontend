@@ -71,7 +71,7 @@
 
 <body id="body-pd">
 
-    <div class="l-navbar" id="navbar">
+    <div class="l-navbar expander" id="navbar">
         <nav class="nav">
             <div>
                 <div class="nav__brand">
@@ -161,7 +161,7 @@
             <h2>게시글 상세보기</h2>
             <br><br><br>
 
-            <table class="table table-bordered">
+            <table class="table">
                 <thead>
                     <tr>
                         <th id="table-bno" scope="col">번호</th>
@@ -185,8 +185,8 @@
             <!-- 좋아요, 수정, 삭제 btn -->
             <div class="content clearfix">
                 <button class="btn btn-primary btn1">좋아요♡ <span id="like-count"> 20</span></button>
-                    <button type="button" class="btn btn-danger btn2">삭제하기</button>
-                    <button type="button" class="btn btn-primary btn2" onclick="location.href='modification.html'">수정하기</a>
+                    <button type="button" class="btn2">삭제하기</button>
+                    <button type="button" class="btn2" onclick="location.href='modification.html'">수정하기</a>
             </div>
         </div>
     </section>
@@ -202,7 +202,7 @@
                 <textarea class="comment-text" placeholder="내용을 입력하세요"></textarea>
             </div>
             <div class="content commentBtn">
-                <button type="button" class="btn">등록</button>  
+                <button type="button">등록</button>  
             </div>
         </div>
         <hr>
@@ -211,8 +211,8 @@
             <div class="comment-date">2021-09-07 11:50</div>
             <textarea class="comment-text" readonly></textarea>
             <div class="content commentBtn clearfix">
-                <button type="button" class="btn btn-primary" onclick="location.href='modification.html'">수정</button>                    
-                <button type="button" class="btn btn-danger">삭제</button>                    
+                <button type="button" class="btn2" onclick="location.href='modification.html'">수정</button>                    
+                <button type="button" class="btn2">삭제</button>                    
             </div>
         </div>
         <hr>
@@ -245,8 +245,6 @@
             });
         });
         // ]]>
-    </script>
-
     </script>
 
     <!-- IONICONS -->
