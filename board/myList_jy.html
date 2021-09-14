@@ -12,7 +12,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/board.css">
+    <link rel="stylesheet" href="../css/myList_jy.css">
     <!-- JQUERY -->
     <script src="js/jquery-3.6.0.js"></script>
 
@@ -35,6 +35,8 @@
             width: 78%;
             text-align: right;
         }
+
+
 
         /* #floatMenu */
         #floatMenu {
@@ -65,7 +67,11 @@
             display: block;
         }
 
-      
+        /* Carousel Banner */
+        .carousel-inner>.carousel-item>img {
+            width: 25em;
+            height: 15em;
+        }
     </style>
 </head>
 
@@ -137,10 +143,10 @@
         <!-- Header -->
         <header class="head">
             <div class="mainlogo">
-                <a href="index.html"><img class="logo" src="image/logo.png"></a>
+                <a href="index.html"><img class="logo" src="../image/logo.png"></a>
             </div>
             <div class="mainimg">
-                <img src="image/main.png">
+                <img src="../image/main.png">
             </div>
             <br style="content: ''; display: block; clear: both;">
             <hr style="content: ''; display: block; clear: both;">
@@ -155,56 +161,158 @@
                 <li><a href="https://programmers.co.kr/">프로그래머스</a></li>
             </ul>
         </div>
-        <!-- board Section -->
-        <section>
-            <div class="board">
-                <h2>게시글 등록</h2>
 
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th id="table-writer" scope="col">작성자</th>
-                            <th id="table-title" scope="col">글 제목</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td scope="col">닉네임1</td>
-                            <td scope="col"><input type="text" placeholder="글 제목 작성"></td>
-                        </tr>
-                    </tbody>
-                    <select class="writing-selectList selectList">
-                        <option selected>직군</option>
-                        <option>IT</option>
-                        <option>제조</option>
-                        <option>교육</option>
-                    </select>
-                    <select class="writing-selectList selectList">
-                        <option selected>합격/불합격</option>
-                        <option>비공개</option>
-                        <option>합격</option>
-                        <option>불합격</option>
-                    </select>
-                </table>
-                <textarea></textarea>
-                <table class="table table-bordered table-sm">
-                    <tr>
-                        <th id="table-writer" scope="col">파일</th>
-                        <th id="selectedFile" scope="col">선택된 파일 :
-                            <div class="uploadBtn">
-                                <button>파일선택</button>
-                            </div>
-                        </th>
-                    </tr>
-                </table>
-                <!-- search button -->
-                <div class="writing-boardBtn">
-                    <button type="submit">등록</button>
-                    <button type="button" onclick="location.href='resumeList.html'">취소</button>
-                </div>
-            </div>
-        </section>
+        <!-- myList start -->
+        <header id="board-header">
+            <a href="myList.html" style="text-align: center;">
+                <h2>내 글 확인</h2>
+            </a>
+        </header>
+
+
+        <table class="menu_tab">
+            <colgroup>
+                <col width="125">
+                <col width="125">
+                <col width="">
+                <col width="">
+                <col width="">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <td class="active line bg">내가 쓴 게시글</td>
+                    <td class="box bg_sub"><a href="../board/myComment_jy.html">내가 쓴 댓글</a></td>
+                    <td class="blank line"></td>
+                    <td class="blank line"></td>
+                    <td class="blank line"></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <div class="list_manage_menu clearfix">
+
+            <input type="hidden" id="selectAll">
+            <button type="button" id="selectAllBtn" for onclick="selectAll(this)">전체선택</button>
+
+            <button type="button" id="deleteBtn" onclick="location.href='';">삭 제</button>
+
+            <select name="viewList" id="viewList">
+                <option>목록 10개</option>
+                <option selected="">목록 20개</option>
+                <option>목록 30개</option>
+                <option>목록 40개</option>
+            </select>
+
+        </div>
+
+
+
+        <!-- board-list-->
+
+
+        <table class="table talbe-striped">
+
+            <thead>
+                <tr>
+                    <th class="list_chkbox" nowrap="nowrap"></th>
+                    <th class="list_bno">번호</th>
+                    <th class="list_witer">작성자</th>
+                    <th class="list_title">글 제목</th>
+                    <th class="list_date">등록일</th>
+                    <th class="list_count">조회수</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td class="list_chkbox"><input type="checkbox" name="data" id="bno" value="bno_data"></td>
+                    <td class="list_bno">50</td>
+                    <td class="list_witer">닉네임1</td>
+                    <td class="list_title"><a href="#">spring 스터디 구해요</a></td>
+                    <td class="list_date">2021-09-06</td>
+                    <td class="list_count">20</td>
+                </tr>
+
+                <tr>
+                    <td class="list_chkbox"><input type="checkbox" name="data" id="bno" value="bno_data"></td>
+                    <td class="list_bno">50</td>
+                    <td class="list_witer">닉네임1</td>
+                    <td class="list_title"><a href="#">spring 스터디 구해요</a></td>
+                    <td class="list_date">2021-09-06</td>
+                    <td class="list_count">20</td>
+                </tr>
+
+                <tr>
+                    <td class="list_chkbox"><input type="checkbox" name="data" id="bno" value="bno_data"></td>
+                    <td class="list_bno">50</td>
+                    <td class="list_witer">닉네임1</td>
+                    <td class="list_title"><a href="#">spring 스터디 구해요</a></td>
+                    <td class="list_date">2021-09-06</td>
+                    <td class="list_count">20</td>
+                </tr>
+
+                <tr>
+                    <td class="list_chkbox"><input type="checkbox" name="data" id="bno" value="bno_data"></td>
+                    <td class="list_bno">50</td>
+                    <td class="list_witer">닉네임1</td>
+                    <td class="list_title"><a href="#">spring 스터디 구해요</a></td>
+                    <td class="list_date">2021-09-06</td>
+                    <td class="list_count">20</td>
+                </tr>
+
+                <tr>
+                    <td class="list_chkbox"><input type="checkbox" name="data" id="bno" value="bno_data"></td>
+                    <td class="list_bno">50</td>
+                    <td class="list_witer">닉네임1</td>
+                    <td class="list_title"><a href="#">spring 스터디 구해요</a></td>
+                    <td class="list_date">2021-09-06</td>
+                    <td class="list_count">20</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <form name="frmSearch" action="" onsubmit="return false;">
+
+            <select class="search-list">
+                <option selected>검색조건</option>
+                <option>작성자</option>
+                <option>글제목</option>
+                <option>글내용</option>
+            </select>
+
     </div>
+
+    <!-- 검색창 -->
+    <div class="input_search_area">
+        <div class="input_component" style="width: 35em">
+            <input type="text" id="query" name="query" placeholder="검색어를 입력해주세요" value="" onkeydown="">
+        </div>
+        <button onclick="" class="btn-search">검색</button>
+    </div>
+    </form>
+    </div>
+    </div>
+
+    <!-- paging Btn -->
+    <div id="pageBtn">
+        <a href="#" class="previous round">&#8249;</a>
+        <a href="#" class="previous round">1</a>
+        <a href="#" class="previous round">2</a>
+        <a href="#" class="previous round">3</a>
+        <a href="#" class="previous round">4</a>
+        <a href="#" class="previous round">5</a>
+        <a href="#" class="next round">&#8250;</a>
+    </div>
+
+    </div>
+    </div>
+
+
+
+
+
 
     <!-- scroll -->
     <script type="text/javascript">
@@ -224,10 +332,10 @@
                 });
             });
         });
-        // ]]>
+		// ]]>
     </script>
 
-    </script>
+
 
     <!-- IONICONS -->
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>

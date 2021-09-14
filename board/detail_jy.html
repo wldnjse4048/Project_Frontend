@@ -12,7 +12,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/board.css">
+    <link rel="stylesheet" href="../css/detail_jy.css">
     <!-- JQUERY -->
     <script src="js/jquery-3.6.0.js"></script>
 
@@ -35,6 +35,7 @@
             width: 78%;
             text-align: right;
         }
+
 
         /* #floatMenu */
         #floatMenu {
@@ -65,13 +66,17 @@
             display: block;
         }
 
-      
+        /* Carousel Banner */
+        .carousel-inner>.carousel-item>img {
+            width: 25em;
+            height: 15em;
+        }
     </style>
 </head>
 
 <body id="body-pd">
 
-    <div class="l-navbar expander" id="navbar">
+    <div class="l-navbar" id="navbar">
         <nav class="nav">
             <div>
                 <div class="nav__brand">
@@ -137,10 +142,10 @@
         <!-- Header -->
         <header class="head">
             <div class="mainlogo">
-                <a href="index.html"><img class="logo" src="image/logo.png"></a>
+                <a href="index.html"><img class="logo" src="../image/logo.png"></a>
             </div>
             <div class="mainimg">
-                <img src="image/main.png">
+                <img src="../image/main.png">
             </div>
             <br style="content: ''; display: block; clear: both;">
             <hr style="content: ''; display: block; clear: both;">
@@ -155,87 +160,138 @@
                 <li><a href="https://programmers.co.kr/">프로그래머스</a></li>
             </ul>
         </div>
-        <!-- board Section -->
-        <section>
-            <div class="board">
-                <h2>게시글 등록</h2>
 
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th id="table-writer" scope="col">작성자</th>
-                            <th id="table-title" scope="col">글 제목</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td scope="col">닉네임1</td>
-                            <td scope="col"><input type="text" placeholder="글 제목 작성"></td>
-                        </tr>
-                    </tbody>
-                    <select class="writing-selectList selectList">
-                        <option selected>직군</option>
-                        <option>IT</option>
-                        <option>제조</option>
-                        <option>교육</option>
-                    </select>
-                    <select class="writing-selectList selectList">
-                        <option selected>합격/불합격</option>
-                        <option>비공개</option>
-                        <option>합격</option>
-                        <option>불합격</option>
-                    </select>
-                </table>
-                <textarea></textarea>
-                <table class="table table-bordered table-sm">
+        <!-- myList profile -->
+        <header id="board-header">
+            <a style="text-align: center;">
+                <h2>게시글 상세보기</h2>
+            </a>
+            <hr>
+        </header>
+
+        <!-- 게시글 상세보기 테이블 -->
+        <div class="content-box">
+            <table class="content-table">
+                <thead>
                     <tr>
-                        <th id="table-writer" scope="col">파일</th>
-                        <th id="selectedFile" scope="col">선택된 파일 :
-                            <div class="uploadBtn">
-                                <button>파일선택</button>
-                            </div>
-                        </th>
+                        <th id="table-bno" scope="col" width="70">번호</th>
+                        <th id="table-writer" scope="col" width="120">작성자</th>
+                        <th id="table-title" scope="col" widhh="460">글 제목</th>
+                        <th id="table-date" scope="col" width="130">작성일</th>
+                        <th id="table-count" scope="col" width="100">조회수</th>
                     </tr>
-                </table>
-                <!-- search button -->
-                <div class="writing-boardBtn">
-                    <button type="submit">등록</button>
-                    <button type="button" onclick="location.href='resumeList.html'">취소</button>
-                </div>
+                </thead>
+
+                <tbody>
+                    <td>50</td>
+                    <td>닉네임1</td>
+                    <td>spring 스터디 구해요</td>
+                    <td>2021-09-06</td>
+                    <td>20</td>
+                </tbody>
+
+            </table>
+
+            <textarea id="content-text" readonly></textarea>
+
+        </div>
+
+        
+
+        <!-- 좋아요, 수정, 삭제 btn -->
+        <div class="content-btn clearfix">
+            <button type="button" id="like_btn"
+                onclick="location.href='';">좋아요♡ <span id="like-count"> 20</span></button>
+            
+            <button type="button" id="deleteBtn" onclick="location.href='';">삭제하기</button>
+            
+            <button type="button" id="modifyBtn" onclick="location.href='';">수정하기</button>
+        </div>
+
+
+        <!-- 댓글 관련 -->
+        <section id="comments">
+
+            <div id="comment-head" class="comment-row">
+                댓글<span id="comments-count"> 2 </span>
             </div>
+
+            <div class="comment-row">
+                <textarea name="new-comment" id="new_comment" rows="2" placeholder="내용을 입력하세요"></textarea>
+
+            </div>
+            <div class="comment-row clearfix">
+                <button id="comment_submit" type="submit"
+                            onclick="submitComment">등록</button>
+            </div>
+            <hr>
+
+            <div class="comment-row ">
+                <div class="comment-writer">닉네임</div>
+                <div class="comment-date">2021-09-06 11:50</div>
+                <div class="comment-content ">comment 2</div>
+
+                <div class="comment-row clearfix">
+                    <button id="comment_delete" type="submit"
+                        onclick="submitComment">삭제</button>
+                    <button id="comment_modify" type="submit"
+                        onclick="submitComment">수정</button>
+                </div>
+                <hr>
+            </div>
+
+            <div class="comment-row">
+                <div class="comment-writer">닉네임</div>
+                <div class="comment-date">2021-09-06 11:50</div>
+                <div class="comment-content">comment 1</div>
+
+                <div class="comment-row clearfix">
+                    <button id="comment_delete" type="submit"
+                        onclick="submitComment">삭제</button>
+                    <button id="comment_modify" type="submit"
+                        onclick="submitComment">수정</button>
+                </div>
+                <hr>    
+            </div>
+
         </section>
-    </div>
 
-    <!-- scroll -->
-    <script type="text/javascript">
-        // <![CDATA[ 
-        var name = "#floatMenu";
-        var menuYloc = null;
+        <!-- scroll -->
+        <script type="text/javascript">
+            // <![CDATA[ 
+            var name = "#floatMenu";
+            var menuYloc = null;
 
-        $(document).ready(function () {
-            menuYloc = parseInt($(name).css("top").substring(0, $(name).css("top").indexOf("px")))
-            $(window).scroll(function () {
-                offset = menuYloc + $(document).scrollTop() + "px";
-                $(name).animate({
-                    top: offset
-                }, {
-                    duration: 400,
-                    queue: false
+            $(document).ready(function () {
+                menuYloc = parseInt($(name).css("top").substring(0, $(name).css("top").indexOf("px")))
+                $(window).scroll(function () {
+                    offset = menuYloc + $(document).scrollTop() + "px";
+                    $(name).animate({
+                        top: offset
+                    }, {
+                        duration: 400,
+                        queue: false
+                    });
                 });
             });
-        });
-        // ]]>
-    </script>
+		// ]]>
+        </script>
 
-    </script>
+        <!-- likeBtn-->
+        <script>
+            $("#like_btn").click(function() {
+                $(this).toggleClass("done");
+            })
+            </script>
 
-    <!-- IONICONS -->
-    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
-    <!-- JS -->
-    <script type="text/javascript" src="js/main.js"></script>
 
-    <script type="text/javascript" src="js/bootstrap.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <!-- IONICONS -->
+        <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+        <!-- JS -->
+        <script type="text/javascript" src="js/main.js"></script>
+
+        <script type="text/javascript" src="js/bootstrap.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
 </body>
 
 </html>

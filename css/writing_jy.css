@@ -1,0 +1,81 @@
+/* writing table*/
+.writing_box{
+    width: 100%;
+}
+
+#writing_writer{
+    width: 10em;
+    text-align: center;
+}
+
+#writing_title{
+    width: 40em;
+    text-align: center;
+}
+
+.w_title{
+    width: 66em;
+}
+
+.selectFilter{
+    float: right;
+}
+
+
+#writing-listArea{
+    display: block;
+    width: 5em;
+    float: right;
+    margin: auto;
+}
+
+#writing-selectList{
+    display: block;
+    width: 8em;
+    float: right;
+    margin: auto;
+}
+
+
+#textWrite{
+    width: 100%;
+    overflow-y: hidden;
+    resize: none;
+    min-height: 20em;
+}
+
+#fileTitle{
+    width: 6em;
+    text-align: center;
+    padding: 0.5em;
+}
+
+#selectedFile{
+    padding: 0.5em;
+    
+}
+
+.uploadBtn{
+    float: right;
+}
+
+#selectFileBtn:hover{
+    color:white;
+    background-color: rgba(20, 50, 120, 0.8);
+}
+
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.writing-boardBtn>button{
+    float: right;
+    margin: 0.25em;
+}
+
+.writing-boardBtn>button:hover{
+    color:white;
+    background-color: rgba(20, 50, 120, 0.8);
+}
