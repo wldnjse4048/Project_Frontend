@@ -133,17 +133,18 @@ a {
 
 .collapse__link {
     justify-self: flex-end;
-    transition: .5;
+    transition: .5s;
 }
 
 .collapse__menu {
     display: none;
-    padding: .75rem 2.25rem;
+    padding: .75rem 2rem 0;
 }
 
 .collapse__sublink {
     color: var(--white-color);
     font-size: var(--small-font-size);
+    margin-bottom: 1em;
 }
 
 /* .collapse__sublink:hover {
@@ -153,6 +154,7 @@ a {
 /* Show collapse */
 .showCollapse {
     display: block;
+    width: 10em;
 }
 
 /* Rotate icon */
