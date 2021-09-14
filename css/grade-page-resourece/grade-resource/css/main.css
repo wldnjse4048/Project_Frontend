@@ -33,10 +33,9 @@ hr{
 /*//////////////////////////////////////////////////////////////////
 [ 모달창 ]*/
 #modal {
-  align-items: center;
+
   display: flex;
   flex-direction: column;
-  font-family: sans-serif;
   padding: 30px;
 }
 /*//////////////////////////////////////////////////////////////////
@@ -56,12 +55,12 @@ hr{
 }
 #btn-1{
   border-radius: 5px;
-  background: rgba(232, 22, 86, 0.6);
+  background: rgba(52, 148, 124, 0.6);
   color:#fff;
   border:none;
   position:relative;
   height:40px;
-  width: 250px;
+  width: 160px;
   font-size:1.6em;
   padding:0 2em;
   cursor:pointer;
