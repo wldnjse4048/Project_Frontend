@@ -9,31 +9,34 @@
 
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    
+
     <!-- CSS -->
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/myList_jy.css">
     <!-- JQUERY -->
-    <script src="js/jquery-3.6.0.js" ></script>
+    <script src="js/jquery-3.6.0.js"></script>
 
     <style>
-        .logo{
+        .logo {
             width: 16em;
         }
-        .head{
+
+        .head {
             margin-top: 1em;
         }
-        .mainlogo{
+
+        .mainlogo {
             float: left;
             width: 22%;
         }
-        .mainimg{
+
+        .mainimg {
             float: right;
             width: 78%;
             text-align: right;
         }
 
-     
+
 
         /* #floatMenu */
         #floatMenu {
@@ -66,8 +69,8 @@
 
         /* Carousel Banner */
         .carousel-inner>.carousel-item>img {
-            width: 25em; 
-            height: 15em; 
+            width: 25em;
+            height: 15em;
         }
     </style>
 </head>
@@ -190,7 +193,7 @@
         <div class="list_manage_menu clearfix">
 
             <input type="hidden" id="selectAll">
-            <button type="button" id="selectAllBtn" onclick="location.href='';">전체선택</button>
+            <button type="button" id="selectAllBtn" for onclick="selectAll(this)">전체선택</button>
 
             <button type="button" id="deleteBtn" onclick="location.href='';">삭 제</button>
 
@@ -200,10 +203,10 @@
                 <option>목록 30개</option>
                 <option>목록 40개</option>
             </select>
-    
+
         </div>
 
-        
+
 
         <!-- board-list-->
 
@@ -212,7 +215,7 @@
 
             <thead>
                 <tr>
-                    <th class="list_chkbox"  nowrap="nowrap"></th>
+                    <th class="list_chkbox" nowrap="nowrap"></th>
                     <th class="list_bno">번호</th>
                     <th class="list_witer">작성자</th>
                     <th class="list_title">글 제목</th>
@@ -270,7 +273,7 @@
             </tbody>
         </table>
 
-        <form name="frmSearch" action="" onsubmit="return false;">          
+        <form name="frmSearch" action="" onsubmit="return false;">
 
             <select class="search-list">
                 <option selected>검색조건</option>
@@ -278,68 +281,69 @@
                 <option>글제목</option>
                 <option>글내용</option>
             </select>
-            
-        </div>
-        
-        <!-- 검색창 -->
-        <div class="input_search_area">
-            <div class="input_component" style="width: 35em">
-                <input type="text" id="query" name="query" placeholder="검색어를 입력해주세요" value="" onkeydown="">
-            </div>
-            <button onclick="" class="btn-search">검색</button>
-        </div>
-        </form>
-            </div>
-        </div>
 
-        <!-- paging Btn -->
-        <div id="pageBtn">
-            <a href="#" class="previous round">&#8249;</a>
-            <a href="#" class="previous round">1</a>
-            <a href="#" class="previous round">2</a>
-            <a href="#" class="previous round">3</a>
-            <a href="#" class="previous round">4</a>
-            <a href="#" class="previous round">5</a>
-            <a href="#" class="next round">&#8250;</a>
-        </div>
-        
     </div>
-</div>
 
-        
+    <!-- 검색창 -->
+    <div class="input_search_area">
+        <div class="input_component" style="width: 35em">
+            <input type="text" id="query" name="query" placeholder="검색어를 입력해주세요" value="" onkeydown="">
+        </div>
+        <button onclick="" class="btn-search">검색</button>
+    </div>
+    </form>
+    </div>
+    </div>
 
-       
-    
+    <!-- paging Btn -->
+    <div id="pageBtn">
+        <a href="#" class="previous round">&#8249;</a>
+        <a href="#" class="previous round">1</a>
+        <a href="#" class="previous round">2</a>
+        <a href="#" class="previous round">3</a>
+        <a href="#" class="previous round">4</a>
+        <a href="#" class="previous round">5</a>
+        <a href="#" class="next round">&#8250;</a>
+    </div>
+
+    </div>
+    </div>
+
+
+
+
+
 
     <!-- scroll -->
-	<script type="text/javascript">
-		// <![CDATA[ 
-		var name = "#floatMenu";
-		var menuYloc = null;
+    <script type="text/javascript">
+        // <![CDATA[ 
+        var name = "#floatMenu";
+        var menuYloc = null;
 
-		$(document).ready(function () {
-			menuYloc = parseInt($(name).css("top").substring(0, $(name).css("top").indexOf("px")))
-			$(window).scroll(function () {
-				offset = menuYloc + $(document).scrollTop() + "px";
-				$(name).animate({
-					top: offset
-				}, {
-					duration: 400,
-					queue: false
-				});
-			});
-		});
+        $(document).ready(function () {
+            menuYloc = parseInt($(name).css("top").substring(0, $(name).css("top").indexOf("px")))
+            $(window).scroll(function () {
+                offset = menuYloc + $(document).scrollTop() + "px";
+                $(name).animate({
+                    top: offset
+                }, {
+                    duration: 400,
+                    queue: false
+                });
+            });
+        });
 		// ]]>
-	</script>
+    </script>
 
 
-     <!-- IONICONS -->
-     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
-     <!-- JS -->
-     <script type="text/javascript" src="js/main.js"></script>
-     
-     <script type="text/javascript" src="js/bootstrap.js"></script>
-     <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <!-- IONICONS -->
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+    <!-- JS -->
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
 </body>
 
 </html>
