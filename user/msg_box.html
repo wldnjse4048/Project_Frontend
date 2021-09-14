@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>쪽지함</title>
+
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/message_box.css">
+</head>
+
+<style>
+    /* 쪽지함 전체영역의 가로사이즈와 가운데 정렬 */
+    #message_box {
+        width: 800px;
+        margin: 0 auto;
+    }
+
+    /* 제목영역 */
+    #message_box h3 {
+        margin-top: 30px;
+        padding: 10px;
+        border-bottom: solid 2px #516e7f;
+        font-size: 20px;
+    }
+
+    /* 쪽지함 리스트 항목마다 아래 경계선 */
+    #message li {
+        padding: 10px;
+        border-bottom: solid 1px #dddddd;
+    }
+
+    /* 제목줄 글씨는 굵게 */
+    #message li:nth-child(1) {
+        font-weight: bold;
+    }
+
+    /* span은 사이즈 조절이 안되서 */
+    #message span {
+        display: inline-block;
+        text-align: center;
+    }
+
+    /* 각 칸(컬룸)마다 가로사이즈 지정 */
+    #message .col1 {
+        width: 80px;
+    }
+
+    #message .col2 {
+        width: 410px;
+        text-align: left;
+    }
+
+    #message .col3 {
+        width: 120px;
+    }
+
+    #message .col4 {
+        width: 150px;
+    }
+
+    /* 페이지 네이션 가운데 정렬 및 옆으로 배치 */
+    #page_num {
+        text-align: center;
+        margin: 30px 0;
+    }
+
+    #page_num li {
+        display: inline;
+    }
+
+    /* 버튼들... 오른쪽 정렬 */
+    #message_box .buttons {
+        text-align: right;
+        margin: 20px 0 40px 0;
+    }
+
+    /* 버튼들 옆으로 배치 */
+    #message_box .buttons li {
+        display: inline;
+    }
+
+    /* 버튼들의 글씨가 버튼박스에 너무 꽉차있어서 안이쁨. 그래서 패딩 */
+    #message_box .buttons button {
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <header>
+        <?php include "../lib/header2.php"; ?>
+    </header>
+
+    <section>
+        <div id="main_content">
+            <div id="message_box">
+                <h3>
+                            송신 쪽지함 > 목록보기
+                            <br>
+                            수신 쪽지함 > 목록보기
+                        
+                </h3>
+
+                <!-- 쪽지 리스트가 보여지는 영역(게시판 모양) -->
+                <div>
+                    <ul id="message">
+                        <!-- 리스트의 제목줄 -->
+                        <li>
+                            <span class="col1">번호</span>
+                            <span class="col2">제목</span>
+                            <span class="col3">
+                                받은이 보낸이
+                            </span>
+                            <span class="col4">등록일</span>
+                        </li>
+
+        
+                        <!-- 이 영역은 html영역 -->
+                        <li>
+                            <span class="col1">
+                                <?=$num?>
+                            </span>
+                            <span class="col2"><a href="./message_view.php?mode=<?=$mode?>&num=<?=$num?>">
+                                    <?=$subject?>
+                                </a></span>
+                            <span class="col3">
+                                <?=$msg_id?>
+                            </span>
+                            <span class="col4">
+                                <?=$regist_day?>
+                            </span>
+                        </li>
+
+                    </ul>
+                    <!-- 메시지 출력 END -->
+                    <!-- 페이지 네이션(페이지 번호 표시) -->
+                    <ul id="page_num">
+                        <?php
+                                if($page!=1){
+                                    $newPage= $page-1;
+                                    echo "<li><a href='./message_box.php?mode=$mode&page=$newPage'>◀이전 </a></li>";
+                                }else{
+                                    echo "<li>◀이전 </li>
+                                }
+ 
+                                <li><strong>  </strong></li>";
+                                <li><a href='./message_box.php?mode=$mode&page=$i'>
+                                <li><a href='./message_box.php?mode=$mode&page=$newPage'> 다음▶</a></li>
+                                <li> 다음▶</li>
+                               
+ 
+ 
+                            ?>
+                    </ul>
+
+                    <!-- 쪽지함 이동 버튼들 -->
+                    <ul class="buttons">
+                        <li><button onclick="location.href='./message_box.php?mode=rv'">수신 쪽지함</button></li>
+                        <li><button onclick="location.href='./message_box.php?mode=send'">송신 쪽지함</button></li>
+                        <li><button onclick="location.href='./message_form.php?mode=rv'">쪽지 보내기</button></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    
+
+    <footer>
+        <?php include "../lib/footer.php"; ?>
+    </footer>
+</body>
+
+</html>

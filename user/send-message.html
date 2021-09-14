@@ -183,7 +183,14 @@
         }
 
         /* 서밋버튼 */
-        #write_msg input[type="submit"] {
+        #msg_success {
+            margin: 15px 0 30px 165px;
+            cursor: pointer;
+            background-color: rgb(20, 50, 120);
+            color: white;
+        }
+
+        #msg-cancle {
             margin: 15px 0 30px 165px;
             cursor: pointer;
         }
@@ -192,6 +199,7 @@
         #message_box .top_buttons {
             text-align: right;
             margin: 20px 0px;
+            
         }
 
         #message_box .top_buttons li {
@@ -200,13 +208,17 @@
         }
 
         #message_box .top_buttons li a:link {
-            text-decoration: underline;
-            color: green;
+            text-decoration: none;
+            color: rgb(20, 50, 120);
         }
 
         #message_box .top_buttons li a:visited {
-            text-decoration: underline;
-            color: green;
+            text-decoration: none;
+            color: rgb(20, 50, 120);
+        }
+
+        #message_box .top_buttons :hover {
+            color: rgb(64, 94, 167);
         }
 
     </style>
@@ -334,8 +346,8 @@
                                     <br>
                                 </ul>
                                 <!-- 서밋버튼 -->
-                                <input type="submit" value="취소">
-                                <input type="submit" value="보내기">
+                                <input id="msg_cancle" type="submit" value="취소">
+                                <input id="msg_success" type="submit" value="보내기">
                             </div>
                     </form>
                 </div>
