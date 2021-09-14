@@ -7,14 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>잡담드림</title>
 
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
     <!-- JQUERY -->
-    <script src="js/jquery-3.6.0.js"></script>
+    <script src="../js/jquery-3.6.0.js"></script>
 
     <style>
         .logo {
@@ -54,7 +54,7 @@
         }
 
         table.calender th {
-            align: center;
+            text-align: center;
         }
 
         table.calendar td {
@@ -100,7 +100,6 @@
         }
 
         /* MyPage */
-
         .mypagebox {
             border-bottom: 2px solid #ededed;
         }
@@ -131,11 +130,11 @@
                     <a href="#" class="nav__logo">Bedimcode</a>
                 </div>
                 <div class="nav__list">
-                    <a href="board-list.html" class="nav__link active">
+                    <a href="board/board-list.html" class="nav__link active">
                         <ion-icon name="reader-outline" class="nav__icon"></ion-icon>
                         <span class="nav_name">study_board</span>
                     </a>
-                    <a href="#" class="nav__link">
+                    <a href="user/send-message.html" class="nav__link">
                         <ion-icon name="chatbubbles-outline" class="nav__icon"></ion-icon>
                         <span class="nav_name">Messenger</span>
                     </a>
@@ -189,10 +188,10 @@
         <!-- Header -->
         <header class="head">
             <div class="mainlogo">
-                <a href="index.html"><img class="logo" src="image/logo.png"></a>
+                <a href="../index.html"><img class="logo" src="../image/logo.png"></a>
             </div>
             <div class="mainimg">
-                <img src="image/main.png">
+                <img src="../image/main.png">
             </div>
             <br style="content: ''; display: block; clear: both;">
             <hr style="content: ''; display: block; clear: both;">
@@ -206,31 +205,6 @@
                 <li><a href="https://www.jobkorea.co.kr/">잡코리아</a></li>
                 <li><a href="https://programmers.co.kr/">프로그래머스</a></li>
             </ul>
-        </div>
-
-        <!-- 케러셀 -->
-        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="5000">
-                    <img src="image/pic01.jpg" class="d-block w-100">
-                </div>
-                <div class="carousel-item">
-                    <img src="image/pic02.jpg" class="d-block w-100">
-                </div>
-                <div class="carousel-item">
-                    <img src="image/pic03.jpg" class="d-block w-100">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
 
         <br><br>
@@ -279,6 +253,9 @@
                 </p>
 
             </div>
+        </div>
+
+
     </div>
     </div>
 
