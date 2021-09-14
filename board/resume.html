@@ -7,13 +7,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>잡담드림</title>
 
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
 
 	<!-- CSS -->
-	<link rel="stylesheet" href="css/styles.css">
-	<link rel="stylesheet" href="css/board.css" <!-- JQUERY -->
-	<script src="js/jquery-3.6.0.js"></script>
+	<link rel="stylesheet" href="../css/styles.css">
+	<link rel="stylesheet" href="../css/board.css" <!-- JQUERY -->
+	<script src="../js/jquery-3.6.0.js"></script>
 
 	<style>
 		.logo {
@@ -134,24 +134,15 @@
 		<!-- Header -->
 		<header class="head">
 			<div class="mainlogo">
-				<a href="index.html"><img class="logo" src="image/logo.png"></a>
+				<a href="index.html"><img class="logo" src="../image/logo.png"></a>
 			</div>
 			<div class="mainimg">
-				<img src="image/main.png">
+				<img src="../image/main.png">
 			</div>
 			<br style="content: ''; display: block; clear: both;">
 			<hr style="content: ''; display: block; clear: both;">
 		</header>
 
-		<!-- floating menu -->
-		<div id="floatMenu">
-			<ul>
-				<li><a href="https://www.16personalities.com/ko">자기분석<br>MBTI</a></li>
-				<li><a href="https://www.saramin.co.kr/zf_user/">사람인</a></li>
-				<li><a href="https://www.jobkorea.co.kr/">잡코리아</a></li>
-				<li><a href="https://programmers.co.kr/">프로그래머스</a></li>
-			</ul>
-		</div>
 		<!-- board Section -->
 		<section id="board-section">
 			<div class="board">
@@ -160,7 +151,7 @@
 				<h6><strong>자기소개서 공유 게시판</strong></h6>
 				<br>
 
-				<select class=selectList>
+				<select class=board-selectList>
 					<option selected>목록개수</option>
 					<option>10개</option>
 					<option>20개</option>
@@ -182,7 +173,7 @@
 					<tr>
 						<td scope="row">1</td>
 						<td>닉네임</td>
-						<td><a href="/detail.html">xx기업 자기소개서</a></td>
+						<td><a href="../board/detail.html">xx기업 자기소개서</a></td>
 						<td>2021-09-01</td>
 						<td>10</td>
 					</tr>
@@ -206,26 +197,26 @@
 		<!-- search button -->
 		<div class="container">
 			<div>
-				<select class="selectList2 ">
+				<select class="board-selectList2 ">
 					<option selected>직군</option>
 					<option>IT</option>
 					<option>제조</option>
 					<option>교육</option>
 				</select>
-				<select class="selectList3 ">
+				<select class="board-selectList3 ">
 					<option selected>검색조건</option>
 					<option>작성자</option>
 					<option>글제목</option>
 					<option>글내용</option>
 				</select>
-				<div class="container-1 ">
+				<div class="board-search">
 					<input type="search" id="search" placeholder="글내용 검색" />
-					<button id="icon">검색</button>
+					<button class="board-searchIcon">검색</button>
 				</div>
-				<div class="boardBtn boardBtn-1 ">
+				<div class="boardListBtn">
 					<button type="submit" onclick="location.href=''">내글보기</button>
 				</div>
-				<div class="boardBtn boardBtn-2 ">
+				<div class="boardListBtn">
 					<button type="button" class="writingBtn" onclick="location.href='board_writing.html'">작성하기</button>
 				</div>
 			</div>
@@ -233,7 +224,7 @@
 	</div>
 
 	<!-- page button -->
-	<div id="pageBtn">
+	<div id="board-pageBtn">
 		<a href="#" class="previous round">&#8249;</a>
 		<a href="#" class="previous round">1</a>
 		<a href="#" class="previous round">2</a>
@@ -269,10 +260,10 @@
 			<!-- IONICONS -->
 			<script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
 			<!-- JS -->
-			<script type="text/javascript" src="js/main.js"></script>
+			<script type="text/javascript" src="../js/main.js"></script>
 
-			<script type="text/javascript" src="js/bootstrap.js"></script>
-			<script type="text/javascript" src="js/bootstrap.min.js"></script>
+			<script type="text/javascript" src="../js/bootstrap.js"></script>
+			<script type="text/javascript" src="../js/bootstrap.min.js"></script>
 </body>
 
 </html>
