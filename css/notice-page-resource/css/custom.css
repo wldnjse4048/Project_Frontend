@@ -1,0 +1,71 @@
+h4{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+hr{
+    height: 20px;
+}
+
+#regist{
+    text-align: right;
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ 모달창버튼 ]*/
+#reveinfleur{
+    text-align:center;
+  }
+  #reveinfleur:before{
+    content:'';
+    height:100%;
+    display:inline-block;
+    vertical-align:middle;
+  }
+  #btn-1{
+    border-radius: 5px;
+    background: rgba(232, 22, 86, 0.6);
+    color:#fff;
+    border:none;
+    position:relative;
+    height:40px;
+    width: 250px;
+    font-size:1.6em;
+    padding:0 2em;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
+  }
+  #btn-1:hover{
+    background:#fff;
+    color:#1AAB8A;
+  }
+  #btn-1:before,button:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #1AAB8A;
+    transition:400ms ease all;
+  }
+  #btn-1:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  #btn-1:hover:before,button:hover:after{
+    width:100%;
+    transition:800ms ease all;
+  }
+
+  #notice_add_btn{
+    display: block;
+    margin: auto;
+    border: 3px solid black;
+    border-radius: 5px;
+    background-color: rgb(0, 0, 0, 0);
+  }
