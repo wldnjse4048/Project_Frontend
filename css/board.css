@@ -1,9 +1,22 @@
+/* 전체적용 */
+select:hover, textarea:hover, input:hover {
+  border: 2px solid rgb(20, 50, 120);
+}
+
+button:hover {
+  background: rgb(20, 50, 120);
+  color: white;
+  box-shadow: 10px 1px 10px white;
+  opacity: 1em;
+}
+
+
 /*-- 테이블 --*/
 
 .board>h2 {
     text-align: center;
     font-weight: bolder;
-    border-bottom: solid 0.15em rgba(20, 50, 120, 0.6);
+    border-bottom: solid 0.15em rgb(20, 50, 120);
     padding-bottom: 1em;
 }
 
@@ -21,7 +34,6 @@
 
 table {
   text-align: center;
-  border: solid 0.01em rgba(204, 197, 197, 0.788);
 }
 
 .board textarea {
@@ -31,7 +43,7 @@ table {
 
 .board input {
   width: 100%;
-  border: none;
+  border: white;
 }
 
 #table-bno {
@@ -59,6 +71,23 @@ table {
   text-align: left;
 }
 
+a {
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+  background-color: none;
+  color: white;
+}
+
+.table a:hover {
+  text-decoration: underline;
+  background-color: none;
+  color: rgb(20, 50, 120);
+  font-weight: bolder;
+}
+
 /* 검색 */
 #board-section {
   padding-bottom: 1em;
@@ -66,7 +95,7 @@ table {
 
 .selectList2, .selectList3 {
   font-size: 0.8em;
-  height: 2em;
+  height: 3em;
   width: 7em;
   float: left;
 }
@@ -77,61 +106,25 @@ table {
   }
 
   .container-1 input#search{
-    height: 2em;
+    height: 3em;
     width: 50em;
-    background: #ffffff;
-    border: none;
     margin-left: 2em;
     padding-left: 1em;
     font-size: 10pt;
     color: black;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    border: solid #aeb6bdbd;
     float: left;
   }
 
   @media screen and (max-width: 1280px) {
     .container-1 input#search{
-      height: 2em;
       width: 30em;
-      background: #ffffff;
-      border: none;
-      margin-left: 2em;
-      padding-left: 1em;
-      font-size: 10pt;
-      color: black;
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-      border-radius: 5px;
-      border: solid #aeb6bdbd;
-      float: left;
     }
   }
   
   @media screen and (max-width: 980px) {
     .container-1 input#search{
-      height: 2em;
       width: 20em;
-      background: #ffffff;
-      border: none;
-      margin-left: 2em;
-      padding-left: 1em;
-      font-size: 10pt;
-      color: black;
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-      border-radius: 5px;
-      border: solid #aeb6bdbd;
-      float: left;
     }
-  }
- .container-1 button.icon{
-    height: 2.3em;
-    width: 4em;
-    font-size: 10pt;
-    border-radius: 0.5em;
   }
   
   /* 버튼 */
@@ -145,23 +138,24 @@ table {
     height: 2.2em;
     font-size: 0.8em;
     padding: 0 1em;
-    border-radius: 5px;
+    border-radius: 0.5em;
   } 
   
   .boardBtn button{
     font-size: 0.9em;
     width: 6em;
-    height: 1.7em;
+    height: 3em;
     border-radius: 0.5em;
+    margin-right: 0.5em;
     text-align: center;
     float: right;
   }
-
-  @media screen and (max-width: 1280px) {
+  
+  @media screen and (max-width: 1680px) {
     .boardBtn button{
       font-size: 0.9em;
       width: 6em;
-      height: 1.7em;
+      height: 3em;
       border-radius: 0.5em;
       text-align: center;
       float: right;
@@ -172,27 +166,27 @@ table {
     .boardBtn button{
       font-size: 0.9em;
       width: 6em;
-      height: 1.7em;
+      height: 3em;
       border-radius: 0.5em;
       text-align: center;
     }
   }
  
+  .container-1 #icon{
+    height: 3em;
+    width: 4em;
+    font-size: 10pt;
+  } 
 
   #pageBtn {
     text-align: center;
-    margin-top: 4em;
+    margin-top: 7em;
+    border-radius: 0.5em;
   }
   #pageBtn a {
     text-decoration: none;
     display: inline-block;
     padding: 8px 16px;
-  }
-  
-  a:hover {
-    font-weight: bolder;
-    background-color: rgba(26, 40, 167, 0.651);
-    color: white;
   }
   
   .previous {
@@ -212,8 +206,15 @@ table {
     margin: 0.5em auto;
   }
   
-  .commentBtn {
+  .content .btn2 {
     float: right;
+    margin-right: 0.5em;
+    border-radius: 0.5em;
+  }
+
+  .commentBtn button{
+    float: right;
+    border-radius: 0.5em;
   }
 
   .clearfix::after {
@@ -230,6 +231,7 @@ table {
   #backBtn button{
     width: 6em;
     height: 3em;
+    margin-bottom: 5em;
     border-radius: 0.5em;
   }
 
@@ -240,6 +242,8 @@ table {
   .writing-boardBtn button {
     border-radius: 0.5em;
     width: 5em;
+    margin-bottom: 5em;
+    border-radius: 0.5em;
   }
 
   
