@@ -20,23 +20,14 @@
 
 .content-btn{
   margin: 0.5em auto;
-  border-radius: 0.25em;
 }
 
-.btnLike{
-
-}
-
-#modifyBtn{
+#modify_btn{
     float: right;
-    border-radius: 0.25em;
-    margin-right: 0.25em;
 }
 
-#deleteBtn{
+#delete_btn{
     float: right;
-    border-radius: 0.25em;
-    margin-left: 0.25em;
 }
 
 #comments{
@@ -54,15 +45,19 @@
 
 #new_comment{
   float: left;
-  width: 73em;
+  width: 72em;
   margin-bottom: 1.5em;
 }
 
-#comment_submit{
+#comment-submit{
+  display: block;
   float: right;
-  margin: 0.25em auto;
+  margin: auto;
+  width: 4em;
+  height: 3.5em;
   align-items: center;
   padding: 0.5em;
+  background-color: white;
   border-radius: 0.5em;
 }
 
@@ -72,54 +67,44 @@
   height: 2em;
 }
 
-.comment-writer{
-  font-size: 0.5em;
-  color: #7f888f;
-  height: 2em;
-  float: left;
-  margin-right: 0.5em;
-}
-
 .comment-content{
   float: left;
   width: 46em;
   font-size: 1.5em;
-  border-radius: 0.25em;
+  margin-bottom: 0.5em;
 }
 
-#comment_modify{
+#comment-modify{
   float: right;
-  margin-right: 0.25em;
+  margin: auto;
+  width: 3.5em;
+  height: 3em;
   align-items: center;
-  padding: 0.25em; 
-  border-radius: 0.25em;
-  
-}
-
-#comment_delete{
-  float: right;
-  margin-left: 0.25em;
-  padding: 0.25em;
-  align-items: center;
-  border-radius: 0.25em;
-}
-
-#like_btn{
+  padding: 0.5em;
   background-color: white;
-  border: 0.05em solid rgb(20, 50, 120);
-  border-radius: 0.25em;
-  color: rgb(20, 50, 120);
-  font-weight: bold;
+  border-radius: 0.5em;
 }
 
+#comment-delete{
+  float: right;
+  margin: auto;
+  width: 3.5em;
+  height: 3em;
+  align-items: center;
+  background-color: white;
+  border-radius: 0.5em;
+}
 
+#comment-modify:hover{
+    background-color: #0dcaf0;
+}
 
+#comment-submit:hover{
+    background-color: #0dcaf0;
+}
 
-
-#deleteBtn:hover, #modifyBtn:hover,
-#comment_submit:hover, #comment_delete:hover,
-#comment_modify:hover {
-    background-color: rgb(20, 50, 120);
+#comment-delete:hover{
+    background-color: red;
+    border:1px red;
     color: white;
 }
-

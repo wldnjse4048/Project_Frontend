@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>잡담드림</title>
 
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/detail_jy.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/detail_jy.css">
     <!-- JQUERY -->
     <script src="js/jquery-3.6.0.js"></script>
 
@@ -142,10 +142,10 @@
         <!-- Header -->
         <header class="head">
             <div class="mainlogo">
-                <a href="index.html"><img class="logo" src="image/logo.png"></a>
+                <a href="index.html"><img class="logo" src="../image/logo.png"></a>
             </div>
             <div class="mainimg">
-                <img src="image/main.png">
+                <img src="../image/main.png">
             </div>
             <br style="content: ''; display: block; clear: both;">
             <hr style="content: ''; display: block; clear: both;">
@@ -195,10 +195,13 @@
 
         </div>
 
+        
+
         <!-- 좋아요, 수정, 삭제 btn -->
         <div class="content-btn clearfix">
-            <a href="#" id="like-btn" class="btn btn-outline-info">좋아요♡ <span id="like-count"> 20
-                </span></a>
+            <button type="button" id="like_btn"
+                onclick="location.href='';">좋아요♡ <span id="like-count"> 20</span></button>
+            
             <button type="button" id="deleteBtn" onclick="location.href='';">삭제하기</button>
             
             <button type="button" id="modifyBtn" onclick="location.href='';">수정하기</button>
@@ -217,7 +220,7 @@
 
             </div>
             <div class="comment-row clearfix">
-                <button id="comment-submit" type="submit"
+                <button id="comment_submit" type="submit"
                             onclick="submitComment">등록</button>
             </div>
             <hr>
@@ -228,9 +231,9 @@
                 <div class="comment-content ">comment 2</div>
 
                 <div class="comment-row clearfix">
-                    <button id="comment-delete" type="submit"
+                    <button id="comment_delete" type="submit"
                         onclick="submitComment">삭제</button>
-                    <button id="comment-modify" type="submit"
+                    <button id="comment_modify" type="submit"
                         onclick="submitComment">수정</button>
                 </div>
                 <hr>
@@ -242,9 +245,9 @@
                 <div class="comment-content">comment 1</div>
 
                 <div class="comment-row clearfix">
-                    <button id="comment-delete" type="submit"
+                    <button id="comment_delete" type="submit"
                         onclick="submitComment">삭제</button>
-                    <button id="comment-modify" type="submit"
+                    <button id="comment_modify" type="submit"
                         onclick="submitComment">수정</button>
                 </div>
                 <hr>    
@@ -272,6 +275,13 @@
             });
 		// ]]>
         </script>
+
+        <!-- likeBtn-->
+        <script>
+            $("#like_btn").click(function() {
+                $(this).toggleClass("done");
+            })
+            </script>
 
 
         <!-- IONICONS -->
