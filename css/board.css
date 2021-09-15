@@ -14,7 +14,6 @@ button:hover {
 
 
 /*-- 테이블 --*/
-
 .board>h2 {
   text-align: center;
   font-weight: bolder;
@@ -55,7 +54,7 @@ table {
 }
 
 #table-writer {
-  width: 8em;
+  width: 6em;
 }
 
 #table-title {
@@ -72,32 +71,27 @@ table {
 
 #selectedFile {
   text-align: left;
+  font-size: 0.8em;
 }
 
 a {
   color: black;
 }
 
-a:hover {
+/* a:hover {
   text-decoration: underline;
   background-color: none;
   color: white;
-}
+} */
 
-.table a:hover {
+.table > a:hover {
   text-decoration: underline;
   background-color: none;
   color: rgb(20, 50, 120);
-  font-weight: bolder;
 }
 
 /* 검색 */
-#board-section {
-  padding-bottom: 1em;
-}
-
-.board-selectList2,
-.board-selectList3 {
+.select1, .select2 {
   font-size: 0.8em;
   height: 3em;
   width: 7em;
@@ -157,7 +151,7 @@ a:hover {
 }
 
 @media screen and (max-width: 1680px) {
-  .boardListBtn button {
+  .boardBtn button{
     font-size: 0.9em;
     width: 6em;
     height: 3em;
@@ -168,7 +162,7 @@ a:hover {
 }
 
 @media screen and (max-width: 980px) {
-  .boardListBtn button {
+  .boardBtn button{
     font-size: 0.9em;
     width: 6em;
     height: 3em;
