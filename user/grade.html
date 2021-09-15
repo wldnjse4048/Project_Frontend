@@ -191,6 +191,13 @@
 		<button type="button" data-toggle="modal" data-target="#exampleModal" id="btn-1">신청</button>
 		</div>
 	</div>
+
+    <!-- 관리자 -->
+    <!-- <div id="modal">
+		<div id="reveinfleur">
+		<button type="button" data-toggle="modal" data-target="#exampleModal" id="btn-1">승인</button>
+		</div>
+	</div> -->
 	
 	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	  <div class="modal-dialog" role="document">
@@ -228,10 +235,38 @@
 		  </div>
 		  <div class="modal-footer">
 			<button type="button" class="btn btn-secondary" data-dismiss="modal">신청</button>
-			<button type="button" class="btn btn-primary">내글목록</button>
-            <!-- 관리자일시 승인 버튼 활성화 -->
-            <!-- <button type="button" class="btn btn-primary">승인</button> -->
+			<button type="button" class="btn btn-primary">내글목록</button>       
 		  </div>
+
+          <!-- 관리자 -->
+          <!-- <form>
+            <div class="form-group">
+                <label>ID</label>
+                <input name="" class="form-control" placeholder="ID" readonly>
+            </div> 
+            <div class="form-group">
+                <label>nickname</label>
+                <input class="form-control" placeholder="nickname" readonly>
+            </div> 
+            <div class="form-group" >
+                <label>신청등급</label>
+                <div style="border: 2px solid black;">
+                <input class="text" placeholder="GRADE">
+            </div>
+            </div> 
+            <div class="form-group">
+                <label>내용</label>
+                <input class="form-control" placeholder="CONTENT">
+            </div> 
+            <div class="form-group">                
+            </div>																
+        </form>	
+      </div>
+      <div class="modal-footer">   
+        <button type="button" class="btn btn-primary">승인</button>
+      </div> -->
+
+
 		</div>
 	  </div>
 	</div>									
@@ -241,13 +276,6 @@
     
 
     <hr width="70%" color="blue" style="text-align: center;">
-
-	
-
-	
-
-
-	
 	
 	<div class="limiter">
 		<div class="container-table100">
@@ -266,7 +294,7 @@
 						</thead>
 						<tbody>
 								<tr>
-									<td class="column1 col-sm-1"><a href="">1(관리자일시만 a활성)</a></td>
+									<td class="column1 col-sm-1"><a href="grade-detail.html">등업 신청 상세페이지</a></td>
 									<td class="column2 col-sm-3">200398</td>
 									<td class="column3 col-sm-5">content</td>
 									<td class="column4 com-sm-5"></td>
@@ -350,16 +378,10 @@
 									<td class="column2">200389</td>
 									<td class="column3"</td>
 									<td class="column4"></td>
-									<td class="column5 col-sm-1">1</td>
-									
-								</tr>
-
-								
-								
-								
+									<td class="column5 col-sm-1">1</td>								
+								</tr>								
 						</tbody>
 					</table>
-
 
 					
                     <!-- 검색창 -->

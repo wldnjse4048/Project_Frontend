@@ -23,7 +23,8 @@
    
      <link rel="stylesheet" href="../css/notice-page-resource/notice-page-detail-resource/nicepage.css" media="screen">
      <link rel="stylesheet" href="../css/notice-page-resource/notice-page-detail-resource/Page-1.css" media="screen">
- >
+     <script class="u-script" type="text/javascript" src="../css/notice-page-resource/notice-page-detail-resource/jquery.js" defer=""></script>
+     <script class="u-script" type="text/javascript" src="../css/notice-page-resource/notice-page-detail-resource/nicepage.js" defer=""></script>
  
      <!-- /////////////-->
 
@@ -193,35 +194,39 @@
             <section class="u-align-center u-clearfix u-section-1" id="carousel_e66c">
               <div class="u-clearfix u-sheet u-sheet-1">
                 <div class="u-shape u-shape-rectangle u-white u-shape-1"></div>
-                <h2 class="u-text u-text-1">공지사항</h2>
+                <h2 class="u-text u-text-1">공지사항 작성</h2>
                 <div class="u-form u-form-1">
                   <form action="#" method="POST" class="u-clearfix u-form-spacing-15 u-form-vertical u-inner-form" style="padding: 0;" source="custom" name="form">
                     <div class="u-form-group u-form-group-1">
                       <label for="text-4f79" class="u-label u-label-1">Date</label>
-                      <input type="text" placeholder="작성일시" id="text-4f79" name="text" class="u-border-2 u-border-grey-75 u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle" readonly>
+                      <input type="text" placeholder="작성일시" id="text-4f79" name="text" class="u-border-2 u-border-grey-75 u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle">
                     </div>
                     <div class="u-form-email u-form-group u-form-group-2">
                       <label for="email-f2a8" class="u-label u-label-2">Title</label>
-                      <input type="email" placeholder="제목" id="email-f2a8" name="email" class="u-border-2 u-border-grey-75 u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle" required="" readonly>
+                      <input type="email" placeholder="제목" id="email-f2a8" name="email" class="u-border-2 u-border-grey-75 u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle" required="">
                     </div>
                     <div class="u-form-group u-form-name u-form-group-3">
                       <label for="name-f2a8" class="u-label u-label-3">Name</label>
-                      <input type="text" placeholder="작성자" id="name-f2a8" name="name" class="u-border-2 u-border-grey-75 u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle" required="" readonly>
+                      <input type="text" placeholder="작성자" id="name-f2a8" name="name" class="u-border-2 u-border-grey-75 u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle" required="">
                     </div>
                     <div class="u-form-group u-form-message u-form-group-4">
                       <label for="message-f2a8" class="u-label u-label-4">Content</label>
-                      <textarea placeholder="내용작성" rows="4" cols="50" id="message-f2a8" name="message" class="u-border-2 u-border-grey-75 u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle" required="" readonly></textarea>
+                      <textarea placeholder="내용작성" rows="4" cols="50" id="message-f2a8" name="message" class="u-border-2 u-border-grey-75 u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle" required=""></textarea>
                     </div>
                     <div class="u-align-center u-form-group u-form-submit u-form-group-5">
-                      <a href="notice.html" class="u-black u-btn u-btn-rectangle u-btn-submit u-button-style u-btn-1">목록</a>
-                      <!-- <input type="submit" value="submdfit"class="u-black u-btn u-btn-rectangle u-btn-submit u-button-style u-btn-1"> -->
+                      <a href="#" class="u-black u-btn u-btn-rectangle u-btn-submit u-button-style u-btn-1">Submit</a>
+                      <input type="submit" value="submit" class="u-form-control-hidden">
                     </div>
-              
+                    <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
+                    <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
+                    <input type="hidden" value="" name="recaptchaResponse">
                   </form>
                 </div>
                 <div class="u-border-3 u-border-palette-5-dark-1 u-line u-line-horizontal u-line-1"></div>
                 <div class="u-border-3 u-border-palette-5-dark-1 u-line u-line-horizontal u-line-2"></div>
-           
+                <a href="notice.html" class="u-border-2 u-border-black u-btn u-button-style u-hover-black u-none u-text-black u-text-hover-white u-btn-2">목록</a>
+                <a href="#" class="u-border-2 u-border-black u-btn u-button-style u-hover-black u-none u-text-black u-text-hover-white u-btn-3">수정</a>
+                <a href="#" class="u-border-2 u-border-black u-btn u-button-style u-hover-black u-none u-text-black u-text-hover-white u-btn-4">삭제</a>
               </div>
             </section>
             <section class="u-clearfix u-section-2" id="sec-9abb">
