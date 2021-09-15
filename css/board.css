@@ -1,10 +1,12 @@
 /* 전체적용 */
-select:hover, textarea:hover, input:hover {
+select:hover,
+textarea:hover,
+input:hover {
   border: 2px solid rgb(20, 50, 120);
 }
 
 button:hover {
-  background: rgb(20, 50, 120);
+  background: linear-gradient( to right, white, rgb(20, 50, 120) );
   color: white;
   box-shadow: 10px 1px 10px white;
   opacity: 1em;
@@ -14,22 +16,23 @@ button:hover {
 /*-- 테이블 --*/
 
 .board>h2 {
-    text-align: center;
-    font-weight: bolder;
-    border-bottom: solid 0.15em rgb(20, 50, 120);
-    padding-bottom: 1em;
+  text-align: center;
+  font-weight: bolder;
+  border-bottom: solid 0.15em rgb(20, 50, 120);
+  padding-bottom: 1em;
 }
 
-.selectList {
-    font-size: 0.9em;
-    width: 7em;
-    height: 2em;
-    float: right;
-    margin-bottom: 0.2em;
+.board-selectList {
+  font-size: 0.9em;
+  width: 7em;
+  height: 2em;
+  float: right;
+  margin-bottom: 0.2em;
 }
 
 .writing-selectList {
   margin-top: 7.5em;
+  float: right;
 }
 
 table {
@@ -93,175 +96,230 @@ a:hover {
   padding-bottom: 1em;
 }
 
-.selectList2, .selectList3 {
+.board-selectList2,
+.board-selectList3 {
   font-size: 0.8em;
   height: 3em;
   width: 7em;
   float: left;
 }
-.container-1{
-    vertical-align: middle;
-    white-space: nowrap;
-    float: left;
-  }
 
-  .container-1 input#search{
-    height: 3em;
-    width: 50em;
-    margin-left: 2em;
-    padding-left: 1em;
-    font-size: 10pt;
-    color: black;
-    float: left;
-  }
+.board-search {
+  vertical-align: middle;
+  white-space: nowrap;
+  float: left;
+}
 
-  @media screen and (max-width: 1280px) {
-    .container-1 input#search{
-      width: 30em;
-    }
+.board-search input#search {
+  height: 3em;
+  width: 50em;
+  margin-left: 2em;
+  padding-left: 1em;
+  font-size: 10pt;
+  color: black;
+  float: left;
+}
+
+@media screen and (max-width: 1280px) {
+  .board-search input#search {
+    width: 30em;
   }
-  
-  @media screen and (max-width: 980px) {
-    .container-1 input#search{
-      width: 20em;
-    }
+}
+
+@media screen and (max-width: 980px) {
+  .board-search input#search {
+    width: 20em;
   }
-  
-  /* 버튼 */
-  .uploadBtn {
-    float: right;
-    bottom: 3em;
-    left: 50em;
-  }
-  
-  .uploadBtn button {
-    height: 2.2em;
-    font-size: 0.8em;
-    padding: 0 1em;
-    border-radius: 0.5em;
-  } 
-  
-  .boardBtn button{
+}
+
+/* 버튼 */
+.uploadBtn {
+  float: right;
+  bottom: 3em;
+  left: 50em;
+}
+
+.uploadBtn button {
+  height: 2.2em;
+  font-size: 0.8em;
+  padding: 0 1em;
+  border-radius: 0.5em;
+}
+
+.boardListBtn button {
+  font-size: 0.9em;
+  width: 6em;
+  height: 3em;
+  border-radius: 0.5em;
+  margin-right: 0.5em;
+  text-align: center;
+  float: right;
+}
+
+@media screen and (max-width: 1680px) {
+  .boardListBtn button {
     font-size: 0.9em;
     width: 6em;
     height: 3em;
     border-radius: 0.5em;
-    margin-right: 0.5em;
     text-align: center;
     float: right;
   }
-  
-  @media screen and (max-width: 1680px) {
-    .boardBtn button{
-      font-size: 0.9em;
-      width: 6em;
-      height: 3em;
-      border-radius: 0.5em;
-      text-align: center;
-      float: right;
-    }
-  }
-  
-  @media screen and (max-width: 980px) {
-    .boardBtn button{
-      font-size: 0.9em;
-      width: 6em;
-      height: 3em;
-      border-radius: 0.5em;
-      text-align: center;
-    }
-  }
- 
-  .container-1 #icon{
-    height: 3em;
-    width: 4em;
-    font-size: 10pt;
-  } 
+}
 
-  #pageBtn {
-    text-align: center;
-    margin-top: 7em;
-    border-radius: 0.5em;
-  }
-  #pageBtn a {
-    text-decoration: none;
-    display: inline-block;
-    padding: 8px 16px;
-  }
-  
-  .previous {
-    background-color: #f1f1f1;
-    color: black;
-  }
-  
-  .next {
-    background-color: #f1f1f1;
-    color: black;
-  }
-  
-  .round {
-    border-radius: 50%;
-  }
-  .content{
-    margin: 0.5em auto;
-  }
-  
-  .content .btn2 {
-    float: right;
-    margin-right: 0.5em;
-    border-radius: 0.5em;
-  }
-
-  .commentBtn button{
-    float: right;
-    border-radius: 0.5em;
-  }
-
-  .clearfix::after {
-    content: '';
-    display: block;
-    clear: both;
-  }
-
-  #backBtn {
-    width: 5em;
-    margin: auto;
-  }
-
-  #backBtn button{
+@media screen and (max-width: 980px) {
+  .boardListBtn button {
+    font-size: 0.9em;
     width: 6em;
     height: 3em;
-    margin-bottom: 5em;
     border-radius: 0.5em;
+    text-align: center;
   }
-
-  .writing-boardBtn {
-    float: right;
-  }
-
-  .writing-boardBtn button {
-    border-radius: 0.5em;
-    width: 5em;
-    margin-bottom: 5em;
-    border-radius: 0.5em;
-  }
-
-  
-  /* 댓글 */
-.comment-text {
-  height: 5em;
-  width: 100%;
 }
 
-.comment-date{
-  font-size: 0.5em;
-  color: #7f888f;
-
+.board-search .board-searchIcon {
+  height: 3em;
+  width: 4em;
+  font-size: 10pt;
 }
 
-.comment-content{
-  font-size: 1.5em;
+#board-pageBtn {
+  text-align: center;
+  margin-top: 7em;
+  border-radius: 0.5em;
+}
+
+#board-pageBtn a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+#board-pageBtn a:hover {
+  background: linear-gradient( to right, white, rgb(20, 50, 120) );
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.round {
+  border-radius: 50%;
+}
+
+.board-content {
+  margin: 0.5em auto;
+}
+
+.board-content .btn-right {
+  float: right;
+  margin-right: 0.5em;
+  border-radius: 0.5em;
+}
+
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.board-returnBtn {
+  width: 5em;
+  margin: auto;
+}
+
+.board-returnBtn button {
+  width: 6em;
+  height: 3em;
+  margin-bottom: 5em;
+  border-radius: 0.5em;
+}
+
+.writing-boardBtn {
+  float: right;
+}
+
+.writing-boardBtn button {
+  border-radius: 0.5em;
+  width: 5em;
+  margin-bottom: 5em;
+  border-radius: 0.5em;
+}
+
+.board-comment .btn-right, .comment-board .btn-right {
+  color: black;
+  border: none;
+  background-color: white;
+  float: right;
+}
+
+.board-comment .btn-right:hover, .comment-board .btn-right:hover {
+  color: rgb(20, 50, 120);
+  font-weight: bolder;
+  background: linear-gradient( to right, white, rgb(20, 50, 120) );
+  border-radius: 10em;
+}
+
+#registBtn {
+  margin-top: 0.3em;
+  margin-right: 1em;
+}
+
+/* 댓글 */
+.comment-section {
   width: 90%;
+  border: 0.2em solid rgb(20, 50, 120);
+  border-radius: 1em;
+  margin-top: 6em;
+  margin-bottom: 3em;
 }
 
+.comment-title {
+  font-size: 1.5em;
+  margin: 2em 0;
+}
 
+.comment-fix-item {
+  padding: 0 2em 2em 2em;
+  margin: 2em 2em 4em 2em;
+}
+
+.comment-fix-item img, .comment-board img {
+  width: 7em;
+  height: 7em;
+  border-radius: 50%;
+  float: left;
+}
+
+.comment-fix-item .comment-name {
+  width: 85%;
+  height: 2em;
+  float: left;
+}
+.comment-fix-item textarea, .comment-board p {
+  width: 85%;
+  height: 4em;
+  float: left;
+  overflow: auto;
+  margin-left: 1em;
+}
+
+.comment-board {
+  padding: 2em;
+  margin: 2em 2em 4em 2em;
+  border: none;
+  height: 40em;
+  overflow: auto;
+}
+
+.comment-date, .comment-name {
+  font-size: 0.9em;
+  color: #7f888f;
+  margin-left: 1em;
+}

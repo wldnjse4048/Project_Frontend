@@ -7,14 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>잡담드림</title>
 
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/board.css">
-    <!-- JQUERY -->
-    <script src="js/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/board.css" <!-- JQUERY -->
+    <script src="../js/jquery-3.6.0.js"></script>
 
     <style>
         .logo {
@@ -64,8 +63,6 @@
             color: white;
             display: block;
         }
-
-      
     </style>
 </head>
 
@@ -137,123 +134,254 @@
         <!-- Header -->
         <header class="head">
             <div class="mainlogo">
-                <a href="index.html"><img class="logo" src="image/logo.png"></a>
+                <a href="index.html"><img class="logo" src="../image/logo.png"></a>
             </div>
             <div class="mainimg">
-                <img src="image/main.png">
+                <img src="../image/main.png">
             </div>
             <br style="content: ''; display: block; clear: both;">
             <hr style="content: ''; display: block; clear: both;">
         </header>
 
-        <!-- floating menu -->
-        <div id="floatMenu">
-            <ul>
-                <li><a href="https://www.16personalities.com/ko">자기분석<br>MBTI</a></li>
-                <li><a href="https://www.saramin.co.kr/zf_user/">사람인</a></li>
-                <li><a href="https://www.jobkorea.co.kr/">잡코리아</a></li>
-                <li><a href="https://programmers.co.kr/">프로그래머스</a></li>
-            </ul>
-        </div>
-       <!-- 게시글 상세보기 테이블 -->
-       <section>
-        <div class="board">
-            <h2>게시글 상세보기</h2>
-            <br><br><br>
 
-            <table class="table">
-                <thead>
+        <!-- 게시글 상세보기 테이블 -->
+        <section>
+            <div class="board">
+                <h2>게시글 상세보기</h2>
+                <br><br><br>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th id="table-bno" scope="col">번호</th>
+                            <th id="table-writer" scope="col">작성자</th>
+                            <th id="table-title" scope="col">글 제목</th>
+                            <th id="table-date" scope="col">작성일</th>
+                            <th id="table-count" scope="col">조회수</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td scope="row">50</td>
+                            <td>닉네임1</td>
+                            <td>spring 스터디 구해요</td>
+                            <td>2021-09-06</td>
+                            <td>20</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <textarea readonly></textarea>
+                <table class="table table-bordered table-sm">
                     <tr>
-                        <th id="table-bno" scope="col">번호</th>
-                        <th id="table-writer" scope="col">작성자</th>
-                        <th id="table-title" scope="col">글 제목</th>
-                        <th id="table-date" scope="col">작성일</th>
-                        <th id="table-count" scope="col">조회수</th>
+                        <th id="table-writer" scope="col">파일</th>
+                        <th id="selectedFile" scope="col">첨부된 파일 :
+                            <div class="uploadBtn">
+                                <button>다운받기</button>
+                            </div>
+                        </th>
                     </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td scope="row">50</td>
-                        <td>닉네임1</td>
-                        <td>spring 스터디 구해요</td>
-                        <td>2021-09-06</td>
-                        <td>20</td>
-                    </tr>
-                </tbody>
-            </table>
-            <textarea readonly></textarea>
-            <!-- 좋아요, 수정, 삭제 btn -->
-            <div class="content clearfix">
-                <button class="btn btn-primary btn1">좋아요♡ <span id="like-count"> 20</span></button>
-                    <button type="button" class="btn2">삭제하기</button>
-                    <button type="button" class="btn2" onclick="location.href='modification.html'">수정하기</a>
+                </table>
+                <!-- 좋아요, 수정, 삭제 btn -->
+                <div class="board-content clearfix">
+                    <button class="btn btn-primary btn1">좋아요♡ <span id="like-count"> 20</span></button>
+                    <button type="button" class="btn-right">삭제하기</button>
+                    <button type="button" class="btn-right" onclick="location.href='modification.html'">수정하기</a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
 
-    <!-- 댓글 관련 -->
-    <section>
-        <div class="clearfix">
-            <div class="content">
-                댓글<span id="comments-count"> 2 </span>
+        <!-- 댓글 관련 -->
+        <section class="container comment-section">
+            <div class="comment-fix-item clearfix">
+                <div class="row">
+                    <div class="comment-title">
+                        <span id="comment-count">2</span> Comments
+                    </div>
+                    <div>
+                        <img src="../image/logo.png" alt="">
+                        <span class="comment-name">닉네임</span>
+                        <textarea id="newComment" name="new-comment" class="comment-text" placeholder="내용을 입력하세요"></textarea>
+                        <div class="board-comment">
+                            <button name="regist-button" type="button" class="btn-right" id="registBtn" onclick="submitComment()">등록</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div>
-                <textarea class="comment-text" placeholder="내용을 입력하세요"></textarea>
-            </div>
-            <div class="content commentBtn">
-                <button type="button">등록</button>  
-            </div>
-        </div>
-        <hr>
-        <div class="clearfix">
-            <div class="comment-content">comment 2</div>
-            <div class="comment-date">2021-09-07 11:50</div>
-            <textarea class="comment-text" readonly></textarea>
-            <div class="content commentBtn clearfix">
-                <button type="button" class="btn2" onclick="location.href='modification.html'">수정</button>                    
-                <button type="button" class="btn2">삭제</button>                    
-            </div>
-        </div>
-        <hr>
-    </section>
-    <!-- 댓글 종료 -->
+            <div id="comment-board" class="comment-board clearfix">
+                <div class="row">
+                    <div>
+                        <img src="../image/logo.png" alt="">
+                        <span class="comment-name"> 닉네임</span> <span class="comment-date">2021-09-07 11:50</span>
+                        <p class="comment-text" readonly>귀는 그들을 놀이 있으랴? 대한 위하여, 창공에 않는 그들의 행복스럽고 그리하였는가? 가는 물방아 품으며, 같이 타오르고 칼이다. 튼튼하며, 눈이 우는 얼마나 주는 것이다. 없으면 바이며, 있으며, 풍부하게 피가 안고, 피다. 불어 예가 구하기 날카로우나 하는 운다. 주는 것은 넣는 끝에 이것은 돋고, 이 인간에 못할 약동하다. 것이다.보라, 무엇을 우리 이상의 보내는 사랑의 황금시대다. 무엇을 꽃 너의 밥을 구하지 어디 내는 것은 동산에는 황금시대다. 위하여, 위하여서, 이상의 우리 따뜻한 힘있다.
 
-    <!-- 목록 버튼-->
-    <section>
-        <div id="backBtn">
-            <button type="button" id="returnBtn" onclick="location.href='resumeList.html'">목록으로</button>
-        </div>
-    </section>
+                            사람은 길지 뜨거운지라, 두손을 위하여서. 아니한 보배를 방황하여도, 우리 투명하되 있다. 아름답고 같이, 구할 구하기 우리의 것은 원질이 거선의 끓는다. 새가 남는 그것은 별과 살 전인 그들의 것이다. 그들을 뜨거운지라, 청춘의 속잎나고, 바이며, 위하여 교향악이다. 그것을 용감하고 품으며, 밝은 뜨거운지라, 용기가 기쁘며, 것이다. 위하여서, 얼음이 수 것이다. 인도하겠다는 인생의 심장의 이 날카로우나 끓는 보라. 인생에 가치를 광야에서 이 그리하였는가? 얼마나 피고, 이상 봄날의 위하여, 뜨거운지라, 무엇을 날카로우나 광야에서 철환하였는가?
+                            
+                            부패를 동산에는 만천하의 아니한 찬미를 소리다.이것은 얼마나 모래뿐일 봄날의 쓸쓸하랴? 인도하겠다는 같은 기관과 힘있다. 내려온 인간은 같으며, 봄바람이다. 그들에게 피어나는 더운지라 예가 이상 물방아 꽃이 것이다. 시들어 트고, 귀는 청춘의 길을 못할 살았으며, 인생에 따뜻한 것이다. 동력은 이 가치를 못할 것이다. 우리의 온갖 낙원을 긴지라 같으며, 자신과 위하여, 피고 품고 아름다우냐? 피는 할지니, 열락의 있는 청춘은 아름답고 말이다. 얼음 아름답고 웅대한 목숨이 열락의 소금이라 거선의 너의 그리하였는가? 구하지 하는 대고, 심장은 보는 눈이 아름다우냐?</p>
+                        <div class="board-content">
+                            <button type="submit" class="btn-right" id="deleteBtn">삭제</button>
+                            <button type="button" class="btn-right" id="modifyBtn">수정</button>
+                            <button type="button" class="btn-right" id="comment-addBtn">답글</button>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div>
+                        <img src="../image/logo.png" alt="">
+                        <span class="comment-name"> 닉네임</span> <span class="comment-date">2021-09-07 11:50</span>
+                        <p class="comment-text" readonly>귀는 그들을 놀이 있으랴? 대한 위하여, 창공에 않는 그들의 행복스럽고 그리하였는가? 가는 물방아 품으며, 같이 타오르고 칼이다. 튼튼하며, 눈이 우는 얼마나 주는 것이다. 없으면 바이며, 있으며, 풍부하게 피가 안고, 피다. 불어 예가 구하기 날카로우나 하는 운다. 주는 것은 넣는 끝에 이것은 돋고, 이 인간에 못할 약동하다. 것이다.보라, 무엇을 우리 이상의 보내는 사랑의 황금시대다. 무엇을 꽃 너의 밥을 구하지 어디 내는 것은 동산에는 황금시대다. 위하여, 위하여서, 이상의 우리 따뜻한 힘있다.
 
-    <!-- scroll -->
-    <script type="text/javascript">
-        // <![CDATA[ 
-        var name = "#floatMenu";
-        var menuYloc = null;
+                            사람은 길지 뜨거운지라, 두손을 위하여서. 아니한 보배를 방황하여도, 우리 투명하되 있다. 아름답고 같이, 구할 구하기 우리의 것은 원질이 거선의 끓는다. 새가 남는 그것은 별과 살 전인 그들의 것이다. 그들을 뜨거운지라, 청춘의 속잎나고, 바이며, 위하여 교향악이다. 그것을 용감하고 품으며, 밝은 뜨거운지라, 용기가 기쁘며, 것이다. 위하여서, 얼음이 수 것이다. 인도하겠다는 인생의 심장의 이 날카로우나 끓는 보라. 인생에 가치를 광야에서 이 그리하였는가? 얼마나 피고, 이상 봄날의 위하여, 뜨거운지라, 무엇을 날카로우나 광야에서 철환하였는가?
+                            
+                            부패를 동산에는 만천하의 아니한 찬미를 소리다.이것은 얼마나 모래뿐일 봄날의 쓸쓸하랴? 인도하겠다는 같은 기관과 힘있다. 내려온 인간은 같으며, 봄바람이다. 그들에게 피어나는 더운지라 예가 이상 물방아 꽃이 것이다. 시들어 트고, 귀는 청춘의 길을 못할 살았으며, 인생에 따뜻한 것이다. 동력은 이 가치를 못할 것이다. 우리의 온갖 낙원을 긴지라 같으며, 자신과 위하여, 피고 품고 아름다우냐? 피는 할지니, 열락의 있는 청춘은 아름답고 말이다. 얼음 아름답고 웅대한 목숨이 열락의 소금이라 거선의 너의 그리하였는가? 구하지 하는 대고, 심장은 보는 눈이 아름다우냐?</p>
+                        <div class="board-content">
+                            <button type="submit" class="btn-right" id="deleteBtn">삭제</button>
+                            <button type="button" class="btn-right" id="modifyBtn">수정</button>
+                            <button type="button" class="btn-right" id="comment-addBtn">답글</button>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+      
+            </div>
+        </section>
+        <!-- 댓글 종료 -->
 
-        $(document).ready(function () {
-            menuYloc = parseInt($(name).css("top").substring(0, $(name).css("top").indexOf("px")))
-            $(window).scroll(function () {
-                offset = menuYloc + $(document).scrollTop() + "px";
-                $(name).animate({
-                    top: offset
-                }, {
-                    duration: 400,
-                    queue: false
+        <!-- 목록 버튼-->
+        <section>
+            <div class="board-returnBtn">
+                <button type="button" onclick="location.href='resumeList.html'">목록으로</button>
+            </div>
+        </section>
+
+
+        <!-- JS 댓글 -->
+        <script>
+            //댓글 등록
+            function warnRegist() {
+                alert("댓글 작성 후 등록버튼을 눌러주세요!")
+            }
+
+            function dateToString(date) {
+                var $dateString = date.toISOString();
+                $dateString = date.toLocaleString();
+                return $dateString;
+            }
+
+            function submitComment() {
+                const $newCommentEL = document.getElementById('newComment');
+                const $newComment = $newCommentEL.value.trim();
+
+                if($newComment) {              
+                    const $commentBoard = document.getElementById('comment-board');
+                    
+                    const $rowDiv = document.createElement('div');
+                    $rowDiv.classList.add('row');
+
+                    const $div = document.createElement('div');
+
+                    const $img = document.createElement('img');
+                    $img.src = "../image/logo.png";
+
+                    const $dateSpan = document.createElement('span');
+                    $dateSpan.classList.add('comment-date');
+                    const $dateString = dateToString(new Date());
+                    $dateSpan.innerText = $dateString;
+
+                    const $nameSpan = document.createElement('span');
+                    $nameSpan.classList.add('comment-name');
+                    $nameSpan.innerText = "닉네임";
+
+                    const $contentEL = document.createElement('p');
+                    $contentEL.classList.add('comment-text');
+                    $contentEL.innerText = $newComment;
+
+                    const $buttonDiv = document.createElement('div');
+                    $buttonDiv.classList.add('board-content');
+                    
+                    const $deleteBtn = document.createElement('button');
+                    $deleteBtn.classList.add('btn-right');
+                    $deleteBtn.id = 'deleteBtn';
+                    $deleteBtn.type = 'submit';
+                    
+                    const $modifyBtn = document.createElement('button');
+                    $modifyBtn.classList.add('btn-right');
+                    $modifyBtn.id = 'modifyBtn';
+                    
+                    const $commentAddBtn = document.createElement('button');
+                    $commentAddBtn.classList.add('btn-right');
+                    $commentAddBtn.id = 'comment-addBtn';
+                    
+                    $deleteBtn.innerText = "삭제"
+                    $modifyBtn.innerText = "수정"
+                    $commentAddBtn.innerText = "답글"
+                    
+                    const $hr = document.createElement('hr');
+
+                    $rowDiv.appendChild($div);
+                    $div.appendChild($img);
+                    $div.appendChild($nameSpan);
+                    $div.appendChild($dateSpan);
+                    $div.appendChild($contentEL);
+                    $div.appendChild($buttonDiv);
+                    $buttonDiv.appendChild($deleteBtn);
+                    $buttonDiv.appendChild($modifyBtn);
+                    $buttonDiv.appendChild($commentAddBtn);
+                    $rowDiv.appendChild($hr);
+                    $commentBoard.appendChild($rowDiv);
+                    $newCommentEL.value = "";
+
+                    const $count = document.getElementById('comment-count');
+                    const $commentsCount = $count.innerText;
+                    $count.innerText = parseInt($commentsCount) + 1;
+                }
+                else warnRegist();
+            }
+            //댓글 등록 끝
+
+            //댓글 수정
+            const $modifyBtn = document.getElementById('modifyBtn');
+
+            function modify() {
+                
+            }
+
+            $modifyBtn.addEventListener('click',modify)
+
+
+            //댓글 수정 끝
+         
+        </script>
+
+        <!-- scroll -->
+        <script type="text/javascript">
+            // <![CDATA[ 
+            var name = "#floatMenu";
+            var menuYloc = null;
+
+            $(document).ready(function () {
+                menuYloc = parseInt($(name).css("top").substring(0, $(name).css("top").indexOf("px")))
+                $(window).scroll(function () {
+                    offset = menuYloc + $(document).scrollTop() + "px";
+                    $(name).animate({
+                        top: offset
+                    }, {
+                        duration: 400,
+                        queue: false
+                    });
                 });
             });
-        });
-        // ]]>
-    </script>
+            // ]]>
+        </script>
 
-    <!-- IONICONS -->
-    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
-    <!-- JS -->
-    <script type="text/javascript" src="js/main.js"></script>
+        <!-- IONICONS -->
+        <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+        <!-- JS -->
+        <script type="text/javascript" src="../js/main.js"></script>
 
-    <script type="text/javascript" src="js/bootstrap.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../js/bootstrap.js"></script>
+        <script type="text/javascript" src="../js/bootstrap.min.js"></script>
 </body>
 
 </html>
