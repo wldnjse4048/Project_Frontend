@@ -181,9 +181,9 @@
                 </colgroup>
                 <tbody>
                     <tr>
-                        <td class="active line bg">내가 쓴 게시글</td>
-                        <td class="box bg_sub"><a href="../board/myCommentV2_jy.html">내가 쓴 댓글</a></td>
-                        <td class="box bg_sub"><a href="../board/myFavorite_jy.html">좋아요 한 글</a></td>
+                        <td class="box bg_sub"><a href="../board/myList_jy.html">내가 쓴 게시글</a></td>
+                        <td class="box bg_sub"><a href="../board/myComment_jy.html">내가 쓴 댓글</a></td>
+                        <td class="active line bg">좋아요 한 글</td>
                         <td class="blank line"></td>
                         <td class="blank line"></td>
                     </tr>
@@ -206,7 +206,6 @@
 
                 <thead>
                     <tr>
-                        <th class="list_chkbox" nowrap="nowrap"></th>
                         <th class="list_bno">번호</th>
                         <th class="list_witer">작성자</th>
                         <th class="list_title">글 제목</th>
@@ -217,7 +216,6 @@
 
                 <tbody>
                     <tr>
-                        <td class="list_chkbox"><input type="checkbox" name="data" id="bno" value="bno_data"></td>
                         <td class="list_bno">50</td>
                         <td class="list_witer">닉네임1</td>
                         <td class="list_title"><a href="#">spring 스터디 구해요</a></td>
@@ -226,7 +224,6 @@
                     </tr>
 
                     <tr>
-                        <td class="list_chkbox"><input type="checkbox" name="data" id="bno" value="bno_data"></td>
                         <td class="list_bno">50</td>
                         <td class="list_witer">닉네임1</td>
                         <td class="list_title"><a href="#">spring 스터디 구해요</a></td>
@@ -235,7 +232,6 @@
                     </tr>
 
                     <tr>
-                        <td class="list_chkbox"><input type="checkbox" name="data" id="bno" value="bno_data"></td>
                         <td class="list_bno">50</td>
                         <td class="list_witer">닉네임1</td>
                         <td class="list_title"><a href="#">spring 스터디 구해요</a></td>
@@ -244,7 +240,7 @@
                     </tr>
 
                     <tr>
-                        <td class="list_chkbox"><input type="checkbox" name="data" id="bno" value="bno_data"></td>
+
                         <td class="list_bno">50</td>
                         <td class="list_witer">닉네임1</td>
                         <td class="list_title"><a href="#">spring 스터디 구해요</a></td>
@@ -253,7 +249,6 @@
                     </tr>
 
                     <tr>
-                        <td class="list_chkbox"><input type="checkbox" name="data" id="bno" value="bno_data"></td>
                         <td class="list_bno">50</td>
                         <td class="list_witer">닉네임1</td>
                         <td class="list_title"><a href="#">spring 스터디 구해요</a></td>
@@ -264,35 +259,7 @@
                 </tbody>
             </table>
 
-            <div class="list_manage_menu clearfix">
 
-                <input type="hidden" id="selectAll">
-                <button type="button" id="selectAllBtn" onclick="selectAll(this)">전체선택</button>
-
-                <button type="button" id="deleteBtn" onclick="location.href='';">삭 제</button>
-                
-
-                
-                
-                <form name="frmSearch" action="" onsubmit="return false;">
-                    
-                    <select class="search-list">
-                        <option selected>검색조건</option>
-                        <option>작성자</option>
-                        <option>글제목</option>
-                        <option>글내용</option>
-                    </select>
-
-                    <!-- 검색창 -->
-                    <div class="input_search_area">
-                        <div class="input_component">
-                            <input type="text" id="query" name="query" placeholder="검색어를 입력해주세요" value="" onkeydown="">
-                        </div>
-                        <button onclick="" class="btn-search">검색</button>
-                    </div>
-                </form>
-
-            </div>
 
             <!-- paging Btn -->
             <div id="pageBtn">
