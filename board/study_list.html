@@ -6,34 +6,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>잡담드림 수정수정</title>
+    <title>잡담드림</title>
 
-    <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    
+
     <!-- CSS -->
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/study_list.css">
+    <link rel="stylesheet" href="../css/board.css">
     <!-- JQUERY -->
-    <script src="js/jquery-3.6.0.js" ></script>
-
-    <style>
-        .logo{
-            width: 16em;
-        }
-        .head{
-            margin-top: 1em;
-        }
-        .mainlogo{
-            float: left;
-            width: 22%;
-        }
-        .mainimg{
-            float: right;
-            width: 78%;
-            text-align: right;
-        }
-    </style>    
+    <script src="../js/jquery-3.6.0.js"></script>
 </head>
 
 <body class="body-pd">
@@ -43,58 +25,94 @@
             <div>
                 <div class="nav__brand">
                     <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
-                    <a href="#" class="nav__logo">Bedimcode</a>
+                    <a href="#" class="nav__logo">잡담드림</a>
                 </div>
-                <div class="nav__list">
-                    <a href="board-list.html" class="nav__link active">
-                        <ion-icon name="reader-outline" class="nav__icon"></ion-icon>
-                        <span class="nav_name">study_board</span>
+
+                <div class="nav__user">
+                    <div class="userProfile" style="border: 1px solid #fff; border-radius: 5px; height: 12em; margin-bottom: 1em; text-align: center; padding-top: 1em;">
+                        <div class="profile-userpic">
+                             <img src="../image/profile.jpg" class="img-responsive" style="width: 5em; height: 5em; border-radius: 50%;">
+                        </div>
+                        <div class="profile-usertitle" style="padding-bottom: 0.5em;">
+                            <div class="profile-usertitle-name" style="font-size: 1em;">manager</div>
+                            <div class="profile-usertitle-level" style="font-size: 0.8em;">level 1</div>
+                        </div>
+                        <div>
+                           <button type="button" class="btn btn-success btn-sm" onclick="location.href='user/mypage.html'">MyPage</button>
+                            <button type="button" class="btn btn-danger btn-sm">Logout</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="nav__login">
+                    <a href="user/form_login.html" class="nav__link">
+                        <ion-icon name="person-circle-outline" class="nav__icon"></ion-icon>
+                        <span class="nav_name">Join & Login</span>
                     </a>
-                    <a href="#" class="nav__link">
+                </div> -->
+
+                <div class="nav__list">
+                    <a href="../user/grade.html" class="nav__link">
+                        <ion-icon name="chevron-up-circle-outline" class="nav__icon"></ion-icon>
+                        <span class="nav_name">등업</span>
+                    </a>
+                    <a href="../user/send-message.html" class="nav__link">
                         <ion-icon name="chatbubbles-outline" class="nav__icon"></ion-icon>
                         <span class="nav_name">Messenger</span>
                     </a>
 
-                    <div href="#" class="nav__link collapse">
+                    <hr>
+
+                    <div class="nav__link collapse">
+                        
                         <ion-icon name="folder-outline" class="nav__icon"></ion-icon>
-                        <span class="nav_name">Projects</span>
+                        <!-- <ion-icon name="folder-open-outline" class="nav__icon"></ion-icon> 클릭시 아이콘변경되도록 설정예정-->
+                        <span class="nav_name" onclick="location.href='../board/board-list.html'">채용공고</span>
+                        
+                        <ion-icon name="chevron-down-outline" class="collapse__link"></ion-icon>
+
+                        <ul class="collapse__menu">
+                            <a href="#" class="collapse__sublink">대기업</a><br>
+                            <a href="#" class="collapse__sublink">중견기업</a><br>
+                            <a href="#" class="collapse__sublink">중소/스타트업</a><br>
+                            <a href="#" class="collapse__sublink">인턴</a>
+                        </ul>
+
+                    </div>
+
+                    <div class="nav__link collapse">
+                        <ion-icon name="clipboard-outline" class="nav__icon"></ion-icon>
+                        <span class="nav_name" onclick="location.href='../board/resume.html'">자기소개서</span>
 
                         <ion-icon name="chevron-down-outline" class="collapse__link"></ion-icon>
 
                         <ul class="collapse__menu">
-                            <a href="#" class="collapse__sublink">Data</a>
-                            <a href="#" class="collapse__sublink">Group</a>
-                            <a href="#" class="collapse__sublink">Members</a>
+                            <a href="#" class="collapse__sublink">합격자소서</a><br>
+                            <a href="#" class="collapse__sublink">불합격자소서</a>
                         </ul>
                     </div>
 
-                    <a href="#" class="nav__link">
-                        <ion-icon name="pie-chart-outline" class="nav__icon"></ion-icon>
-                        <span class="nav_name">Analytics</span>
+                    <a href="../board/interview.html" class="nav__link">
+                        <ion-icon name="chatbox-ellipses-outline" class="nav__icon"></ion-icon>
+                        <span class="nav_name">면접경험담</span>
                     </a>
 
-                    <div href="#" class="nav__link collapse">
-                        <ion-icon name="people-outline" class="nav__icon"></ion-icon>
-                        <span class="nav_name">Team</span>
-
-                        <ion-icon name="chevron-down-outline" class="collapse__link"></ion-icon>
-
-                        <ul class="collapse__menu">
-                            <a href="#" class="collapse__sublink">Data</a>
-                            <a href="#" class="collapse__sublink">Group</a>
-                            <a href="#" class="collapse__sublink">Members</a>
-                        </ul>
-                    </div>
+                    <a href="#" class="nav__link">
+                        <ion-icon name="trail-sign-outline" class="nav__icon"></ion-icon>
+                        <span class="nav_name">취업상담소</span>
+                    </a>
 
                     <a href="#" class="nav__link">
-                        <ion-icon name="settings-outline" class="nav__icon"></ion-icon>
-                        <span class="nav_name">Settings</span>
+                        <ion-icon name="heart-outline" class="nav__icon"></ion-icon>
+                        <span class="nav_name">자유게시판</span>
+                    </a>
+
+                    <a href="../board/study_list.html" class="nav__link">
+                        <ion-icon name="people-outline" class="nav__icon"></ion-icon>
+                        <span class="nav_name">스터디모임</span>
                     </a>
                 </div>
-                <a href="#" class="nav__link">
-                    <ion-icon name="log-out-outline" class="nav__icon"></ion-icon>
-                    <span class="nav_name">Log out</span>
-                </a>
+                
             </div>
         </nav>
     </div>
@@ -104,7 +122,7 @@
         <!-- Header -->
         <header class="head">
             <div class="mainlogo">
-                <a href="index.html"><img class="logo" src="../image/logo.png"></a>
+                <a href="../index.html"><img class="logo" src="../image/logo.png"></a>
             </div>
             <div class="mainimg">
                 <img src="../image/main.png">
@@ -112,75 +130,80 @@
             <br style="content: ''; display: block; clear: both;">
             <hr style="content: ''; display: block; clear: both;">
         </header>
-
                
         <!-- boardlist-->
-        <table class="table talbe-striped">
+        <div class="board">
+            <h2>스터디 모임</h2><br>
 
-            <thead>
-                <tr>
-                    <th class="list_bno">번호</th>
-                    <th class="list_witer">작성자</th>
-                    <th class="list_title">글 제목</th>
-                    <th class="list_date">등록일</th>
-                    <th class="list_count">조회수</th>
-                </tr>
-            </thead>
+            <select class=selectList>
+                <option selected>목록개수</option>
+                <option>10개</option>
+                <option>20개</option>
+                <option>30개</option>
+            </select>
 
-            <tbody>
-                <tr>
-                    <td class="list_bno">50</td>
-                    <td class="list_witer">닉네임1</td>
-                    <td class="list_title"><a href="../board/detail_jy.html">spring 스터디 구해요</a></td>
-                    <td class="list_date">2021-09-06</td>
-                    <td class="list_count">20</td>
-                </tr>
+            <table class="table table-striped">
 
-                <tr>
-                    <td class="list_bno">50</td>
-                    <td class="list_witer">닉네임1</td>
-                    <td class="list_title"><a href="../board/detail_jy.html">spring 스터디 구해요</a></td>
-                    <td class="list_date">2021-09-06</td>
-                    <td class="list_count">20</td>
-                </tr>
+                <thead>
+                    <tr>
+                        <th class="list_bno">번호</th>
+                        <th class="list_writer">작성자</th>
+                        <th class="list_title">글 제목</th>
+                        <th class="list_date">등록일</th>
+                        <th class="list_count">조회수</th>
+                    </tr>
+                </thead>
 
-                <tr>
-                    <td class="list_bno">50</td>
-                    <td class="list_witer">닉네임1</td>
-                    <td class="list_title"><a href="../board/detail_jy.html">spring 스터디 구해요</a></td>
-                    <td class="list_date">2021-09-06</td>
-                    <td class="list_count">20</td>
-                </tr>
+                <tbody>
+                    <tr>
+                        <td class="list_bno">50</td>
+                        <td class="list_writer">닉네임1</td>
+                        <td class="list_title"><a href="../board/detail_jy.html">spring 스터디 구해요</a></td>
+                        <td class="list_date">2021-09-06</td>
+                        <td class="list_count">20</td>
+                    </tr>
 
-                <tr>
-                    <td class="list_bno">50</td>
-                    <td class="list_witer">닉네임1</td>
-                    <td class="list_title"><a href="../board/detail_jy.html">spring 스터디 구해요</a></td>
-                    <td class="list_date">2021-09-06</td>
-                    <td class="list_count">20</td>
-                </tr>
+                    <tr>
+                        <td class="list_bno">50</td>
+                        <td class="list_writer">닉네임1</td>
+                        <td class="list_title"><a href="../board/detail_jy.html">spring 스터디 구해요</a></td>
+                        <td class="list_date">2021-09-06</td>
+                        <td class="list_count">20</td>
+                    </tr>
 
-                <tr>
-                    <td class="list_bno">50</td>
-                    <td class="list_witer">닉네임1</td>
-                    <td class="list_title"><a href="../board/detail_jy.html">spring 스터디 구해요</a></td>
-                    <td class="list_date">2021-09-06</td>
-                    <td class="list_count">20</td>
-                </tr>
+                    <tr>
+                        <td class="list_bno">50</td>
+                        <td class="list_writer">닉네임1</td>
+                        <td class="list_title"><a href="../board/detail_jy.html">spring 스터디 구해요</a></td>
+                        <td class="list_date">2021-09-06</td>
+                        <td class="list_count">20</td>
+                    </tr>
 
-            </tbody>
-        </table>
+                    <tr>
+                        <td class="list_bno">50</td>
+                        <td class="list_writer">닉네임1</td>
+                        <td class="list_title"><a href="../board/detail_jy.html">spring 스터디 구해요</a></td>
+                        <td class="list_date">2021-09-06</td>
+                        <td class="list_count">20</td>
+                    </tr>
 
-        <div class="list-btn clearfix">
-            <button class="boardBtn" id="list-writer" type="submit"
-                onclick="submitComment">작성하기</button>
-            <button class="boardBtn" id="list-modify" type="submit"
-                onclick="submitComment">수정하기</button>
+                    <tr>
+                        <td class="list_bno">50</td>
+                        <td class="list_writer">닉네임1</td>
+                        <td class="list_title"><a href="../board/detail_jy.html">spring 스터디 구해요</a></td>
+                        <td class="list_date">2021-09-06</td>
+                        <td class="list_count">20</td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <div class="list-btn clearfix">
+                <button class="btn boardBtn" id="list-writer" type="button" onclick="location.href='../board/writing.html'">작성하기</button>
+                <button class="boardBtn" id="list-modify" type="button" onclick="location.href='../board/myList.html'">내글보기</button>
+            </div>
         </div>
-       
-        
-            
-        
+  
         
         <!-- 검색창 -->
         <form name="frmSearch" id="frmSearch" action="" onsubmit="return false;">          
@@ -199,23 +222,23 @@
                 <option>글내용</option>
             </select>
 
-        <div class="input_search_area">
-            <div class="input_component" >
-                <input type="text" id="query" name="query" placeholder="검색어를 입력해주세요" value="" onkeydown="">
+            <div class="input_search_area">
+                <div class="input_component" >
+                    <input type="text" id="query" name="query" placeholder="검색어를 입력해주세요" value="" onkeydown="">
+                </div>
+                <button onclick="" class="btn-search">검색</button>
             </div>
-            <button onclick="" class="btn-search">검색</button>
-        </div>
         </form>
 
         <!-- 페이지 btn -->
         <div id="pageBtn">
-            <a href="#" class="previous round">&#8249;</a>
-            <a href="#" class="previous round">1</a>
-            <a href="#" class="previous round">2</a>
-            <a href="#" class="previous round">3</a>
-            <a href="#" class="previous round">4</a>
-            <a href="#" class="previous round">5</a>
-            <a href="#" class="next round">&#8250;</a>
+            <a href="#" class="round">&#8249;</a>
+            <a href="#" class="round">1</a>
+            <a href="#" class="round">2</a>
+            <a href="#" class="round">3</a>
+            <a href="#" class="round">4</a>
+            <a href="#" class="round">5</a>
+            <a href="#" class="round">&#8250;</a>
         </div>
      
     </div>
@@ -223,10 +246,10 @@
     <!-- IONICONS -->
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
     <!-- JS -->
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
     
-    <script type="text/javascript" src="js/bootstrap.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
 
 
 </body>
