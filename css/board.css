@@ -274,10 +274,11 @@ a:hover {
 }
 /* 댓글 */
 .comment-section {
-  border: 0.1em solid rgb(20, 50, 120);
-  box-shadow: -5px -5px 5px rgb(20, 50, 120);
+  width: 90%;
+  border: 0.2em solid rgb(20, 50, 120);
   border-radius: 1em;
-  margin: 6em 3em;
+  margin-top: 6em;
+  margin-bottom: 3em;
 }
 
 .comment-title {
@@ -286,12 +287,8 @@ a:hover {
 }
 
 .comment-fix-item {
-  width: 90%;
   padding: 0 2em 2em 2em;
-  margin: 2em 4em 4em 4em;
-  border: 0.1em solid rgb(20, 50, 120);
-  box-shadow: -5px -5px 5px rgb(20, 50, 120);
-  border-radius: 1em;
+  margin: 2em 2em 4em 2em;
 }
 
 .comment-fix-item img, .comment-board img {
@@ -301,32 +298,27 @@ a:hover {
   float: left;
 }
 
-.comment-fix-item .comment-name {
-  width: 86%;
+.comment-fix-item .comment-name, .comment-board .comment-date {
+  width: 85%;
   height: 2em;
   float: left;
 }
-.comment-fix-item textarea, .comment-board textarea {
+.comment-fix-item textarea, .comment-board p {
   width: 85%;
   height: 4em;
   float: left;
-}
-
-.comment-board {
-  border: none;
-  width: 90%;
-  height: 40em;
-  padding: 2em;
   overflow: auto;
 }
 
-.comment-text {
-  height: 4em;
-  width: 90%;
+.comment-board {
+  padding: 2em;
+  margin: 2em 2em 4em 2em;
+  border: none;
+  height: 40em;
+  overflow: auto;
 }
 
 .comment-date {
   font-size: 0.9em;
   color: #7f888f;
-  float: left;
 }
