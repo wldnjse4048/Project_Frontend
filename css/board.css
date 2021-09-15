@@ -32,6 +32,7 @@ button:hover {
 
 .writing-selectList {
   margin-top: 7.5em;
+  float: right;
 }
 
 table {
@@ -265,13 +266,11 @@ a:hover {
   border-radius: 10em;
 }
 
-#registBtn, #deleteBtn {
-  margin: 0.3em 2.3em 0 0;
+#registBtn {
+  margin-top: 0.3em;
+  margin-right: 1em;
 }
 
-#modifyBtn {
-  margin-top: 0.3em;
-}
 /* 댓글 */
 .comment-section {
   width: 90%;
@@ -298,7 +297,7 @@ a:hover {
   float: left;
 }
 
-.comment-fix-item .comment-name, .comment-board .comment-date {
+.comment-fix-item .comment-name {
   width: 85%;
   height: 2em;
   float: left;
@@ -308,6 +307,7 @@ a:hover {
   height: 4em;
   float: left;
   overflow: auto;
+  margin-left: 1em;
 }
 
 .comment-board {
@@ -318,7 +318,8 @@ a:hover {
   overflow: auto;
 }
 
-.comment-date {
+.comment-date, .comment-name {
   font-size: 0.9em;
   color: #7f888f;
+  margin-left: 1em;
 }
