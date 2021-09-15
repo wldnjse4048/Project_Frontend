@@ -1,10 +1,12 @@
 /* 전체적용 */
-select:hover, textarea:hover, input:hover {
-  border: 1px solid rgb(20, 50, 120);
+select:hover,
+textarea:hover,
+input:hover {
+  border: 2px solid rgb(20, 50, 120);
 }
 
 button:hover {
-  background: rgb(20, 50, 120);
+  background: linear-gradient( to right, white, rgb(20, 50, 120) );
   color: white;
   box-shadow: 10px 1px 10px white;
   opacity: 1em;
@@ -12,24 +14,24 @@ button:hover {
 
 
 /*-- 테이블 --*/
-
-.board > h2 {
-    text-align: center;
-    font-weight: bolder;
-    border-bottom: solid 0.15em rgb(20, 50, 120);
-    padding: 1em 0 0.4em;
+.board>h2 {
+  text-align: center;
+  font-weight: bolder;
+  border-bottom: solid 0.15em rgb(20, 50, 120);
+  padding-bottom: 1em;
 }
 
-.selectList {
-    font-size: 0.9em;
-    width: 7em;
-    height: 2em;
-    float: right;
-    margin-bottom: 1em;
+.board-selectList {
+  font-size: 0.9em;
+  width: 7em;
+  height: 2em;
+  float: right;
+  margin-bottom: 0.2em;
 }
 
 .writing-selectList {
-  margin-top: 2.5em;
+  margin-top: 7.5em;
+  float: right;
 }
 
 table {
@@ -95,13 +97,14 @@ a {
   width: 7em;
   float: left;
 }
-.container-1{
-    vertical-align: middle;
-    white-space: nowrap;
-    float: left;
+
+.board-search {
+  vertical-align: middle;
+  white-space: nowrap;
+  float: left;
 }
 
-.container-1 input#search{
+.board-search input#search {
   height: 3em;
   width: 50em;
   margin-left: 2em;
@@ -112,13 +115,13 @@ a {
 }
 
 @media screen and (max-width: 1280px) {
-  .container-1 input#search{
+  .board-search input#search {
     width: 30em;
   }
 }
 
 @media screen and (max-width: 980px) {
-  .container-1 input#search{
+  .board-search input#search {
     width: 20em;
   }
 }
@@ -131,18 +134,17 @@ a {
 }
 
 .uploadBtn button {
-  width: 2em;
-  height: 1.8em;
+  height: 2.2em;
   font-size: 0.8em;
+  padding: 0 1em;
   border-radius: 0.5em;
-} 
+}
 
-.boardBtn {
+.boardListBtn button {
   font-size: 0.9em;
   width: 6em;
-  height: 2.5em;
+  height: 3em;
   border-radius: 0.5em;
-  border: 0.5px solid rgb(20, 50, 120, 0.8);
   margin-right: 0.5em;
   text-align: center;
   float: right;
@@ -169,43 +171,49 @@ a {
   }
 }
 
-.container-1 .icon{
+.board-search .board-searchIcon {
   height: 3em;
   width: 4em;
   font-size: 10pt;
-  border: 0.5px solid rgb(20, 50, 120, 0.8);
-} 
+}
 
-#pageBtn {
+#board-pageBtn {
   text-align: center;
-  margin: 4em auto;
+  margin-top: 7em;
   border-radius: 0.5em;
 }
-#pageBtn a {
+
+#board-pageBtn a {
   text-decoration: none;
   display: inline-block;
   padding: 8px 16px;
 }
 
-.round {
+#board-pageBtn a:hover {
+  background: linear-gradient( to right, white, rgb(20, 50, 120) );
+}
+
+.previous {
   background-color: #f1f1f1;
   color: black;
-  width: 2.5em;
+}
+
+.next {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.round {
   border-radius: 50%;
 }
 
-.content{
+.board-content {
   margin: 0.5em auto;
 }
 
-.content .btn2 {
+.board-content .btn-right {
   float: right;
   margin-right: 0.5em;
-  border-radius: 0.5em;
-}
-
-.commentBtn button{
-  float: right;
   border-radius: 0.5em;
 }
 
@@ -215,12 +223,12 @@ a {
   clear: both;
 }
 
-#backBtn {
+.board-returnBtn {
   width: 5em;
   margin: auto;
 }
 
-#backBtn button{
+.board-returnBtn button {
   width: 6em;
   height: 3em;
   margin-bottom: 5em;
@@ -238,22 +246,74 @@ a {
   border-radius: 0.5em;
 }
 
-  
-  /* 댓글 */
-.comment-text {
-  height: 5em;
-  width: 100%;
+.board-comment .btn-right, .comment-board .btn-right {
+  color: black;
+  border: none;
+  background-color: white;
+  float: right;
 }
 
-.comment-date{
-  font-size: 0.5em;
-  color: #7f888f;
-
+.board-comment .btn-right:hover, .comment-board .btn-right:hover {
+  color: rgb(20, 50, 120);
+  font-weight: bolder;
+  background: linear-gradient( to right, white, rgb(20, 50, 120) );
+  border-radius: 10em;
 }
 
-.comment-content{
-  font-size: 1.5em;
+#registBtn {
+  margin-top: 0.3em;
+  margin-right: 1em;
+}
+
+/* 댓글 */
+.comment-section {
   width: 90%;
+  border: 0.2em solid rgb(20, 50, 120);
+  border-radius: 1em;
+  margin-top: 6em;
+  margin-bottom: 3em;
 }
 
+.comment-title {
+  font-size: 1.5em;
+  margin: 2em 0;
+}
 
+.comment-fix-item {
+  padding: 0 2em 2em 2em;
+  margin: 2em 2em 4em 2em;
+}
+
+.comment-fix-item img, .comment-board img {
+  width: 7em;
+  height: 7em;
+  border-radius: 50%;
+  float: left;
+}
+
+.comment-fix-item .comment-name {
+  width: 85%;
+  height: 2em;
+  float: left;
+}
+.comment-fix-item textarea, .comment-board p {
+  width: 85%;
+  height: 4em;
+  float: left;
+  overflow: auto;
+  margin-left: 1em;
+}
+
+.comment-board {
+  padding: 2em;
+  margin: 2em 2em 4em 2em;
+  border: none;
+  height: 40em;
+  overflow: auto;
+}
+
+.comment-date, .comment-name {
+  font-size: 0.9em;
+  color: #7f888f;
+  margin-left: 1em;
+}

@@ -13,19 +13,14 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../css/styles.css">
     <!-- JQUERY -->
-    <script src="../js/jquery-3.6.0.js"></script>
+    <script src="../js/jquery-3.6.0.js"></script>   
 
-     <!-- 본문 css 파일 -->
+    <a href="../css/grade-page-resourece/grade-detail-resource/nicepage.css"></a>
 
-
-     <a href="../css/notice-page-resource/notice-page-detail-resource/"></a>
-
-   
-     <link rel="stylesheet" href="../css/notice-page-resource/notice-page-detail-resource/nicepage.css" media="screen">
-     <link rel="stylesheet" href="../css/notice-page-resource/notice-page-detail-resource/Page-1.css" media="screen">
- >
- 
-     <!-- /////////////-->
+    <link rel="stylesheet" href="../css/grade-page-resourece/grade-detail-resource/nicepage.css" media="screen">
+    <link rel="stylesheet" href="../css/grade-page-resourece/grade-detail-resource/Page-2.css" media="screen">
+    <script class="u-script" type="text/javascript" src="../css/grade-page-resourece/grade-detail-resource/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="../css/grade-page-resourece/grade-detail-resource/nicepage.js" defer=""></script>
 
     <style>
         .logo {
@@ -187,53 +182,88 @@
                 <li><a href="https://programmers.co.kr/">프로그래머스</a></li>
             </ul>
         </div>
-
-
-        <body data-home-page="Page-1.html" data-home-page-title="Page 1" class="u-body"><header class="u-clearfix u-header u-header" id="sec-dba3"><div class="u-clearfix u-sheet u-sheet-1"></div></header>
-            <section class="u-align-center u-clearfix u-section-1" id="carousel_e66c">
+        <body data-home-page="Page-2.html" data-home-page-title="Page 2" class="u-body"><header class="u-clearfix u-header u-header" id="sec-dba3"><div class="u-clearfix u-sheet u-sheet-1"></div></header>
+            <section class="u-clearfix u-section-1" id="sec-4231">
               <div class="u-clearfix u-sheet u-sheet-1">
-                <div class="u-shape u-shape-rectangle u-white u-shape-1"></div>
-                <h2 class="u-text u-text-1">공지사항</h2>
-                <div class="u-form u-form-1">
-                  <form action="#" method="POST" class="u-clearfix u-form-spacing-15 u-form-vertical u-inner-form" style="padding: 0;" source="custom" name="form">
-                    <div class="u-form-group u-form-group-1">
-                      <label for="text-4f79" class="u-label u-label-1">Date</label>
-                      <input type="text" placeholder="작성일시" id="text-4f79" name="text" class="u-border-2 u-border-grey-75 u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle" readonly>
+                <div class="u-clearfix u-gutter-0 u-layout-wrap u-layout-wrap-1">
+                  <div class="u-gutter-0 u-layout">
+                    <div class="u-layout-row">
+                      <div class="u-align-left u-container-style u-layout-cell u-size-60 u-white u-layout-cell-1">
+                        <div class="u-container-layout u-container-layout-1">
+                          <div class="u-border-3 u-border-grey-dark-1 u-line u-line-horizontal u-line-1"></div>
+                          <h1 class="u-text u-text-default u-text-1">등업 신청 현황</h1>
+                          <div class="u-border-3 u-border-grey-dark-1 u-line u-line-horizontal u-line-2"></div>
+                          <div class="u-form u-form-1">
+                            <form action="#" method="POST" class="u-clearfix u-form-spacing-24 u-form-vertical u-inner-form" style="padding: 20px;" source="custom" name="form">
+                              
+                              <!-- 모든 입력창 readonly -->
+                                <div class="u-form-group u-form-group-1">
+                                <label for="text-d3e3" class="u-label">아이디</label>
+                                <input type="text" placeholder="ID" id="text-d3e3" name="text-1" class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-2-base u-input u-input-rectangle u-input-1" readonly>
+                              </div>
+                              <div class="u-form-group u-form-group-2">
+                                <label for="text-ebab" class="u-label">닉네임</label>
+                                <input type="text" placeholder="NICKNAME" id="text-ebab" name="text-2" class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-2-base u-input u-input-rectangle u-input-2" readonly>
+                              </div>
+                              <div class="u-form-email u-form-group">
+                                <label for="email-3b9a" class="u-label" wfd-invisible="true">신청일자</label>
+                                <input type="email" placeholder="Date" id="email-3b9a" name="email" class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-2-base u-input u-input-rectangle u-input-3" required="" readonly>
+                              </div>
+                              <div class="u-form-group u-form-group-4">
+                                <label for="text-247b" class="u-label">신청등급</label>
+                                <input type="text" placeholder="GRADE" id="text-247b" name="text" class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-2-base u-input u-input-rectangle u-input-4" readonly>
+                              </div>
+                              <div class="u-form-group u-form-textarea u-form-group-5">
+                                <label for="textarea-1472" class="u-label">내용</label>
+                                <textarea rows="4" cols="50" id="textarea-1472" name="textarea" class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-2-base u-input u-input-rectangle u-input-5" required="" placeholder="Content" readonly></textarea>
+                              </div>
+
+
+                              <!-- 관리자 none readonly-->
+                              <!-- <div class="u-form-group u-form-group-1">
+                                <label for="text-d3e3" class="u-label">아이디</label>
+                                <input type="text" placeholder="ID" id="text-d3e3" name="text-1" class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-2-base u-input u-input-rectangle u-input-1">
+                              </div>
+                              <div class="u-form-group u-form-group-2">
+                                <label for="text-ebab" class="u-label">닉네임</label>
+                                <input type="text" placeholder="NICKNAME" id="text-ebab" name="text-2" class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-2-base u-input u-input-rectangle u-input-2">
+                              </div>
+                              <div class="u-form-email u-form-group">
+                                <label for="email-3b9a" class="u-label" wfd-invisible="true">신청일자</label>
+                                <input type="email" placeholder="Date" id="email-3b9a" name="email" class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-2-base u-input u-input-rectangle u-input-3" required="">
+                              </div>
+                              <div class="u-form-group u-form-group-4">
+                                <label for="text-247b" class="u-label">신청등급</label>
+                                <input type="text" placeholder="GRADE" id="text-247b" name="text" class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-2-base u-input u-input-rectangle u-input-4">
+                              </div>
+                              <div class="u-form-group u-form-textarea u-form-group-5">
+                                <label for="textarea-1472" class="u-label">내용</label>
+                                <textarea rows="4" cols="50" id="textarea-1472" name="textarea" class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-2-base u-input u-input-rectangle u-input-5" required="" placeholder="Content"></textarea>
+                              </div> -->
+
+
+                              <div class="u-align-center u-form-group u-form-submit">
+                                <!-- 관리자 -->
+                                <!-- <a href="#" class="u-btn u-btn-submit u-button-style u-hover-palette-2-light-1 u-palette-2-base u-btn-1">승인<br> -->
+                                </a>
+                                <input type="submit" value="승인"class="u-btn u-btn-submit u-button-style u-hover-palette-2-light-1 u-palette-2-base u-btn-1">
+                              </div>
+                              <div class="u-form-send-message u-form-send-success" wfd-invisible="true"> 성공 </div>
+                              <div class="u-form-send-error u-form-send-message" wfd-invisible="true"> 실패 </div>
+                              <input type="hidden" value="" name="recaptchaResponse" wfd-invisible="true">
+                            </form>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="u-form-email u-form-group u-form-group-2">
-                      <label for="email-f2a8" class="u-label u-label-2">Title</label>
-                      <input type="email" placeholder="제목" id="email-f2a8" name="email" class="u-border-2 u-border-grey-75 u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle" required="" readonly>
-                    </div>
-                    <div class="u-form-group u-form-name u-form-group-3">
-                      <label for="name-f2a8" class="u-label u-label-3">Name</label>
-                      <input type="text" placeholder="작성자" id="name-f2a8" name="name" class="u-border-2 u-border-grey-75 u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle" required="" readonly>
-                    </div>
-                    <div class="u-form-group u-form-message u-form-group-4">
-                      <label for="message-f2a8" class="u-label u-label-4">Content</label>
-                      <textarea placeholder="내용작성" rows="4" cols="50" id="message-f2a8" name="message" class="u-border-2 u-border-grey-75 u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle" required="" readonly></textarea>
-                    </div>
-                    <div class="u-align-center u-form-group u-form-submit u-form-group-5">
-                      <a href="notice.html" class="u-black u-btn u-btn-rectangle u-btn-submit u-button-style u-btn-1">목록</a>
-                      <!-- <input type="submit" value="submdfit"class="u-black u-btn u-btn-rectangle u-btn-submit u-button-style u-btn-1"> -->
-                    </div>
-              
-                  </form>
+                  </div>
                 </div>
-                <div class="u-border-3 u-border-palette-5-dark-1 u-line u-line-horizontal u-line-1"></div>
-                <div class="u-border-3 u-border-palette-5-dark-1 u-line u-line-horizontal u-line-2"></div>
-           
+                <a href="grade.html" class="u-border-2 u-border-black u-btn u-button-style u-hover-black u-none u-text-black u-text-hover-white u-btn-2">목록</a>
+                <a href="#" class="u-border-2 u-border-black u-btn u-button-style u-hover-black u-none u-text-black u-text-hover-white u-btn-3">삭제</a>
+                <a href="#" class="u-border-2 u-border-black u-btn u-button-style u-hover-black u-none u-text-black u-text-hover-white u-btn-4">수정</a>
               </div>
-            </section>
-            <section class="u-clearfix u-section-2" id="sec-9abb">
-              <div class="u-clearfix u-sheet u-sheet-1"></div>
-            </section>
-            
-      </body>
-
-        
-
-   
-        
+            </section>                 
+          </body>
 
     <!-- scroll -->
     <script type="text/javascript">
@@ -311,8 +341,6 @@
         }
         showMenu('nav-toggle', 'navbar', 'body-pd')
     </script>
-
-    
 
 
 </body>
