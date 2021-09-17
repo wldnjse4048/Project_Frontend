@@ -167,6 +167,7 @@
             <a href="myList.html" style="text-align: center;">
                 <h2>내 글 확인</h2>
             </a>
+            <hr style="content: ''; display: block; clear: both;">
         </header>
 
 
@@ -174,44 +175,34 @@
             <colgroup>
                 <col width="125">
                 <col width="125">
-                <col width="">
+                <col width="125">
                 <col width="">
                 <col width="">
             </colgroup>
             <tbody>
                 <tr>
                     <td class="active line bg">내가 쓴 게시글</td>
-                    <td class="box bg_sub"><a href="../board/myComment_jy.html">내가 쓴 댓글</a></td>
-                    <td class="blank line"></td>
+                    <td class="box bg_sub"><a href="../board/myCommentV2_jy.html">내가 쓴 댓글</a></td>
+                    <td class="box bg_sub"><a href="../board/myFavorite_jy.html">좋아요 한 글</a></td>
                     <td class="blank line"></td>
                     <td class="blank line"></td>
                 </tr>
             </tbody>
         </table>
 
-
-        <div class="list_manage_menu clearfix">
-
-            <input type="hidden" id="selectAll">
-            <button type="button" id="selectAllBtn" for onclick="selectAll(this)">전체선택</button>
-
-            <button type="button" id="deleteBtn" onclick="location.href='';">삭 제</button>
-
+        <div class="clearfix">
             <select name="viewList" id="viewList">
                 <option>목록 10개</option>
                 <option selected="">목록 20개</option>
                 <option>목록 30개</option>
                 <option>목록 40개</option>
             </select>
-
         </div>
 
 
 
-        <!-- board-list-->
-
-
-        <table class="table talbe-striped">
+        <!-- board list start-->
+        <table class="table table-striped" style="border-top: 0.1em solid rgb(163, 161, 161);">
 
             <thead>
                 <tr>
@@ -273,41 +264,48 @@
             </tbody>
         </table>
 
-        <form name="formSearch" action="" onsubmit="return false;">
+        <div class="list_manage_menu clearfix">
 
-            <select class="search-list">
-                <option selected>검색조건</option>
-                <option>작성자</option>
-                <option>글제목</option>
-                <option>글내용</option>
-            </select>
+            <input type="hidden" id="selectAll">
+            <button type="button" id="selectAllBtn" onclick="selectAll(this)">전체선택</button>
 
-    </div>
+            <button type="button" id="deleteBtn" onclick="location.href='';">삭 제</button>
 
-    <!-- 검색창 -->
-    <div class="input_search_area">
-        <div class="input_component" style="width: 35em">
-            <input type="text" id="query" name="query" placeholder="검색어를 입력해주세요" value="" onkeydown="">
+
+
+
+            <form name="frmSearch" action="" onsubmit="return false;">
+
+                <select class="search-list">
+                    <option selected>검색조건</option>
+                    <option>작성자</option>
+                    <option>글제목</option>
+                    <option>글내용</option>
+                </select>
+
+                <!-- 검색창 -->
+                <div class="input_search_area">
+                    <div class="input_component">
+                        <input type="text" id="query" name="query" placeholder="검색어를 입력해주세요" value="" onkeydown="">
+                    </div>
+                    <button onclick="" class="btn-search">검색</button>
+                </div>
+            </form>
+
         </div>
-        <button onclick="" class="btn-search">검색</button>
-    </div>
-    </form>
-    </div>
-    </div>
 
-    <!-- paging Btn -->
-    <div id="pageBtn">
-        <a href="#" class="previous round">&#8249;</a>
-        <a href="#" class="previous round">1</a>
-        <a href="#" class="previous round">2</a>
-        <a href="#" class="previous round">3</a>
-        <a href="#" class="previous round">4</a>
-        <a href="#" class="previous round">5</a>
-        <a href="#" class="next round">&#8250;</a>
-    </div>
+        <!-- paging Btn -->
+        <div id="pageBtn">
+            <a href="#" class="previous round">&#8249;</a>
+            <a href="#" class="previous round">1</a>
+            <a href="#" class="previous round">2</a>
+            <a href="#" class="previous round">3</a>
+            <a href="#" class="previous round">4</a>
+            <a href="#" class="previous round">5</a>
+            <a href="#" class="next round">&#8250;</a>
+        </div>
 
-    </div>
-    </div>
+    </div> <!-- main div end -->
 
 
 
