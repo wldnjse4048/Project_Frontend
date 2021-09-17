@@ -171,7 +171,7 @@
             <colgroup>
                 <col width="125">
                 <col width="125">
-                <col width="">
+                <col width="125">
                 <col width="">
                 <col width="">
             </colgroup>
@@ -179,7 +179,7 @@
                 <tr>
                     <td class="box bg_sub"><a href="../board/myList_jy.html">내가 쓴 게시글</a></td>
                     <td class="active line bg">내가 쓴 댓글</td>
-                    <td class="blank line"></td>
+                    <td class="box bg_sub"><a href="../board/myFavorite_jy.html">좋아요 한 글</a></td>
                     <td class="blank line"></td>
                     <td class="blank line"></td>
                 </tr>
@@ -189,11 +189,6 @@
 
         <div class="list_manage_menu clearfix">
             
-            <input type="hidden" id="selectAll">
-            <button type="button" id="selectAllBtn" onclick="location.href='';">전체선택</button>
-
-            <button type="button" id="deleteBtn" onclick="location.href='';">삭 제</button>
-
             <select name="viewList" id="viewList">
                 <option>목록 10개</option>
                 <option selected="">목록 20개</option>
@@ -201,7 +196,7 @@
                 <option>목록 40개</option>
             </select>
             
-    </div>
+        </div>
 
         <!-- board-list-->
         <table id="searchCafeList" class="table talbe-striped">
@@ -247,6 +242,10 @@
                 
             </tbody>
         </table>
+
+        <input type="hidden" id="selectAll">
+        <button type="button" id="selectAllBtn" onclick="location.href='';">전체선택</button>
+        <button type="button" id="deleteBtn" onclick="location.href='';">삭 제</button>
 
         <!-- -->
         <div id="pageBtn">

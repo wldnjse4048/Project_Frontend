@@ -12,25 +12,22 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/myList_jy.css">
+    <link rel="stylesheet" href="../css/myCommentV2_jy.css">
     <!-- JQUERY -->
-    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/jquery-3.6.0.js" ></script>
 
     <style>
-        .logo {
+        .logo{
             width: 16em;
         }
-
-        .head {
+        .head{
             margin-top: 1em;
         }
-
-        .mainlogo {
+        .mainlogo{
             float: left;
             width: 22%;
         }
-
-        .mainimg {
+        .mainimg{
             float: right;
             width: 78%;
             text-align: right;
@@ -69,8 +66,8 @@
 
         /* Carousel Banner */
         .carousel-inner>.carousel-item>img {
-            width: 25em;
-            height: 15em;
+            width: 25em; 
+            height: 15em; 
         }
     </style>
 </head>
@@ -136,7 +133,7 @@
                 </a>
             </div>
         </nav>
-    </div> <!-- nav div 종료 -->
+    </div>
 
     <div class="main">
 
@@ -162,9 +159,9 @@
             </ul>
         </div>
 
-        <!-- myList start -->
+        <!-- myList profile -->
         <header id="board-header">
-            <a href="myList.html" style="text-align: center;">
+            <a href="myComment.html" style="text-align: center;">
                 <h2>내 글 확인</h2>
             </a>
         </header>
@@ -174,15 +171,15 @@
             <colgroup>
                 <col width="125">
                 <col width="125">
-                <col width="">
+                <col width="125">
                 <col width="">
                 <col width="">
             </colgroup>
             <tbody>
                 <tr>
-                    <td class="active line bg">내가 쓴 게시글</td>
-                    <td class="box bg_sub"><a href="../board/myComment_jy.html">내가 쓴 댓글</a></td>
-                    <td class="blank line"></td>
+                    <td class="box bg_sub"><a href="../board/myList_jy.html">내가 쓴 게시글</a></td>
+                    <td class="active line bg">내가 쓴 댓글</td>
+                    <td class="box bg_sub"><a href="../board/myList_jy.html">좋아요 한 글</a></td>
                     <td class="blank line"></td>
                     <td class="blank line"></td>
                 </tr>
@@ -191,11 +188,6 @@
 
 
         <div class="list_manage_menu clearfix">
-
-            <input type="hidden" id="selectAll">
-            <button type="button" id="selectAllBtn" for onclick="selectAll(this)">전체선택</button>
-
-            <button type="button" id="deleteBtn" onclick="location.href='';">삭 제</button>
 
             <select name="viewList" id="viewList">
                 <option>목록 10개</option>
@@ -206,108 +198,103 @@
 
         </div>
 
-
-
         <!-- board-list-->
-
-
-        <table class="table talbe-striped">
+        <table class="table table-striped">
 
             <thead>
                 <tr>
-                    <th class="list_chkbox" nowrap="nowrap"></th>
-                    <th class="list_bno">번호</th>
-                    <th class="list_witer">작성자</th>
-                    <th class="list_title">글 제목</th>
-                    <th class="list_date">등록일</th>
-                    <th class="list_count">조회수</th>
+                    <th scope="col" colspan="2" style="text-align: center;">
+                        댓글
+                    </th>
                 </tr>
             </thead>
 
             <tbody>
                 <tr>
-                    <td class="list_chkbox"><input type="checkbox" name="data" id="bno" value="bno_data"></td>
-                    <td class="list_bno">50</td>
-                    <td class="list_witer">닉네임1</td>
-                    <td class="list_title"><a href="#">spring 스터디 구해요</a></td>
-                    <td class="list_date">2021-09-06</td>
-                    <td class="list_count">20</td>
+                    <td class="td_article">
+                        <div class="check_box only_box">
+                            <input id="check_comment_66626871" type="checkbox" name="chkBox">
+                            <label for="check_comment_66626871">
+                                <span class="blind">선택</span>
+                            </label>
+                        </div>
+
+                        <a href="#" target="_blank"
+                            class="board-list">
+
+                            <div class="inner_list">
+                                <strong class="article">저요! 저 xxxx근처 삽니다! 같이 열심히 해봐요!!</strong>
+                                <span class="list-i-new">
+                                    <span class="blind"> new </span>
+                                </span>
+                            </div>
+
+                            <div class="comment_date">
+                               2021-09-15 09:53
+                            </div>
+
+                            <div class="comment_title">
+                                spring 스터디 구해요~
+                            </div>
+                        </a>
+                    </td>
                 </tr>
 
                 <tr>
-                    <td class="list_chkbox"><input type="checkbox" name="data" id="bno" value="bno_data"></td>
-                    <td class="list_bno">50</td>
-                    <td class="list_witer">닉네임1</td>
-                    <td class="list_title"><a href="#">spring 스터디 구해요</a></td>
-                    <td class="list_date">2021-09-06</td>
-                    <td class="list_count">20</td>
-                </tr>
+                    <td class="td_article">
+                        <div class="check_box only_box">
+                            <input id="check_comment_66626871" type="checkbox" name="chkBox">
+                            <label for="check_comment_66626871">
+                                <span class="blind">선택</span>
+                            </label>
+                        </div>
 
-                <tr>
-                    <td class="list_chkbox"><input type="checkbox" name="data" id="bno" value="bno_data"></td>
-                    <td class="list_bno">50</td>
-                    <td class="list_witer">닉네임1</td>
-                    <td class="list_title"><a href="#">spring 스터디 구해요</a></td>
-                    <td class="list_date">2021-09-06</td>
-                    <td class="list_count">20</td>
-                </tr>
+                        <a href="/ArticleRead.nhn?clubid=28951646&amp;articleid=124&amp;commentFocus=true" target="_blank"
+                            class="board-list">
 
-                <tr>
-                    <td class="list_chkbox"><input type="checkbox" name="data" id="bno" value="bno_data"></td>
-                    <td class="list_bno">50</td>
-                    <td class="list_witer">닉네임1</td>
-                    <td class="list_title"><a href="#">spring 스터디 구해요</a></td>
-                    <td class="list_date">2021-09-06</td>
-                    <td class="list_count">20</td>
-                </tr>
+                            <div class="inner_list">
+                                <strong class="article">좋은자료 감사합니다.</strong>
+                                <span class="list-i-new">
+                                    <span class="blind">
+                                        new
+                                    </span>
+                                </span>
+                            </div>
 
-                <tr>
-                    <td class="list_chkbox"><input type="checkbox" name="data" id="bno" value="bno_data"></td>
-                    <td class="list_bno">50</td>
-                    <td class="list_witer">닉네임1</td>
-                    <td class="list_title"><a href="#">spring 스터디 구해요</a></td>
-                    <td class="list_date">2021-09-06</td>
-                    <td class="list_count">20</td>
-                </tr>
+                            <div class="comment_date">
+                               2021-09-15 09:53
+                            </div>
 
+                            <div class="comment_title">
+                                xxx기업 면접 자료 입니다.
+                            </div>
+                        </a>
+                    </td>
+                    <td class="td_view">
+                        <!---->
+                    </td>
+                </tr>
             </tbody>
         </table>
 
-        <form name="formSearch" action="" onsubmit="return false;">
+        <input type="hidden" id="selectAll">
+            <button type="button" id="selectAllBtn" onclick="location.href='';">전체선택</button>
 
-            <select class="search-list">
-                <option selected>검색조건</option>
-                <option>작성자</option>
-                <option>글제목</option>
-                <option>글내용</option>
-            </select>
+            <button type="button" id="deleteBtn" onclick="location.href='';">삭 제</button>
 
-    </div>
-
-    <!-- 검색창 -->
-    <div class="input_search_area">
-        <div class="input_component" style="width: 35em">
-            <input type="text" id="query" name="query" placeholder="검색어를 입력해주세요" value="" onkeydown="">
+        <!-- -->
+        <div id="pageBtn">
+            <a href="#" class="previous round">&#8249;</a>
+            <a href="#" class="previous round">1</a>
+            <a href="#" class="previous round">2</a>
+            <a href="#" class="previous round">3</a>
+            <a href="#" class="previous round">4</a>
+            <a href="#" class="previous round">5</a>
+            <a href="#" class="next round">&#8250;</a>
         </div>
-        <button onclick="" class="btn-search">검색</button>
-    </div>
-    </form>
-    </div>
-    </div>
-
-    <!-- paging Btn -->
-    <div id="pageBtn">
-        <a href="#" class="previous round">&#8249;</a>
-        <a href="#" class="previous round">1</a>
-        <a href="#" class="previous round">2</a>
-        <a href="#" class="previous round">3</a>
-        <a href="#" class="previous round">4</a>
-        <a href="#" class="previous round">5</a>
-        <a href="#" class="next round">&#8250;</a>
-    </div>
 
     </div>
-    </div>
+</div>
 
 
 
@@ -315,35 +302,34 @@
 
 
     <!-- scroll -->
-    <script type="text/javascript">
-        // <![CDATA[ 
-        var name = "#floatMenu";
-        var menuYloc = null;
+	<script type="text/javascript">
+		// <![CDATA[ 
+		var name = "#floatMenu";
+		var menuYloc = null;
 
-        $(document).ready(function () {
-            menuYloc = parseInt($(name).css("top").substring(0, $(name).css("top").indexOf("px")))
-            $(window).scroll(function () {
-                offset = menuYloc + $(document).scrollTop() + "px";
-                $(name).animate({
-                    top: offset
-                }, {
-                    duration: 400,
-                    queue: false
-                });
-            });
-        });
+		$(document).ready(function () {
+			menuYloc = parseInt($(name).css("top").substring(0, $(name).css("top").indexOf("px")))
+			$(window).scroll(function () {
+				offset = menuYloc + $(document).scrollTop() + "px";
+				$(name).animate({
+					top: offset
+				}, {
+					duration: 400,
+					queue: false
+				});
+			});
+		});
 		// ]]>
-    </script>
+	</script>
 
 
+     <!-- IONICONS -->
+     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+     <!-- JS -->
+     <script type="text/javascript" src="js/main.js"></script>
 
-    <!-- IONICONS -->
-    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
-    <!-- JS -->
-    <script type="text/javascript" src="js/main.js"></script>
-
-    <script type="text/javascript" src="js/bootstrap.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+     <script type="text/javascript" src="js/bootstrap.js"></script>
+     <script type="text/javascript" src="js/bootstrap.min.js"></script>
 </body>
 
 </html>
