@@ -1,4 +1,5 @@
 <!DOCTYPE HTML>
+<html lang="en">
 
 <html>
 
@@ -7,12 +8,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>잡담드림</title>
-
+    
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-
+    
     <!-- CSS -->
     <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/study_list.css">
     <link rel="stylesheet" href="../css/board.css">
     <!-- JQUERY -->
     <script src="../js/jquery-3.6.0.js"></script>
@@ -38,7 +38,7 @@
                             <div class="profile-usertitle-level" style="font-size: 0.8em;">level 1</div>
                         </div>
                         <div>
-                           <button type="button" class="btn btn-success btn-sm" onclick="location.href='user/mypage.html'">MyPage</button>
+                        	<button type="button" class="btn btn-success btn-sm" onclick="location.href='../user/mypage.html'">MyPage</button>
                             <button type="button" class="btn btn-danger btn-sm">Logout</button>
                         </div>
                     </div>
@@ -92,7 +92,7 @@
                         </ul>
                     </div>
 
-                    <a href="../board/interview.html" class="nav__link">
+					<a href="../board/interview.html" class="nav__link">
                         <ion-icon name="chatbox-ellipses-outline" class="nav__icon"></ion-icon>
                         <span class="nav_name">면접경험담</span>
                     </a>
@@ -110,7 +110,7 @@
                     <a href="../board/study_list.html" class="nav__link">
                         <ion-icon name="people-outline" class="nav__icon"></ion-icon>
                         <span class="nav_name">스터디모임</span>
-                    </a>
+					</a>
                 </div>
                 
             </div>
@@ -127,15 +127,18 @@
             <div class="mainimg">
                 <img src="../image/main.png">
             </div>
-            <br style="content: ''; display: block; clear: both;">
-            <hr style="content: ''; display: block; clear: both;">
+            <br class="clearfix">
+            <hr class="clearfix">
         </header>
                
-        <!-- boardlist-->
+        <!-- boardlist -->
         <div class="board">
-            <h2>스터디 모임</h2><br>
+            <h2>스터디 모임</h2>
+            <br>
+			<h6><strong>스터디 공유 게시판</strong></h6>
+			<br>
 
-            <select class=selectList>
+            <select class="selectList">
                 <option selected>목록개수</option>
                 <option>10개</option>
                 <option>20개</option>
@@ -158,7 +161,7 @@
                     <tr>
                         <td class="list_bno">50</td>
                         <td class="list_writer">닉네임1</td>
-                        <td class="list_title"><a href="../board/detail_jy.html">spring 스터디 구해요</a></td>
+                        <td class="list_title"><a href="../board/detail.html">spring 스터디 구해요</a></td>
                         <td class="list_date">2021-09-06</td>
                         <td class="list_count">20</td>
                     </tr>
@@ -166,7 +169,7 @@
                     <tr>
                         <td class="list_bno">50</td>
                         <td class="list_writer">닉네임1</td>
-                        <td class="list_title"><a href="../board/detail_jy.html">spring 스터디 구해요</a></td>
+                        <td class="list_title"><a href="../board/detail.html">spring 스터디 구해요</a></td>
                         <td class="list_date">2021-09-06</td>
                         <td class="list_count">20</td>
                     </tr>
@@ -174,7 +177,7 @@
                     <tr>
                         <td class="list_bno">50</td>
                         <td class="list_writer">닉네임1</td>
-                        <td class="list_title"><a href="../board/detail_jy.html">spring 스터디 구해요</a></td>
+                        <td class="list_title"><a href="../board/detail.html">spring 스터디 구해요</a></td>
                         <td class="list_date">2021-09-06</td>
                         <td class="list_count">20</td>
                     </tr>
@@ -182,7 +185,7 @@
                     <tr>
                         <td class="list_bno">50</td>
                         <td class="list_writer">닉네임1</td>
-                        <td class="list_title"><a href="../board/detail_jy.html">spring 스터디 구해요</a></td>
+                        <td class="list_title"><a href="../board/detail.html">spring 스터디 구해요</a></td>
                         <td class="list_date">2021-09-06</td>
                         <td class="list_count">20</td>
                     </tr>
@@ -190,7 +193,7 @@
                     <tr>
                         <td class="list_bno">50</td>
                         <td class="list_writer">닉네임1</td>
-                        <td class="list_title"><a href="../board/detail_jy.html">spring 스터디 구해요</a></td>
+                        <td class="list_title"><a href="../board/detail.html">spring 스터디 구해요</a></td>
                         <td class="list_date">2021-09-06</td>
                         <td class="list_count">20</td>
                     </tr>
@@ -199,23 +202,23 @@
             </table>
 
             <div class="list-btn clearfix">
-                <button class="btn boardBtn" id="list-writer" type="button" onclick="location.href='../board/writing.html'">작성하기</button>
-                <button class="boardBtn" id="list-modify" type="button" onclick="location.href='../board/myList.html'">내글보기</button>
-            </div>
+				<button class="btn boardBtn" id="list-write" type="button" onclick="location.href='../board/write.html'">작성하기</button>
+				<button class="btn boardBtn" id="list-my" type="button" onclick="location.href='../board/myList.html'">내글보기</button>
+			</div>
         </div>
   
         
-        <!-- 검색창 -->
-        <form name="frmSearch" id="frmSearch" action="" onsubmit="return false;">          
+		<!-- search -->
+        <form name="formSearch" id="formSearch" action="" onsubmit="return false;">          
 
-            <select class="listArea">
+            <select class="select1">
                 <option selected>지역</option>
                 <option>서울</option>
                 <option>부산</option>
                 <option>속초</option>
             </select>
 
-            <select class="listSearch">
+            <select class="select2">
                 <option selected>검색조건</option>
                 <option>작성자</option>
                 <option>글제목</option>
@@ -224,22 +227,22 @@
 
             <div class="input_search_area">
                 <div class="input_component" >
-                    <input type="text" id="query" name="query" placeholder="검색어를 입력해주세요" value="" onkeydown="">
+                    <input type="text" class="search-text" name="search-text" placeholder="검색어를 입력해주세요" value="" onkeydown="">
                 </div>
                 <button onclick="" class="btn-search">검색</button>
             </div>
         </form>
 
-        <!-- 페이지 btn -->
-        <div id="pageBtn">
-            <a href="#" class="round">&#8249;</a>
-            <a href="#" class="round">1</a>
-            <a href="#" class="round">2</a>
-            <a href="#" class="round">3</a>
-            <a href="#" class="round">4</a>
-            <a href="#" class="round">5</a>
-            <a href="#" class="round">&#8250;</a>
-        </div>
+    <!-- 페이지 btn -->
+    <div id="board-pageBtn">
+        <a href="#" class="round">&#8249;</a>
+        <a href="#" class="round">1</a>
+        <a href="#" class="round">2</a>
+        <a href="#" class="round">3</a>
+        <a href="#" class="round">4</a>
+        <a href="#" class="round">5</a>
+        <a href="#" class="round">&#8250;</a>
+    </div>
      
     </div>
 

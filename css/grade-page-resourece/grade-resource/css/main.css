@@ -209,22 +209,19 @@ table {
   border-spacing: 1;
   border-collapse: collapse;
   background: white;
-  border-radius: 10px;
   overflow: hidden;
-  width: 100%;
-  margin: 0 auto;
+  width: 85%;
+  margin: 1em auto;
   position: relative;
 }
 table * {
   border: gray 1px solid;
   position: relative;
 }
-table td, table th {
-  padding-left: 8px;
-}
+
 table thead tr {
   height: 60px;
-  background: #36304a;
+  background: rgba(20, 50, 120);
 }
 table tbody tr {
   height: 50px;
@@ -233,10 +230,10 @@ table tbody tr:last-child {
   border: 0;
 }
 table td, table th {
-  text-align: left;
+  text-align: center;
 }
 table td.l, table th.l {
-  text-align: right;
+  text-align: center;
 }
 table td.c, table th.c {
   text-align: center;
@@ -274,7 +271,6 @@ tbody tr:hover {
 
 .column1 {
   width: 260px;
-  padding-left: 40px;
 }
 
 .column2 {
@@ -283,16 +279,16 @@ tbody tr:hover {
 
 .column3 {
   width: 245px;
+  text-align: left;
+  padding-left: 8px;
 }
 
 .column4 {
   width: 110px;
-  text-align: right;
 }
 
 .column5 {
   width: 170px;
-  text-align: right;
 }
 
 .column6 {

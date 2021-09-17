@@ -2,31 +2,37 @@
 select:hover,
 textarea:hover,
 input:hover {
-  border: 2px solid rgb(20, 50, 120);
+  border: 1px solid rgb(20, 50, 120);
 }
-
-button:hover {
-  background: linear-gradient( to right, white, rgb(20, 50, 120) );
-  color: white;
-  box-shadow: 10px 1px 10px white;
-  opacity: 1em;
-}
-
 
 /*-- 테이블 --*/
-.board>h2 {
+.board {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.board > h2 {
   text-align: center;
   font-weight: bolder;
   border-bottom: solid 0.15em rgb(20, 50, 120);
-  padding-bottom: 1em;
+  padding: 1em 0 0.5em;
 }
 
-.board-selectList {
+.selectList {
   font-size: 0.9em;
-  width: 7em;
-  height: 2em;
+  width: max-content;
+  height: 2.5em;
   float: right;
-  margin-bottom: 0.2em;
+  margin-bottom: 0.5em;
+}
+
+.selectMenu {
+  font-size: 0.9em;
+  width: max-content;
+  height: 2.5em;
+  margin-bottom: 0.5em;
+  margin-right: 1em;
 }
 
 .writing-selectList {
@@ -34,7 +40,7 @@ button:hover {
   float: right;
 }
 
-table {
+.table {
   text-align: center;
 }
 
@@ -69,9 +75,17 @@ table {
   width: 7em;
 }
 
-#selectedFile {
+#textwrite{
+  width: 100%;
+  padding: 1em;
+  overflow-y: auto;
+  resize: none;
+  min-height: 20em;
+}
+
+#selectFile {
   text-align: left;
-  font-size: 0.8em;
+  padding: 0.5em;
 }
 
 a {
@@ -84,91 +98,43 @@ a {
   color: white;
 } */
 
-.table > a:hover {
+.table  a:hover {
   text-decoration: underline;
   background-color: none;
   color: rgb(20, 50, 120);
 }
 
-/* 검색 */
-.select1, .select2 {
-  font-size: 0.8em;
-  height: 3em;
-  width: 7em;
-  float: left;
-}
-
-.board-search {
-  vertical-align: middle;
-  white-space: nowrap;
-  float: left;
-}
-
-.board-search input#search {
-  height: 3em;
-  width: 50em;
-  margin-left: 2em;
-  padding-left: 1em;
-  font-size: 10pt;
-  color: black;
-  float: left;
-}
-
-@media screen and (max-width: 1280px) {
-  .board-search input#search {
-    width: 30em;
-  }
-}
-
-@media screen and (max-width: 980px) {
-  .board-search input#search {
-    width: 20em;
-  }
-}
-
 /* 버튼 */
-.uploadBtn {
+.selectBtn {
   float: right;
-  bottom: 3em;
-  left: 50em;
 }
 
-.uploadBtn button {
-  height: 2.2em;
-  font-size: 0.8em;
-  padding: 0 1em;
-  border-radius: 0.5em;
+.selectBtn button {
+  font-size: 0.9em;
+  border: 0.5px solid black;
+  background: none;
 }
 
-.boardListBtn button {
+.selectBtn button:hover{
+  color:white;
+  background-color: rgba(20, 50, 120, 0.8);
+}
+
+.boardBtn {
   font-size: 0.9em;
   width: 6em;
-  height: 3em;
-  border-radius: 0.5em;
-  margin-right: 0.5em;
+  height: 2.5em;
+  border-radius: 0.25em;
+  border: 0.5px solid rgb(20, 50, 120);
+  margin: 0.25em;
+  padding: 0.25em;
   text-align: center;
   float: right;
 }
 
-@media screen and (max-width: 1680px) {
-  .boardBtn button{
-    font-size: 0.9em;
-    width: 6em;
-    height: 3em;
-    border-radius: 0.5em;
-    text-align: center;
-    float: right;
-  }
-}
-
-@media screen and (max-width: 980px) {
-  .boardBtn button{
-    font-size: 0.9em;
-    width: 6em;
-    height: 3em;
-    border-radius: 0.5em;
-    text-align: center;
-  }
+.boardBtn:hover {
+  background: rgb(20, 50, 120, 0.8);
+  color: white;
 }
 
 .board-search .board-searchIcon {
@@ -179,7 +145,7 @@ a {
 
 #board-pageBtn {
   text-align: center;
-  margin-top: 7em;
+  margin: 4em auto;
   border-radius: 0.5em;
 }
 
@@ -190,34 +156,22 @@ a {
 }
 
 #board-pageBtn a:hover {
-  background: linear-gradient( to right, white, rgb(20, 50, 120) );
-}
-
-.previous {
-  background-color: #f1f1f1;
-  color: black;
-}
-
-.next {
-  background-color: #f1f1f1;
-  color: black;
+  color:white;
+  background-color: rgba(20, 50, 120);
 }
 
 .round {
+  background-color: #f1f1f1;
+  color: black;
   border-radius: 50%;
-}
-
-.board-content {
-  margin: 0.5em auto;
+  width: 2.5em;
 }
 
 .board-content .btn-right {
   float: right;
-  margin-right: 0.5em;
-  border-radius: 0.5em;
 }
 
-.clearfix::after {
+.clearfix {
   content: '';
   display: block;
   clear: both;
@@ -235,85 +189,143 @@ a {
   border-radius: 0.5em;
 }
 
-.writing-boardBtn {
-  float: right;
-}
-
-.writing-boardBtn button {
-  border-radius: 0.5em;
-  width: 5em;
-  margin-bottom: 5em;
-  border-radius: 0.5em;
-}
-
-.board-comment .btn-right, .comment-board .btn-right {
+.board-comment .btn-right, .board-content .btn-right {
   color: black;
-  border: none;
+  border: 0.5px solid rgb(20, 50, 120);
   background-color: white;
   float: right;
+  margin-right: 1em;
+  margin-bottom: 0.2em;
 }
 
-.board-comment .btn-right:hover, .comment-board .btn-right:hover {
-  color: rgb(20, 50, 120);
-  font-weight: bolder;
-  background: linear-gradient( to right, white, rgb(20, 50, 120) );
-  border-radius: 10em;
+.board-comment .btn-right:hover, .board-content .btn-right:hover {
+  color:white;
+  background-color: rgba(20, 50, 120, 0.8);
 }
 
 #registBtn {
-  margin-top: 0.3em;
-  margin-right: 1em;
+  margin-top: 2em;
 }
 
 /* 댓글 */
 .comment-section {
   width: 90%;
-  border: 0.2em solid rgb(20, 50, 120);
-  border-radius: 1em;
-  margin-top: 6em;
+  border: 0.5px solid rgb(20, 50, 120);
+  margin-top: 4em;
   margin-bottom: 3em;
 }
 
 .comment-title {
   font-size: 1.5em;
-  margin: 2em 0;
+  margin: 1em 0;
 }
 
 .comment-fix-item {
-  padding: 0 2em 2em 2em;
-  margin: 2em 2em 4em 2em;
+  margin: 2em;
 }
 
 .comment-fix-item img, .comment-board img {
-  width: 7em;
-  height: 7em;
+  width: 5em;
+  height: 5em;
   border-radius: 50%;
   float: left;
+  margin: 1em;
 }
 
-.comment-fix-item .comment-name {
-  width: 85%;
+.comment-fix-item .comment-writer {
+  width: 20%;
   height: 2em;
   float: left;
+  margin-bottom: 0.2em;
 }
 .comment-fix-item textarea, .comment-board p {
-  width: 85%;
-  height: 4em;
+  width: 80%;
+  height: 5em;
   float: left;
   overflow: auto;
-  margin-left: 1em;
 }
 
 .comment-board {
-  padding: 2em;
-  margin: 2em 2em 4em 2em;
-  border: none;
-  height: 40em;
-  overflow: auto;
+  margin: 2em;
+  height: 30em;
+  overflow-y: auto;
 }
 
-.comment-date, .comment-name {
+.comment-date, .comment-writer {
   font-size: 0.9em;
   color: #7f888f;
+}
+
+/* search */
+#formSearch{
+  width: 40em;
+  height: auto;
+  margin: auto;
+  padding: 0.25em;
+}
+
+.select1, .select2 {
+  font-size: 0.8em;
+  height: 3em;
+  width: 7em;
+  float: left;
+  margin-right: 1em;
+}
+
+.input_search_area{
+  -webkit-text-size-adjust: none;
+  font-weight: 400;
+  color: #333;
+  text-align: center;
+  font-size: 13px;
+  display: inline-block;
+  margin: auto;
   margin-left: 1em;
+}
+
+.input_component{
+  font-weight: 400;
+  color: #333;
+  text-align: center;
+  font-size: 13px;
+  display: inline-block;
+  position: relative;
+  height: 36px;
+  box-sizing: border-box;
+  border: solid 1px;
+  vertical-align: top;
+  border-color: #ddd;
+  background-color: #fff;
+  border-right: 0;
+  width: 25em;
+}
+
+.search-text {
+  margin: 0;
+  font-size: 13px;
+  width: 100%;
+  height: 100%;
+  padding: 0 12px;
+  border: 0;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #333;
+}
+
+.btn-search {
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  cursor: pointer;
+  color: white;
+  display: inline-block;
+  width: 56px;
+  height: 36px;
+  background-color: rgba(20, 50, 120);
+  border: 0;
+}
+
+#selectAllBtn:hover, #deleteBtn:hover{
+color:white;
+background-color: rgba(20, 50, 120, 0.8);
 }

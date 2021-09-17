@@ -7,82 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>잡담드림</title>
 
-    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-
     <!-- CSS -->
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/board.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
     <!-- JQUERY -->
     <script src="../js/jquery-3.6.0.js"></script>
 
-	
-<!--===============================================================================================-->
+<!-- ================================================================================================== -->
 	<link rel="stylesheet" type="text/css" href="../css/grade-page-resourece/grade-resource/css/util.css">
 	<link rel="stylesheet" type="text/css" href="../css/grade-page-resourece/grade-resource/css/main.css">
 
-     
-
-    <style>
-        .logo {
-            width: 16em;
-        }
-
-        .head {
-            margin-top: 1em;
-        }
-
-        .mainlogo {
-            float: left;
-            width: 22%;
-        }
-
-        .mainimg {
-            float: right;
-            width: 78%;
-            text-align: right;
-        }
-
-        /* #floatMenu */
-        #floatMenu {
-            font-weight: bold;
-            font-size: 0.8em;
-            text-align: center;
-            position: absolute;
-            margin-top: 5em;
-            width: 8.5em;
-            height: 17em;
-            left: 9em;
-            z-index: 1;
-            background-color: rgba(20, 50, 120, 0.6);
-            border-radius: 7%;
-        }
-
-        #floatMenu ul {
-            padding-top: 0.5em;
-            list-style: none;
-        }
-
-        #floatMenu li {
-            padding: 1em;
-        }
-
-        #floatMenu a {
-            color: white;
-            display: block;
-        }
-
-        /* Carousel Banner */
-        .carousel-inner>.carousel-item>img {
-            width: 25em;
-            height: 15em;
-        }
-
-    </style>
 </head>
 
 <body id="body-pd">
 
-    <div class="l-navbar" id="navbar">
+    <div class="l-navbar expander" id="navbar">
         <nav class="nav">
             <div>
                 <div class="nav__brand">
@@ -91,68 +32,90 @@
                 </div>
 
                 <div class="nav__user">
-                    
+                    <div class="userProfile" style="border: 1px solid #fff; border-radius: 5px; height: 12em; margin-bottom: 1em; text-align: center; padding-top: 1em;">
+                        <div class="profile-userpic">
+                             <img src="../image/profile.jpg" class="img-responsive" style="width: 5em; height: 5em; border-radius: 50%;">
+                        </div>
+                        <div class="profile-usertitle" style="padding-bottom: 0.5em;">
+                            <div class="profile-usertitle-name" style="font-size: 1em;">manager</div>
+                            <div class="profile-usertitle-level" style="font-size: 0.8em;">level 1</div>
+                        </div>
+                        <div>
+                        	<button type="button" class="btn btn-success btn-sm" onclick="location.href='../user/mypage.html'">MyPage</button>
+                            <button type="button" class="btn btn-danger btn-sm">Logout</button>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="nav__login">
+                <!-- <div class="nav__login">
                     <a href="user/form_login.html" class="nav__link">
                         <ion-icon name="person-circle-outline" class="nav__icon"></ion-icon>
                         <span class="nav_name">Join & Login</span>
                     </a>
-                </div>
+                </div> -->
 
                 <div class="nav__list">
-                    <a href="board/board-list.html" class="nav__link active">
+                    <a href="../user/grade.html" class="nav__link">
                         <ion-icon name="chevron-up-circle-outline" class="nav__icon"></ion-icon>
                         <span class="nav_name">등업</span>
                     </a>
-                    <a href="message.html" class="nav__link">
+                    <a href="../user/send-message.html" class="nav__link">
                         <ion-icon name="chatbubbles-outline" class="nav__icon"></ion-icon>
                         <span class="nav_name">Messenger</span>
                     </a>
 
                     <hr>
 
-                    <div href="#" class="nav__link collapse">
+                    <div class="nav__link collapse">
+                        
                         <ion-icon name="folder-outline" class="nav__icon"></ion-icon>
-                        <span class="nav_name">Projects</span>
+                        <!-- <ion-icon name="folder-open-outline" class="nav__icon"></ion-icon> 클릭시 아이콘변경되도록 설정예정-->
+                        <span class="nav_name" onclick="location.href='../board/board-list.html'">채용공고</span>
+                        
+                        <ion-icon name="chevron-down-outline" class="collapse__link"></ion-icon>
+
+                        <ul class="collapse__menu">
+                            <a href="#" class="collapse__sublink">대기업</a><br>
+                            <a href="#" class="collapse__sublink">중견기업</a><br>
+                            <a href="#" class="collapse__sublink">중소/스타트업</a><br>
+                            <a href="#" class="collapse__sublink">인턴</a>
+                        </ul>
+
+                    </div>
+
+                    <div class="nav__link collapse">
+                        <ion-icon name="clipboard-outline" class="nav__icon"></ion-icon>
+                        <span class="nav_name" onclick="location.href='../board/resume.html'">자기소개서</span>
 
                         <ion-icon name="chevron-down-outline" class="collapse__link"></ion-icon>
 
                         <ul class="collapse__menu">
-                            <a href="#" class="collapse__sublink">Data</a>
-                            <a href="#" class="collapse__sublink">Group</a>
-                            <a href="#" class="collapse__sublink">Members</a>
+                            <a href="#" class="collapse__sublink">합격자소서</a><br>
+                            <a href="#" class="collapse__sublink">불합격자소서</a>
                         </ul>
                     </div>
 
-                    <a href="#" class="nav__link">
-                        <ion-icon name="pie-chart-outline" class="nav__icon"></ion-icon>
-                        <span class="nav_name">Analytics</span>
+					<a href="../board/interview.html" class="nav__link">
+                        <ion-icon name="chatbox-ellipses-outline" class="nav__icon"></ion-icon>
+                        <span class="nav_name">면접경험담</span>
                     </a>
 
-                    <div href="#" class="nav__link collapse">
+                    <a href="#" class="nav__link">
+                        <ion-icon name="trail-sign-outline" class="nav__icon"></ion-icon>
+                        <span class="nav_name">취업상담소</span>
+                    </a>
+
+                    <a href="#" class="nav__link">
+                        <ion-icon name="heart-outline" class="nav__icon"></ion-icon>
+                        <span class="nav_name">자유게시판</span>
+                    </a>
+
+                    <a href="../board/study_list.html" class="nav__link">
                         <ion-icon name="people-outline" class="nav__icon"></ion-icon>
-                        <span class="nav_name">Team</span>
-
-                        <ion-icon name="chevron-down-outline" class="collapse__link"></ion-icon>
-
-                        <ul class="collapse__menu">
-                            <a href="#" class="collapse__sublink">Data</a>
-                            <a href="#" class="collapse__sublink">Group</a>
-                            <a href="#" class="collapse__sublink">Members</a>
-                        </ul>
-                    </div>
-
-                    <a href="#" class="nav__link">
-                        <ion-icon name="settings-outline" class="nav__icon"></ion-icon>
-                        <span class="nav_name">Settings</span>
-                    </a>
+                        <span class="nav_name">스터디모임</span>
+					</a>
                 </div>
-                <a href="#" class="nav__link">
-                    <ion-icon name="log-out-outline" class="nav__icon"></ion-icon>
-                    <span class="nav_name">Log out</span>
-                </a>
+                
             </div>
         </nav>
     </div>
@@ -162,120 +125,106 @@
         <!-- Header -->
         <header class="head">
             <div class="mainlogo">
-                <a href="index.html"><img class="logo" src="../image/logo.png"></a>
-
+                <a href="../index.html"><img class="logo" src="../image/logo.png"></a>
             </div>
             <div class="mainimg">
                 <img src="../image/main.png">
             </div>
-            <br style="content: ''; display: block; clear: both;">
-            <hr style="content: ''; display: block; clear: both;">
-
+            <br class="clearfix">
+            <hr class="clearfix">
+            <br class="clearfix">
         </header>
-
-        <!-- floating menu -->
-        <div id="floatMenu">
-            <ul>
-                <li><a href="https://www.16personalities.com/ko">자기분석<br>MBTI</a></li>
-                <li><a href="https://www.saramin.co.kr/zf_user/">사람인</a></li>
-                <li><a href="https://www.jobkorea.co.kr/">잡코리아</a></li>
-                <li><a href="https://programmers.co.kr/">프로그래머스</a></li>
-            </ul>
+        
+        <h2>등업신청</h2>
+  
+        <div id="modal">
+            <div id="reveinfleur">
+            <button type="button" data-toggle="modal" data-target="#exampleModal" id="btn-1">신청</button>
+            </div>
         </div>
 
-	
-
-  
-	<div id="modal">
-		<div id="reveinfleur">
-		<button type="button" data-toggle="modal" data-target="#exampleModal" id="btn-1">신청</button>
-		</div>
-	</div>
-
-    <!-- 관리자 -->
-    <!-- <div id="modal">
-		<div id="reveinfleur">
-		<button type="button" data-toggle="modal" data-target="#exampleModal" id="btn-1">승인</button>
-		</div>
-	</div> -->
-	
-	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	  <div class="modal-dialog" role="document">
-		<div class="modal-content">
-		  <div class="modal-header">
-			<h4>등업 창</h4>
-			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			  <span aria-hidden="true">&times;</span>
-			</button>
-		  </div>
-		  <div class="modal-body">
-
-			<form>
-				<div class="form-group">
-					<label>ID</label>
-					<input name="" class="form-control" placeholder="ID" readonly>
-				</div> <!-- form-group// -->
-				<div class="form-group">
-					<label>nickname</label>
-					<input class="form-control" placeholder="nickname" readonly>
-				</div> <!-- form-group// --> 
-				<div class="form-group" >
-					<label>신청등급</label>
-					<div style="border: 2px solid black;">
-					<input class="text" placeholder="GRADE">
-				</div>
-				</div> <!-- form-group// --> 
-				<div class="form-group">
-					<label>내용</label>
-					<input class="form-control" placeholder="CONTENT">
-				</div> <!-- form-group// --> 
-				<div class="form-group">                
-				</div> <!-- form-group// --> 																	
-			</form>	
-		  </div>
-		  <div class="modal-footer">
-			<button type="button" class="btn btn-secondary" data-dismiss="modal">신청</button>
-			<button type="button" class="btn btn-primary">내글목록</button>       
-		  </div>
-
-          <!-- 관리자 -->
-          <!-- <form>
-            <div class="form-group">
-                <label>ID</label>
-                <input name="" class="form-control" placeholder="ID" readonly>
-            </div> 
-            <div class="form-group">
-                <label>nickname</label>
-                <input class="form-control" placeholder="nickname" readonly>
-            </div> 
-            <div class="form-group" >
-                <label>신청등급</label>
-                <div style="border: 2px solid black;">
-                <input class="text" placeholder="GRADE">
+        <!-- 관리자 -->
+        <!-- <div id="modal">
+            <div id="reveinfleur">
+            <button type="button" data-toggle="modal" data-target="#exampleModal" id="btn-1">승인</button>
             </div>
-            </div> 
-            <div class="form-group">
-                <label>내용</label>
-                <input class="form-control" placeholder="CONTENT">
-            </div> 
-            <div class="form-group">                
-            </div>																
-        </form>	
-      </div>
-      <div class="modal-footer">   
-        <button type="button" class="btn btn-primary">승인</button>
-      </div> -->
+        </div> -->
+        
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h4>등업 창</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            
+            <div class="modal-body">
+
+                <form>
+                    <div class="form-group">
+                        <label>ID</label>
+                        <input name="" class="form-control" placeholder="ID" readonly>
+                    </div> <!-- form-group// -->
+                    <div class="form-group">
+                        <label>nickname</label>
+                        <input class="form-control" placeholder="nickname" readonly>
+                    </div> <!-- form-group// --> 
+                    <div class="form-group" >
+                        <label>신청등급</label>
+                        <div style="border: 2px solid black;">
+                            <input class="text" placeholder="GRADE">
+                        </div>
+                    </div> <!-- form-group// --> 
+                    <div class="form-group">
+                        <label>내용</label>
+                        <input class="form-control" placeholder="CONTENT">
+                    </div> <!-- form-group// --> 
+                    <div class="form-group">                
+                    </div> <!-- form-group// --> 																	
+                </form>	
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">신청</button>
+                <button type="button" class="btn btn-primary">내글목록</button>       
+            </div>
+
+            <!-- 관리자 -->
+            <!-- <form>
+                <div class="form-group">
+                    <label>ID</label>
+                    <input name="" class="form-control" placeholder="ID" readonly>
+                </div> 
+                <div class="form-group">
+                    <label>nickname</label>
+                    <input class="form-control" placeholder="nickname" readonly>
+                </div> 
+                <div class="form-group" >
+                    <label>신청등급</label>
+                    <div style="border: 2px solid black;">
+                        <input class="text" placeholder="GRADE">
+                    </div>
+                </div> 
+                <div class="form-group">
+                    <label>내용</label>
+                    <input class="form-control" placeholder="CONTENT">
+                </div> 
+                <div class="form-group">                
+                </div>																
+            </form>	
+        </div>
+        <div class="modal-footer">   
+            <button type="button" class="btn btn-primary">승인</button>
+        </div> -->
 
 
-		</div>
-	  </div>
-	</div>									
-	</div>
-</div>
-</div>
-    
-
-    <hr width="70%" color="blue" style="text-align: center;">
+            </div>
+        </div>
+    </div>
+        
+    <hr width="80%" color="blue" style="text-align: center;">
 	
 	<div class="limiter">
 		<div class="container-table100">
@@ -285,227 +234,146 @@
 						<thead>
 							<tr class="table100-head">
 								<th class="col-sm-2" >글번호</th>
-								<th class=" col-sm-2" >작성자</th>
-								<th class=" col-sm-6" >글내용</th>
-								<th class=" col-sm-1" style="font-size: 15px;">신청등급</th>
-								<th class=" col-sm-1" style="font-size: 15px;">승인여부</th>
+								<th class="col-sm-2" >작성자</th>
+								<th class="col-sm-6" >글내용</th>
+								<th class="col-sm-1" style="font-size: 15px;">신청등급</th>
+								<th class="col-sm-1" style="font-size: 15px;">승인여부</th>
 								
 							</tr>
 						</thead>
 						<tbody>
-								<tr>
-									<td class="column1 col-sm-1"><a href="grade-detail.html">등업 신청 상세페이지</a></td>
-									<td class="column2 col-sm-3">200398</td>
-									<td class="column3 col-sm-5">content</td>
-									<td class="column4 com-sm-5"></td>
-									<td class="column5 col-sm-1">1</td>
-									
-								</tr>
-								<tr>
-									<td class="column1">2017-09-28 05:57</td>
-									<td class="column2">200397</td>
-									<td class="column3"></td>
-									<td class="column4"></td>
-									<td class="column5 col-sm-1">1</td>
-									
-								</tr>
-								<tr>
-									<td class="column1">2017-09-26 05:57</td>
-									<td class="column2">200396</td>
-									<td class="column3"></td>
-									<td class="column4"></td>
-									<td class="column5 col-sm-1">2</td>
-									
-								</tr>
-								<tr>
-									<td class="column1">2017-09-25 23:06</td>
-									<td class="column2">200392</td>
-									<td class="column3"></td>
-									<td class="column4"></td>
-									<td class="column5 col-sm-1">3</td>
-								
-								</tr>
-								<tr>
-									<td class="column1">2017-09-24 05:57</td>
-									<td class="column2">200391</td>
-									<td class="column3"></td>
-									<td class="column4"></td>
-									<td class="column5 col-sm-1">6</td>
-								
-								</tr>
-								<tr>
-									<td class="column1">2017-09-23 05:57</td>
-									<td class="column2">200390</td>
-									<td class="column3"></td>
-									<td class="column4"></td>
-									<td class="column5 col-sm-1">1</td>
-									
-								</tr>
-								<tr>
-									<td class="column1">2017-09-22 05:57</td>
-									<td class="column2">200389</td>
-									<td class="column3"></td>
-									<td class="column4"></td>
-									<td class="column5 col-sm-1">1</td>
-									
-								</tr>
-								<tr>
-									<td class="column1">2017-09-21 05:57</td>
-									<td class="column2">200388</td>
-									<td class="column3"></td>
-									<td class="column4"</td>
-									<td class="column5 col-sm-1">1</td>
-								
-								</tr>
-								<tr>
-									<td class="column1">2017-09-19 05:57</td>
-									<td class="column2">200387</td>
-									<td class="column3"></td>
-									<td class="column4"></td>
-									<td class="column5 col-sm-1">1</td>
-									
-								</tr>
-								<tr>
-									<td class="column1">2017-09-18 05:57</td>
-									<td class="column2">200386</td>
-									<td class="column3"></td>
-									<td class="column4"></td>
-									<td class="column5 col-sm-1">1</td>
-									
-								</tr>
-								<tr>
-									<td class="column1">2017-09-22 05:57</td>
-									<td class="column2">200389</td>
-									<td class="column3"</td>
-									<td class="column4"></td>
-									<td class="column5 col-sm-1">1</td>								
-								</tr>								
+                            <tr>
+                                <td class="column1 col-sm-1"><a href="grade-detail.html">등업 신청 상세페이지</a></td>
+                                <td class="column2 col-sm-3">200398</td>
+                                <td class="column3 col-sm-5">content</td>
+                                <td class="column4 com-sm-5"></td>
+                                <td class="column5 col-sm-1">1</td>
+                                
+                            </tr>
+                            <tr>
+                                <td class="column1">2017-09-28 05:57</td>
+                                <td class="column2">200397</td>
+                                <td class="column3"></td>
+                                <td class="column4"></td>
+                                <td class="column5 col-sm-1">1</td>
+                                
+                            </tr>
+                            <tr>
+                                <td class="column1">2017-09-26 05:57</td>
+                                <td class="column2">200396</td>
+                                <td class="column3"></td>
+                                <td class="column4"></td>
+                                <td class="column5 col-sm-1">2</td>
+                                
+                            </tr>
+                            <tr>
+                                <td class="column1">2017-09-25 23:06</td>
+                                <td class="column2">200392</td>
+                                <td class="column3"></td>
+                                <td class="column4"></td>
+                                <td class="column5 col-sm-1">3</td>
+                            
+                            </tr>
+                            <tr>
+                                <td class="column1">2017-09-24 05:57</td>
+                                <td class="column2">200391</td>
+                                <td class="column3"></td>
+                                <td class="column4"></td>
+                                <td class="column5 col-sm-1">6</td>
+                            
+                            </tr>
+                            <tr>
+                                <td class="column1">2017-09-23 05:57</td>
+                                <td class="column2">200390</td>
+                                <td class="column3"></td>
+                                <td class="column4"></td>
+                                <td class="column5 col-sm-1">1</td>
+                                
+                            </tr>
+                            <tr>
+                                <td class="column1">2017-09-22 05:57</td>
+                                <td class="column2">200389</td>
+                                <td class="column3"></td>
+                                <td class="column4"></td>
+                                <td class="column5 col-sm-1">1</td>
+                                
+                            </tr>
+                            <tr>
+                                <td class="column1">2017-09-21 05:57</td>
+                                <td class="column2">200388</td>
+                                <td class="column3"></td>
+                                <td class="column4"</td>
+                                <td class="column5 col-sm-1">1</td>
+                            
+                            </tr>
+                            <tr>
+                                <td class="column1">2017-09-19 05:57</td>
+                                <td class="column2">200387</td>
+                                <td class="column3"></td>
+                                <td class="column4"></td>
+                                <td class="column5 col-sm-1">1</td>
+                                
+                            </tr>
+                            <tr>
+                                <td class="column1">2017-09-18 05:57</td>
+                                <td class="column2">200386</td>
+                                <td class="column3"></td>
+                                <td class="column4"></td>
+                                <td class="column5 col-sm-1">1</td>
+                                
+                            </tr>
+                            <tr>
+                                <td class="column1">2017-09-22 05:57</td>
+                                <td class="column2">200389</td>
+                                <td class="column3"</td>
+                                <td class="column4"></td>
+                                <td class="column5 col-sm-1">1</td>								
+                            </tr>								
 						</tbody>
 					</table>
 
 					
-                    <!-- 검색창 -->
-					<div class="container">					
-						<div class="row">
-							<div class="col-lg-12 card-margin">
-								<div class="card search-form">
-									
-									<div class="card-body p-0">
-										<form id="search-form">
-											<div class="row">
-												<div class="col-12">
-													<div class="row no-gutters">
-														<div class="col-lg-3 col-md-3 col-sm-12 p-0">
-															
-															<select class="form-control" id="exampleFormControlSelect1">
-																<option>id</option>
-																<option>제목</option>
-																<option>내용</option>				
-															</select>
-														</div>
-														<div class="col-lg-8 col-md-6 col-sm-12 p-0">
-															<input type="text" placeholder="검색".." class="form-control" id="search" name="search">
-														</div>
-														<div class="col-lg-1 col-md-3 col-sm-12 p-0">
-															<button type="submit" class="btn btn-base">													
-																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>														
-															</button>										
-														</div>
-													</div>
-												</div>
-											</div>
-										</form>									
-									</div>
-								</div>						
-							</div>						
-						</div>
-					<!-- /검색창 -->						
+                    <!-- search -->
+                    <form name="formSearch" id="formSearch" action="" onsubmit="return false;">          
 
-					<div>
-						<ul class="pagination" style="justify-content: center; " >
-						  <li class="page-item disabled">
-							<a class="page-link" href="#">&laquo;</a>
-						  </li>
-						  <li class="page-item active">
-							<a class="page-link" href="#">1</a>
-						  </li>
-						  <li class="page-item">
-							<a class="page-link" href="#">2</a>
-						  </li>
-						  <li class="page-item">
-							<a class="page-link" href="#">3</a>
-						  </li>
-						  <li class="page-item">
-							<a class="page-link" href="#">4</a>
-						  </li>
-						  <li class="page-item">
-							<a class="page-link" href="#">5</a>
-						  </li>
-						  <li class="page-item">
-							<a class="page-link" href="#">&raquo;</a>
-						  </li>
-						</ul>														
-					</div>
+                        <select class="select1">
+                            <option selected>지역</option>
+                            <option>서울</option>
+                            <option>부산</option>
+                            <option>속초</option>
+                        </select>
 
-        
+                        <select class="select2">
+                            <option selected>검색조건</option>
+                            <option>작성자</option>
+                            <option>글제목</option>
+                            <option>글내용</option>
+                        </select>
 
-        
+                        <div class="input_search_area">
+                            <div class="input_component" >
+                                <input type="text" class="search-text" name="search-text" placeholder="검색어를 입력해주세요" value="" onkeydown="">
+                            </div>
+                            <button onclick="" class="btn-search">검색</button>
+                        </div>
+                    </form>				
 
-    <!-- scroll -->
-    <script type="text/javascript">
-        // <![CDATA[ 
-        var name = "#floatMenu";
-        var menuYloc = null;
-
-        $(document).ready(function () {
-            menuYloc = parseInt($(name).css("top").substring(0, $(name).css("top").indexOf("px")))
-            $(window).scroll(function () {
-                offset = menuYloc + $(document).scrollTop() + "px";
-                $(name).animate({
-                    top: offset
-                }, {
-                    duration: 400,
-                    queue: false
-                });
-            });
-        });
-        // ]]>
-    </script>
-
-    <script text="text/javascript">
-        $("#navbar").on("click", function() { userProfile(); });
-
-        function userProfile(){
-            if ($("#navbar").hasClass("expander") === true) {
-                var setUserHTML = "";
-                setUserHTML += '<div class="userProfile" style="border: 1px solid #fff; border-radius: 5px; height: 12em; margin-bottom: 1em; text-align: center; padding-top: 1em;">';
-                setUserHTML += '    <div class="profile-userpic">';
-                setUserHTML += '         <img src="image/profile.jpg" class="img-responsive" style="width: 5em; height: 5em; border-radius: 50%;">';
-                setUserHTML += '    </div>';
-                setUserHTML += '    <div class="profile-usertitle" style="padding-bottom: 0.5em;">';
-                setUserHTML += '        <div class="profile-usertitle-name" style="font-size: 1em;">manager</div>';
-                setUserHTML += '        <div class="profile-usertitle-level" style="font-size: 0.8em;">level 1</div>';
-                setUserHTML += '    </div>';
-                setUserHTML += '    <div>';
-                setUserHTML += '        <button type="button" class="btn btn-success btn-sm" onclick="location.href=\'user/mypage.html\' style="font-size: 0.8em;">MyPage</button>';
-                setUserHTML += '        <button type="button" class="btn btn-danger btn-sm" style="font-size: 0.8em;">Logout</button>';
-                setUserHTML += '    </div>';
-                setUserHTML += '</div>';
-
-                $(".nav__user").html(setUserHTML);
-            } else {
-                $(".nav__user").empty();
-            }   
-        }
-    </script>
-
-   
-    </script>
-
+                    <!-- 페이지 btn -->
+					<div id="board-pageBtn">
+                        <a href="#" class="round">&#8249;</a>
+                        <a href="#" class="round">1</a>
+                        <a href="#" class="round">2</a>
+                        <a href="#" class="round">3</a>
+                        <a href="#" class="round">4</a>
+                        <a href="#" class="round">5</a>
+                        <a href="#" class="round">&#8250;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
-
     <script src="../css/grade-page-resourece/grade-resource/js/index.js"></script>
 <!--===============================================================================================-->	
 	<script src="../css/grade-page-resourece/grade-resource/vendor/jquery/jquery-3.2.1.min.js"></script>
@@ -518,35 +386,13 @@
 	<script src="../css/grade-page-resourece/grade-resource/js/main.js"></script>
 
 
-
     <!-- IONICONS -->
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
     <!-- JS -->
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
 
-    <script type="text/javascript" src="js/bootstrap.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-
-    <!-- navbar expander -->
-    <script>
-        const showMenu = (toggleId, navbarId, bodyId) => {
-            const toggle = document.getElementById(toggleId),
-                navbar = document.getElementById(navbarId),
-                bodypadding = document.getElementById(bodyId)
-
-            if (toggle && navbar) {
-                toggle.addEventListener('click', () => {
-                    navbar.classList.toggle('expander');
-
-                    bodypadding.classList.toggle('body-pd')
-                })
-            }
-        }
-        showMenu('nav-toggle', 'navbar', 'body-pd')
-    </script>
-
-  
-<!-- ///////////// -->
+    <script type="text/javascript" src="../js/bootstrap.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
 
 </body>
 

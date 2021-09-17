@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>잡담드림</title>
 
-    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
     <!-- CSS -->
@@ -16,7 +15,6 @@
     <script src="js/jquery-3.6.0.js"></script>
 
     <style>
-    
         /* #calender */
         .cal_top {
             text-align: center;
@@ -45,6 +43,43 @@
             width: 10em;
         }
 
+        /* #floatMenu */
+        #floatMenu {
+            font-weight: bold;
+            text-align: center;
+            position: absolute;
+            margin-top: 5em;
+            width: 6em;
+            height: 15.7em;
+            left: 7em;
+            z-index: 1;
+        }
+
+        #floatMenu ul {
+            list-style: none;
+        }
+
+        #floatMenu li {
+            font-size: 0.7em;
+            border: 0.5px solid rgba(20, 50, 120, 0.8);   
+        }
+
+        #floatMenu li:hover {
+            background-color: rgba(20, 50, 120, 0.8);
+            color: white;
+        }
+
+        #floatMenu a {
+            color: black;
+            display: block;
+            padding: 2em 0.5em;
+        }
+
+        #floatMenu a:hover {
+            color: white;
+        }
+
+        /* Carousel Banner */
         .carousel-inner>.carousel-item>img {
             width: 25em;
             height: 15em;
@@ -68,19 +103,19 @@
                     
                 </div>
 
-                <!-- <div class="nav__login">
+                <div class="nav__login">
                     <a href="user/form_login.html" class="nav__link">
                         <ion-icon name="person-circle-outline" class="nav__icon"></ion-icon>
                         <span class="nav_name">Join & Login</span>
                     </a>
-                </div> -->
+                </div>
 
                 <div class="nav__list">
-                    <a href="user/grade.html" class="nav__link">
+                    <a href="user/grade.html" class="nav__link active">
                         <ion-icon name="chevron-up-circle-outline" class="nav__icon"></ion-icon>
                         <span class="nav_name">등업</span>
                     </a>
-                    <a href="user/send-message.html" class="nav__link">
+                    <a href="user/msg_box.html" class="nav__link">
                         <ion-icon name="chatbubbles-outline" class="nav__icon"></ion-icon>
                         <span class="nav_name">Messenger</span>
                     </a>
@@ -91,7 +126,7 @@
                         
                         <ion-icon name="folder-outline" class="nav__icon"></ion-icon>
                         <!-- <ion-icon name="folder-open-outline" class="nav__icon"></ion-icon> 클릭시 아이콘변경되도록 설정예정-->
-                        <span class="nav_name" onclick="location.href='board/board-list.html'">채용공고</span>
+                        <span class="nav_name" onclick="location.href='#'">채용공고</span>
                         
                         <ion-icon name="chevron-down-outline" class="collapse__link"></ion-icon>
 
@@ -106,7 +141,7 @@
 
                     <div class="nav__link collapse">
                         <ion-icon name="clipboard-outline" class="nav__icon"></ion-icon>
-                        <span class="nav_name" onclick="location.href='board/resume.html'">자기소개서</span>
+                        <span class="nav_name" onclick="location.href='../board/resume.html'">자기소개서</span>
 
                         <ion-icon name="chevron-down-outline" class="collapse__link"></ion-icon>
 
@@ -116,7 +151,7 @@
                         </ul>
                     </div>
 
-                    <a href="board/interview.html" class="nav__link">
+                    <a href="../board/interview.html" class="nav__link">
                         <ion-icon name="chatbox-ellipses-outline" class="nav__icon"></ion-icon>
                         <span class="nav_name">면접경험담</span>
                     </a>
@@ -131,7 +166,7 @@
                         <span class="nav_name">자유게시판</span>
                     </a>
 
-                    <a href="board/study_list.html" class="nav__link">
+                    <a href="../board/study_list.html" class="nav__link">
                         <ion-icon name="people-outline" class="nav__icon"></ion-icon>
                         <span class="nav_name">스터디모임</span>
                     </a>
@@ -249,7 +284,7 @@
                 setUserHTML += '        <div class="profile-usertitle-level" style="font-size: 0.8em;">level 1</div>';
                 setUserHTML += '    </div>';
                 setUserHTML += '    <div>';
-                setUserHTML += '       <button type="button" class="btn btn-success btn-sm" onclick="location.href=\'user/mypage.html\'">MyPage</button>';
+                setUserHTML += '        <button type="button" class="btn btn-success btn-sm" onclick="location.href=\'user/mypage.html\'">MyPage</button>';
                 setUserHTML += '        <button type="button" class="btn btn-danger btn-sm">Logout</button>';
                 setUserHTML += '    </div>';
                 setUserHTML += '</div>';
@@ -397,12 +432,6 @@
         }
     </script>
 
-    <!-- IONICONS -->
-    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
-    <!-- JS -->
-    <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-
     <!-- navbar expander -->
     <script>
         const showMenu = (toggleId, navbarId, bodyId) => {
@@ -420,6 +449,14 @@
         }
         showMenu('nav-toggle', 'navbar', 'body-pd')
     </script>
+
+    <!-- IONICONS -->
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+    <!-- JS -->
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
 
 </body>
 

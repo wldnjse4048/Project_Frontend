@@ -158,42 +158,6 @@ a {
     transition: .5s;
 }
 
-/* #floatMenu */
-#floatMenu {
-    font-weight: bold;
-    text-align: center;
-    position: absolute;
-    margin-top: 5em;
-    width: 6em;
-    height: 15.7em;
-    left: 7em;
-    z-index: 1;
-}
-
-#floatMenu ul {
-    list-style: none;
-}
-
-#floatMenu li {
-    font-size: 0.7em;
-    border: 0.5px solid rgba(20, 50, 120, 0.8);   
-}
-
-#floatMenu li:hover {
-    background-color: rgba(20, 50, 120, 0.8);
-    color: white;
-}
-
-#floatMenu a {
-    color: black;
-    display: block;
-    padding: 2em 0.5em;
-}
-
-#floatMenu a:hover {
-    color: white;
-}
-
 /* Header */
 .logo {
     width: 16em;
@@ -213,4 +177,18 @@ a {
     width: 78%;
     text-align: right;
 }
+
+.clearfix {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+h2 {
+    text-align: center;
+    font-weight: bolder;
+    border-bottom: solid 0.15em rgb(20, 50, 120);
+    padding: 1em 0 0.5em;
+}
+
 
