@@ -27,7 +27,10 @@
         .form-group{
             margin-bottom: 1em;
         }
-        #header_join{
+        .form-group > label{
+            margin-bottom: 0.2em;
+        }
+        .header_join{
             margin-bottom: 2em;
         }
     </style>
@@ -36,7 +39,7 @@
 <body class="user">
 
     <!-- Header -->
-    <header id="header_join">
+    <header class="header_join">
         <div style="text-align: center;">
             <a href="../index.html"><img class="logo" src="../image/logo.png"></a>
         </div>
@@ -46,9 +49,18 @@
     <section>
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-8 col-sm-12 join-form">
+                <div class="col-lg-5 col-md-8 col-sm-12 join-form">
   
                     <form action="#">
+                        <div class="form-group">
+                            <label for="id">사업자번호</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="company-id" placeholder="사업자번호" required>
+                                <div class="input-group-addon">
+                                    <button class="btn btn-secondary join_btn">사업자번호인증</button>
+                                </div>
+                            </div>
+                        </div>
                         <div class="form-group">
                             <label for="id">아이디</label>
                             <div class="input-group">
@@ -102,9 +114,9 @@
                         <div class="form-group">
                             <label for="email">이메일</label><br>
                             <div class="input-group">
-                                <input type="text" class="mailid form-control-md" style="width: 260px; border: 1px solid #ced4da">
+                                <input type="text" class="mailid form-control-md" style="width: 13em; border: 1px solid #ced4da">
                                 <span class="mailtext" style="padding: 2px;">@</span>
-                                <select class="mailslc form-select-md" style="width: 260px; border: 1px solid #ced4da">
+                                <select class="mailslc form-select-md" style="width: 12.5em; border: 1px solid #ced4da">
                                     <option value="naver">naver.com</option>
                                     <option value="gm">gmail.com</option>
                                     <option value="da">daum.com</option>

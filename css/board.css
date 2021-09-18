@@ -248,6 +248,7 @@ a {
 .comment-board {
   margin: 2em;
   height: 30em;
+  overflow-x: hidden;
   overflow-y: auto;
 }
 
