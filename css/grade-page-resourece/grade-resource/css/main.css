@@ -13,9 +13,9 @@
 /*//////////////////////////////////////////////////////////////////
 [ 상단 레이아웃 ]*/
 h2{
-  margin: 10px;
+  /* margin: 10px; */
   font-weight: bold;
-  font-size: 40px;
+  /* font-size: 40px; */
 }
 
 #link{
@@ -24,9 +24,9 @@ h2{
   font-size: 17px;
 }
 
-hr{
+/* hr{
   margin: 0 auto;
-}
+} */
 /*//////////////////////////////////////////////////////////////////
 [ /상단 레이아웃 ]*/
 
@@ -55,7 +55,7 @@ hr{
 }
 #btn-1{
   border-radius: 5px;
-  background: rgba(52, 148, 124, 0.6);
+  background: rgb(20, 50, 120);
   color:#fff;
   border:none;
   position:relative;
@@ -69,7 +69,7 @@ hr{
 }
 #btn-1:hover{
   background:#fff;
-  color:#1AAB8A;
+  color:rgb(20, 50, 120);
 }
 #btn-1:before,button:after{
   content:'';
@@ -78,7 +78,7 @@ hr{
   right:0;
   height:2px;
   width:0;
-  background: #1AAB8A;
+  background: rgb(20, 50, 120);
   transition:400ms ease all;
 }
 #btn-1:after{
@@ -107,7 +107,7 @@ hr{
 
 body, html {
 	height: 100%;
-	font-family: sans-serif;
+	/* font-family: sans-serif; */
 }
 
 /* ------------------------------------ */
@@ -381,7 +381,8 @@ tbody tr:hover {
 
 body{
   background:white;
-  margin-top:20px;}
+  /* margin-top:20px; */
+}
 
 .widget-26 {
 color: #3c4142;
