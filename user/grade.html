@@ -154,7 +154,7 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                 <div class="modal-header">
-                    <h4>등업 창</h4>
+                    <h4 style="margin-bottom: 0;">등업 창</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                     </button>
@@ -172,13 +172,15 @@
                         </div> <!-- form-group// -->
                         <div class="form-group" >
                             <label>신청등급</label>
-                            <div style="border: 2px solid black;">
-                                <input class="text" placeholder="GRADE">
+                            <div style="border: 0.5px solid black; border-radius: 0.25em;">
+                                <input class="form-control" placeholder="GRADE">
                             </div>
                         </div> <!-- form-group// -->
                         <div class="form-group">
                             <label>내용</label>
-                            <input class="form-control" placeholder="CONTENT">
+                            <div style="border: 0.5px solid black; border-radius: 0.25em;">
+                                <input class="form-control" placeholder="CONTENT">
+                            </div>
                         </div> <!-- form-group// -->
                         <div class="form-group">
                         </div> <!-- form-group// -->
@@ -332,14 +334,7 @@
                     <!-- search -->
                     <form name="formSearch" id="formSearch" action="" onsubmit="return false;">          
 
-                        <select class="select1">
-                            <option selected>지역</option>
-                            <option>서울</option>
-                            <option>부산</option>
-                            <option>속초</option>
-                        </select>
-
-                        <select class="select2">
+                        <select class="search-list">
                             <option selected>검색조건</option>
                             <option>작성자</option>
                             <option>글제목</option>

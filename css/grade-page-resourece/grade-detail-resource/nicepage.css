@@ -22957,7 +22957,7 @@ a.u-link.u-hover-palette-2-light-3:hover {
 .u-button-style.u-palette-2-base,
 .u-button-style.u-palette-2-base[class*="u-border-"] {
   color: #ffffff !important;
-  background-color: #db545a !important;
+  background-color: rgb(20, 50, 120) !important;
 }
 .u-button-style.u-palette-2-base:hover,
 .u-button-style.u-palette-2-base[class*="u-border-"]:hover,
@@ -24709,7 +24709,7 @@ a.u-button-style.u-button-style.active > .u-active-black[class*="u-border-"],
 li.active > a.u-button-style.u-button-style.u-active-black,
 li.active > a.u-button-style.u-button-style.u-active-black[class*="u-border-"] {
   color: #ffffff !important;
-  background-color: #000000 !important;
+  background-color: rgb(20, 50, 120) !important;
 }
 a.u-link.u-hover-black:hover {
   color: #000000 !important;
@@ -27421,7 +27421,7 @@ li.active > a.u-button-style.u-button-style.u-border-active-palette-2-light-3 {
 }
 .u-border-palette-2-base,
 .u-separator-palette-2-base:after {
-  border-color: #db545a;
+  border-color: rgb(20, 50, 120);
   stroke: #db545a;
 }
 .u-button-style.u-border-palette-2-base {
@@ -33946,7 +33946,7 @@ a.u-link.u-text-hover-grey-90:hover {
         h1:not(.u-title)
         {
         font-weight: 400;
-        font-size: 3rem;
+        /* font-size: 3rem; */
         line-height: 1.1;
         margin-top: 20px;
         margin-bottom: 20px;
