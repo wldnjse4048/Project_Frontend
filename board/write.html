@@ -130,10 +130,10 @@
         </header>
 
         <!-- board write -->
-        <section>
-            <div class="board">
-                <h2>게시글 등록</h2><br>
+        <div class="board">
+            <h2>게시글 등록</h2><br>
 
+            <form action="#" name="registForm" method="POST">
                 <table class="table">
                     <thead>
                         <tr>
@@ -147,41 +147,39 @@
                             <td scope="col"><input type="text" placeholder="글 제목 작성"></td>
                         </tr>
                     </tbody>
-                    
+                
                     <div class="input-group mb-3" style="width: max-content; float: right">
                         <div class="input-group-prepend">
-                          <label class="input-group-text selectList">합격/불합격</label>
+                            <label class="input-group-text selectList">합격/불합격</label>
                         </div>
                         <select class="custom-select selectMenu" id="inputGroupSelect">
-                          <option value="1" selected>비공개</option>
-                          <option value="2">합격</option>
-                          <option value="3">불합격</option>
+                            <option value="1" selected>비공개</option>
+                            <option value="2">합격</option>
+                            <option value="3">불합격</option>
                         </select>
                     </div>
                     <div class="input-group mb-3" style="width: max-content; float: right;">
                         <div class="input-group-prepend">
-                          <label class="input-group-text selectList">직군</label>
+                            <label class="input-group-text selectList">직군</label>
                         </div>
                         <select class="custom-select selectMenu" id="inputGroupSelect">
-                          <option value="1" selected>IT</option>
-                          <option value="2">제조</option>
-                          <option value="3">교육</option>
+                            <option value="1" selected>IT</option>
+                            <option value="2">제조</option>
+                            <option value="3">교육</option>
                         </select>
                     </div>
                     <!-- <div class="input-group mb-3" style="width: max-content; float: right;">
                         <div class="input-group-prepend">
-                          <label class="input-group-text selectList">지역</label>
+                            <label class="input-group-text selectList">지역</label>
                         </div>
                         <select class="custom-select selectMenu" id="inputGroupSelect">
-                          <option value="1" selected>서울</option>
-                          <option value="2">부산</option>
-                          <option value="3">광주</option>
+                            <option value="1" selected>서울</option>
+                            <option value="2">부산</option>
+                            <option value="3">광주</option>
                         </select>
                     </div> -->
                 </table>
-
                 <textarea id="textwrite"  placeholder="글 내용 작성"></textarea>
-
                 <table class="table table-bordered table-sm">
                     <tr style="vertical-align: middle;">
                         <th id="table-writer" scope="col">첨부파일</th>
@@ -192,14 +190,14 @@
                         </td>
                     </tr>
                 </table>
-                
-                <!-- search button -->
-                <div class="write-boardBtn" >
-                    <button class="btn boardBtn" type="button" style="margin-bottom: 4em;" onclick="location.href='../board/resume.html'">취소</button>
-                    <button class="btn boardBtn" type="submit">등록</button>
-                </div>
+            </form>
+            
+            <!-- search button -->
+            <div class="write-boardBtn" >
+                <button class="btn boardBtn" type="button" style="margin-bottom: 4em;" onclick="location.href='../board/resume.html'">취소</button>
+                <button class="btn boardBtn" type="submit">등록</button>
             </div>
-        </section>
+        </div>
     </div>
 
     <!-- IONICONS -->

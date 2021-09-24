@@ -31,7 +31,7 @@ input:hover {
   font-size: 0.9em;
   width: max-content;
   height: 2.5em;
-  margin-bottom: 0.5em;
+  margin: 1em;
   margin-right: 1em;
 }
 
@@ -53,6 +53,7 @@ input:hover {
 .board input {
   width: 100%;
   border: white;
+  text-align: center;
 }
 
 .table-chkbox {

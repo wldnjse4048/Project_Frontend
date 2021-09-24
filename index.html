@@ -46,49 +46,6 @@
             border: 0.5px solid rgba(20, 50, 120, 0.6);
             width: 18em;
         }
-
-        /* #floatMenu */
-        #floatMenu {
-            font-weight: bold;
-            text-align: center;
-            position: absolute;
-            margin-top: 5em;
-            width: 6em;
-            height: 15.7em;
-            left: 7em;
-            z-index: 1;
-        }
-
-        #floatMenu ul {
-            list-style: none;
-        }
-
-        #floatMenu li {
-            font-size: 0.7em;
-            border: 0.5px solid rgba(20, 50, 120, 0.8);   
-        }
-
-        #floatMenu li:hover {
-            background-color: rgba(20, 50, 120, 0.8);
-            color: white;
-        }
-
-        #floatMenu a {
-            color: black;
-            display: block;
-            padding: 2em 0.5em;
-        }
-
-        #floatMenu a:hover {
-            color: white;
-        }
-
-        /* Carousel Banner */
-        .carousel-inner>.carousel-item>img {
-            width: 25em;
-            height: 15em;
-        }
-
         
     </style>
 </head>
@@ -216,13 +173,13 @@
         <!-- 케러셀 -->
         <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="5000">
+                <div class="carousel-item active" data-bs-interval="3000">
                     <img src="image/pic01.jpg" class="d-block w-100">
                 </div>
-                <div class="carousel-item">
+                <div class="carousel-item" data-bs-interval="3000">
                     <img src="image/pic02.jpg" class="d-block w-100">
                 </div>
-                <div class="carousel-item">
+                <div class="carousel-item" data-bs-interval="3000">
                     <img src="image/pic03.jpg" class="d-block w-100">
                 </div>
             </div>
